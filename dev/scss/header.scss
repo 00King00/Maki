@@ -1,11 +1,27 @@
+.header_menu{
+	li{
+		list-style:none;
+		display:inline-block;
+		text-align:center;
+		margin-right:45px;
+		color: #333333;
+		font-size: 17px;
+	}
+	a{
+		text-decoration: none;
+	}	
+}
 .categories{
 	a{
 		text-decoration: none;
 	}
+	ul{
+		display:flex;
+		justify-content:space-around;
+		align-items: center;
+		flex-wrap:wrap;
+	}
 	li{
-		margin-right: 70px;
-		list-style:none;
-		display:inline-block;
-		text-align:center;		
+		text-align:center;
 	}
 }
