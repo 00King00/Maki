@@ -1,10 +1,7 @@
-node_modules/
-package.json
-*.psd
-app/
-app/*
-package-lock.json
-gulpfile.js
-package.json
+
+/*
+!/dev
+!package.json
+!.gitignore
 
 
