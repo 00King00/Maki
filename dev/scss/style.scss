@@ -1,6 +1,162 @@
 body{
-	font-family: 'Open Sans'
+	font-family: 'Open Sans', sans-serif;
+	a{
+		text-decoration:none;
+	}
 }
-a{
-	text-decoration:none;
-} 
+.news{
+	font-size:23px;
+	color:#333333;
+	&_all{
+		a{
+			color:#7b7b7b;
+			font-size:13px;
+			text-decoration:underline;
+		}
+	}
+}
+.article{
+	margin-top:30px;
+	@include breakpoint(phablet){
+		margin-top:0;
+	}
+	a{
+		display:block;
+		color:#333333;
+	}
+	img{
+		max-width:100%;
+	}
+	&_title{
+		text-decoration:none;
+		display: block;
+		margin-top: 10px;
+		font-weight:bold;
+		font-size:15px;
+	}
+	.pub-date{
+		display:block;
+		margin-top: 20px;
+		font-style:italic;
+		font-size: 13px;
+		color: #999999;
+	}
+	&_pic{
+		position: relative;
+		img {
+			opacity: 1;
+			display: block;
+			width: 100%;
+			height: auto;
+			transition: .5s ease;
+			backface-visibility: hidden;
+		}
+		.middle{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding: 1em;
+			color: #fff;
+			background: rgba(214,102,107,.8);
+			opacity: 0;
+			transition: opacity .7s;
+			cursor: pointer;
+			font-size:32px;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+		}
+		.text {
+			position:absolute;
+			margin-top:-25px;
+			margin-left:-84px;
+			top: 50%;
+			left: 50%;
+			border:1px solid #fff;
+			color: #fff;
+			font-size: 16px;
+			padding: 16px 32px;
+		}
+	}
+	&_pic:hover{
+		.middle{
+			opacity:1;
+		}
+		img{
+			opacity:0.5;
+		}
+	}
+}
+.footer{
+	text-align: center;
+	margin-top:95px;
+	background-color:#f0f0f0;
+	padding:47px 0 47px 0;
+	@include breakpoint(laptop){
+		text-align:left;
+	}
+	ul:first-child{
+		margin-top:0;
+	}
+	ul{
+		display:block;
+		@include breakpoint(laptop){
+			display:inline-block;
+			margin-right:120px;
+		}
+	}
+	li{
+		margin-top:10px;
+		display:block;
+		color:#666666;
+		font-size:13px;
+	}
+	a{
+		color:#666666;
+		text-decoration:underline;
+	}
+}
+.bottom-line{
+	padding:15px 0;
+	background: #ff7575;
+	color:#fff;
+	font-size:13px;
+
+}
+.rights{
+	display:inline-block;
+}
+.pull-right{
+	float:right;
+}
+.catalog-item{
+	position:relative;
+	width:220px;
+	height:370px;
+	text-align:center;
+}
+.item__name{
+	display:inline-block;
+	color:#333333;
+	font-size:15px;
+	margin-top:20px;
+}
+.item__price{
+	width:100%;
+	display:inline-block;
+	color:#333333;
+	font-size:15px;
+	font-weight:bold;
+	margin-top: 10px;
+}
+.btn_order{
+	display:inline-block;
+	position:absolute;
+	bottom:3%;
+	left:50%;
+	margin-left:-67px;
+	text-align: center;
+	padding: 15px 30px;
+	border:1px solid #959595;
+}
