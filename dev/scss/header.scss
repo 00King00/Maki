@@ -1,17 +1,41 @@
+@mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: 70em) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: 64em) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: 50em) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 37.5em)  { @content ; }
+
+  }
+}
 .header_menu{
 	li{
 		list-style:none;
-		display:inline-block;
+		padding: 10px;
+		display:block;
 		text-align:center;
 		margin-right:45px;
 		color: #333333;
 		font-size: 17px;
+		@include breakpoint(tablet){
+			display:inline-block;;
+		}
 	}
 	a{
 		text-decoration: none;
 	}	
 }
 .categories{
+	background:rgba(255,255,255,.5);
+	padding:10px;
 	a{
 		text-decoration: none;
 	}
@@ -23,5 +47,12 @@
 	}
 	li{
 		text-align:center;
+		color: #333333;
 	}
+}
+.header{
+	height: 50vh;
+	background: url("/images/background_maki.png");
+	background-size: cover;
+	border-top: 1px solid #ebebeb;
 }
