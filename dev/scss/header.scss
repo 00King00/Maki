@@ -38,16 +38,30 @@
 	padding:10px;
 	a{
 		text-decoration: none;
+		color:#333333;
+		&:active{
+			color: #ff9999;
+		}
 	}
 	ul{
-		display:flex;
-		justify-content:space-around;
-		align-items: center;
-		flex-wrap:wrap;
+		text-align:center;
+		// display:flex;
+		// justify-content:space-around;
+		// align-items: center;
+		// flex-wrap:wrap;
 	}
 	li{
+		margin:0 30px;
+		padding-bottom: 28px;
+		display:inline-block;
 		text-align:center;
 		color: #333333;
+		border-bottom:5px solid transparent;
+	}
+	li:active{
+		box-sizing:border-box;
+		color:#ff9999;
+		border-bottom: 5px solid #ff9999;
 	}
 }
 .header{
