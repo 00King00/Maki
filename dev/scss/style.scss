@@ -179,3 +179,24 @@ body{
 	padding: 15px 30px;
 	border:1px solid #959595;
 }
+.paging{
+	margin-top: 30px;
+	margin-bottom: 80px;
+	text-align:center;
+	ul{
+		display:inline-block;
+		list-style: none;
+	}
+	li{
+		display:inline-block;
+		padding:10px 13px;
+		border: 1px solid #959595;
+		color:#959595;
+		&:active{
+			color:#fff;
+			background: #ff7575;
+			border:1px solid #ff7575;
+		}
+	}
+
+}
