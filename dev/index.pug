@@ -6,8 +6,9 @@ html
 			.row.clearfix
 				.col-phablet-3-4 
 					.header_menu
+						img.down(src="/images/dropdown.png")
 						ul
-							li
+							li.active
 								a(href="#") Доставка
 							li
 								a(href="#") Оплата
@@ -17,7 +18,10 @@ html
 								a(href="#") Контакты
 							li
 								a(href="#") Статус заказа
-				.col-phablet-1-4 search
+						img.up(src="/images/dropdown.png")
+				.col-phablet-1-4.search-rigth
+					form
+						input(type="search" placeholder="Искать")
 		.header
 			.wrapper
 				.row.clearfix
