@@ -66,6 +66,7 @@ input{
 
 .search-rigth{
 	float: right;
+	width: 25%;
 	input[type=search] {
 		background: #ededed url(images/search-icon.png) no-repeat 9px right;
 		width: 15px;
@@ -74,11 +75,12 @@ input{
 		color: transparent;	
 		cursor: pointer;
 		float: right;
+		
 		&:hover {	
 			background-color: #fff;
 		}
 		&:focus {	
-			width: 200px;	
+			width: 100px;	
 			padding-left: 32px;	
 			color: #000;
 			background-color: #fff;
@@ -93,6 +95,10 @@ input{
 	.header_menu{
 		ul{
 			display: none;
+			li{
+				padding: 10px 10px;
+
+			}
 		}
 		img{
 			height: 30px;
