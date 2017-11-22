@@ -27,10 +27,11 @@
 		},
 	]
 .categories
-	ul
-		each item in categories
-			li 
-				a(href="#")
-					img(src=item.pic)
-					br 
-					span #{item.text}
+	.wrapper
+		ul
+			each item in categories
+				li 
+					a(href="#")
+						img(src=item.pic)
+						br 
+						span #{item.text}
