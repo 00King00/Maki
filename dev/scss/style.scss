@@ -23,6 +23,17 @@ body{
 		text-decoration:none;
 	}
 }
+.news{
+	font-size:23px;
+	color:#333333;
+	&_all{
+		a{
+			color:#7b7b7b;
+			font-size:13px;
+			text-decoration:underline;
+		}
+	}
+}
 .article{
 	a{
 		display:block;
