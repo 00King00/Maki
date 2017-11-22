@@ -39,6 +39,10 @@ body{
 	}
 }
 .article{
+	margin-top:30px;
+	@include breakpoint(phablet){
+		margin-top:0;
+	}
 	a{
 		display:block;
 		color:#333333;
@@ -82,13 +86,14 @@ body{
 			opacity: 0;
 			transition: opacity .7s;
 			cursor: pointer;
-			font: 32px sans-serif;
+			font-size:32px;
+			text-transform: uppercase;
 			letter-spacing: 3px;
 		}
 		.text {
 			position:absolute;
 			margin-top:-25px;
-			margin-left:-75px;
+			margin-left:-84px;
 			top: 50%;
 			left: 50%;
 			border:1px solid #fff;
@@ -107,16 +112,19 @@ body{
 	}
 }
 .footer{
+	text-align: center;
+	margin-top:95px;
 	background-color:#f0f0f0;
 	padding:47px 0 47px 0;
+	@include breakpoint(laptop){
+		text-align:left;
+	}
 	ul:first-child{
 		margin-top:0;
 	}
 	ul{
-		margin-top:35px;
 		display:block;
 		@include breakpoint(laptop){
-			margin:0;
 			display:inline-block;
 			margin-right:120px;
 		}
@@ -145,3 +153,35 @@ body{
 .pull-right{
 	float:right;
 }
+
+.catalog-item{
+	position:relative;
+	width:220px;
+	height:370px;
+	text-align:center;
+}
+.item__name{
+	display:inline-block;
+	color:#333333;
+	font-size:15px;
+	margin-top:20px;
+}
+.item__price{
+	width:100%;
+	display:inline-block;
+	color:#333333;
+	font-size:15px;
+	font-weight:bold;
+	margin-top: 10px;
+}
+.btn_order{
+	display:inline-block;
+	position:absolute;
+	bottom:3%;
+	left:50%;
+	margin-left:-67px;
+	text-align: center;
+	padding: 15px 30px;
+	border:1px solid #959595;
+}
+
