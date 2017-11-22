@@ -1,0 +1,27 @@
+.wrapper
+	.row.clearfix
+		.col-phablet-3-4 
+			.header_menu
+				img.down(src="/images/dropdown.png")
+				ul
+					li.active
+						a(href="#") Доставка
+					li
+						a(href="#") Оплата
+					li
+						a(href="#") Гарантии
+					li
+						a(href="#") Контакты
+					li
+						a(href="#") Статус заказа
+				img.up(src="/images/dropdown.png")
+		.col-phablet-1-4.search-rigth
+			form
+				input(type="search" placeholder="Искать")
+.header
+	.wrapper
+		.row.clearfix
+			.col-phablet-1-4 logo
+			.col-phablet-1-2 contacts
+			.col-phablet-1-4 bascet
+	include ./header_categories.pug
