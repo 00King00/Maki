@@ -1,6 +1,20 @@
 html
 	head
 		include ./parts/head.pug
+		.header_menu
+			ul
+				li
+					a(href="#") Доставка
+				li
+					a(href="#") Оплата
+				li
+					a(href="#") Гарантии
+				li
+					a(href="#") Контакты
+				li
+					a(href="#") Статус заказа
+		.header
+			include ./parts/header_categories.pug
 	body
 		.wrapper
 			.row.clearfix
