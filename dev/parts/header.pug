@@ -1,4 +1,26 @@
+.wrapper
+	.row.clearfix
+		.col-phablet-3-4 
+			.header_menu
+				ul
+					li
+						a(href="#") Доставка
+					li
+						a(href="#") Оплата
+					li
+						a(href="#") Гарантии
+					li
+						a(href="#") Контакты
+					li
+						a(href="#") Статус заказа
+		.col-phablet-1-4 search
 .header
-    .logo
-        img(src="../images/logo.png", alt="")
-        p Интернет-магазин цветов
+	.wrapper
+		.row.clearfix
+			.col-phablet-1-4
+				.logo
+				img(src="../images/logo.png", alt="")
+				p Интернет-магазин цветов
+			.col-phablet-1-2 contacts
+			.col-phablet-1-4 bascet
+	include ./header_categories.pug
