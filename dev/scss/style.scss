@@ -171,6 +171,7 @@ body{
 	display:inline-block;
 	height:400px;
 	text-align:center;
+	
 	@include breakpoint(phablet){
 		margin:0;
 	}
@@ -232,7 +233,9 @@ body{
 }
 
 // start filterst block
-
+.for-phablet, .for-tablet{
+	display: none;
+}
 @include breakpoint(phablet){
 	.for-phablet{
 		display: block;
@@ -256,4 +259,4 @@ body{
 		display: block;
 	}
 }
-
+// end filterst block

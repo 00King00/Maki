@@ -18,10 +18,11 @@
 }
 
 .header_menu{
-    img{
+	padding-top: 10px;
+	img{
 			height: 30px;
 			width: 30px;
-    }
+	}
 	
 	li{
 		list-style:none;
@@ -30,7 +31,7 @@
 		text-align:center;
 		color: #333333;
 		font-size: 17px;
-		&.active{
+		&:active{
 			border: 1px solid #ffa8a8;
 		}
 		@include breakpoint(phablet){
@@ -39,7 +40,7 @@
 	}
 	a{
 		text-decoration: none;
-	}	
+	}
 }
 .categories{
 	margin-top:80px;
@@ -73,10 +74,8 @@
 	}
 }
 .header{
-	//height: 50vh;
 	background: url("/images/background_maki.png");
 	background-size: cover;
-	// background-repeat: repeat-y; 
 	border-top: 1px solid #ebebeb;
 }
 .logo{
@@ -109,7 +108,7 @@
 				padding-right: 20px;
 				margin-bottom: -3px;
 			}
-            .p-red{
+			.p-red{
 				padding-right: 10px;
 				font-size: 15px;
 				color: #ff9999;
@@ -118,7 +117,7 @@
 				font-size: 21px
 			}
 		}
-	}	
+	}
 }
 
 .bascet{
@@ -135,27 +134,37 @@
 .search-right{
 	float: right;
 	box-sizing:border-box;
+	position: relative;
 	input[type="search"] {
-		color: transparent;	
+		color: transparent;
 		cursor: pointer;
 		float: right;
 		width:0;
 		height:0;
+		position: absolute;
+		right: 0;
+		top: 8px;
 		
-		&:hover {	
+		&:hover {
 			background-color: #fff;
 		}
 		&:focus {
-			display:block;	
-			height:39px;
-			width:  170px;	
-			padding-left: 32px;	
+			display:block;
+			height:38px;
+			width: 200px;
+			padding-left: 32px;
 			color: #000;
 			background-color: #fff;
 			cursor: auto;
 			outline: none;
 		}
-	}		
+	}
+	
+	img{
+		float: right;
+		position: relative;
+		top: 8px;
+	}
 }
 //begining nessecary for header_menu js code
 @include breakpoint(mobileonly){
@@ -170,7 +179,7 @@
 			li{
 				padding: 10px 10px;
 				&:first-child{
-					margin-top: 30px;
+					margin-top: 40px;
 				}
 
 			}
