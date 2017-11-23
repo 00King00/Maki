@@ -5,10 +5,105 @@ html
 		include ./parts/header.pug
 		.wrapper
 			.row.clearfix
-				.col-phablet-3-4 products
-					.row.clearfix
-						include ./parts/catalog.pug					
-				.col-phablet-1-4 filters
+				.col-phablet-3-4
+					.row.clearfix.catalog
+						include ./parts/catalog.pug
+					.row.paging
+						ul
+							li 1
+							li 2
+							li 3
+							li 4
+                            
+				.col-phablet-1-4
+					.btn Фильтр
+					.for-phablet
+						.article_title Стоимость
+						.article_title Букеты с
+						ul
+							li
+								label(for="roses")
+									input(type="checkbox",id="roses")
+									| Розы
+							li
+								label(for="orchid")
+									input(type="checkbox",id="orchid")
+									| Орхидея
+							li
+								label(for="lily")
+									input(type="checkbox",id="lily")
+									| Лилия
+							li
+								label(for="gerber")
+									input(type="checkbox",id="gerber")
+									| Гербер
+						.article_title Кому
+						ul
+							li
+								label(for="man")
+									input(type="checkbox",id="man")
+									| Мужчина
+							li
+								label(for="kid")
+									input(type="checkbox",id="kid")
+									| Ребенок
+							li
+								label(for="woman")
+									input(type="checkbox",id="woman")
+									| Женщина
+							li
+								label(for="family")
+									input(type="checkbox",id="family")
+									| Семья
+						.article_title Поиск
+					.for-tablet
+						.article_title
+							|Стоимость
+						.article_title
+							|Букеты с
+						table
+							tr
+								td
+									label(for="roses")
+										input(type="checkbox",id="roses")
+										|Розы
+								td
+									label(for="orchid")
+										input(type="checkbox",id="orchid")
+										|Орхидея
+							tr
+								td
+									label(for="lily")
+										input(type="checkbox",id="lily")
+										|Лилия
+								td
+									label(for="gerber")
+										input(type="checkbox",id="gerber")
+										|Гербер
+						.article_title
+							|Кому
+						table
+							tr
+								td
+									label(for="man")
+										input(type="checkbox",id="man")
+										|Мужчина
+								td
+									label(for="kid")
+										input(type="checkbox",id="kid")
+										|Ребенок
+							tr
+								td
+									label(for="woman")
+										input(type="checkbox",id="woman") 
+										|Женщина
+								td
+									label(for="family")
+										input(type="checkbox",id="family")
+										|Семья
+						.article_title
+							|Поиск
+                            
 			.row.clearfix
 				.news
 					|Новости

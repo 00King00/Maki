@@ -74,8 +74,10 @@ body{
 			display: block;
 			width: 100%;
 			height: auto;
+			-webkit-transition: .5s ease;
 			transition: .5s ease;
-			backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+			        backface-visibility: hidden;
 		}
 		.middle{
 			position: absolute;
@@ -87,6 +89,7 @@ body{
 			color: #fff;
 			background: rgba(214,102,107,.8);
 			opacity: 0;
+			-webkit-transition: opacity .7s;
 			transition: opacity .7s;
 			cursor: pointer;
 			font-size:32px;
@@ -171,7 +174,7 @@ body{
 	display:inline-block;
 	height:400px;
 	text-align:center;
-	
+
 	@include breakpoint(phablet){
 		margin:0;
 	}
@@ -249,9 +252,6 @@ body{
 	.for-tablet{
 		display: none;
 	}
-	.logo, .bascet{
-		text-align: center;
-	}
 }
 
 @include breakpoint(tablet){
@@ -261,7 +261,17 @@ body{
 	.for-tablet{
 		display: block;
 	}
+	.for-tablet{
+		display: none;
+	}
 }
 
-
+@include breakpoint(mobileonly){
+	.logo, .bascet{
+		text-align: center;
+	}
+	.contacts{
+		padding: 20px 0;
+	}
+}
 // end filterst block
