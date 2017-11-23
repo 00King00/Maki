@@ -246,6 +246,9 @@ body{
 	.for-tablet{
 		display: none;
 	}
+	.logo, .bascet{
+		text-align: center;
+	}
 }
 
 @include breakpoint(tablet){
