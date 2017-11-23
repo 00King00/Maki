@@ -16,9 +16,7 @@
 
   }
 }
-input{
-	width: 100%;
-}
+
 .header_menu{
 	
 	li{
@@ -78,14 +76,13 @@ input{
 	border-top: 1px solid #ebebeb;
 }
 
-.search-rigth{
+.search-right{
 	float: right;
-	width: 25%;
-	input[type=search] {
+	box-sizing:border-box;
+	input[type="search"] {
 		background: #ededed url(images/search-icon.png) no-repeat 9px right;
 		width: 15px;
 		height: 30px;
-		padding-left: 10px;	
 		color: transparent;	
 		cursor: pointer;
 		float: right;
@@ -94,7 +91,7 @@ input{
 			background-color: #fff;
 		}
 		&:focus {	
-			width: 100px;	
+			width:  200px;	
 			padding-left: 32px;	
 			color: #000;
 			background-color: #fff;
@@ -106,11 +103,19 @@ input{
 }
 //begining nessecary for header_menu js code
 @include breakpoint(mobileonly){
+	.search-right{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
 	.header_menu{
 		ul{
 			display: none;
 			li{
 				padding: 10px 10px;
+				&:first-child{
+					margin-top: 30px;
+				}
 
 			}
 		}
