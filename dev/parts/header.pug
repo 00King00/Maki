@@ -25,24 +25,27 @@
 		.row.clearfix
 			.col-phablet-1-4
 				.logo
-					img(src="../images/logo.png", alt="")
+					a(href="/")
+						img(src="../images/logo.png", alt="")
 					p Интернет-магазин цветов
 			.col-phablet-1-2
 				.contacts
-					.contacts-main
+					.contacts-address
 						p
 							span.bold г. Челябинск,
-							| ул. Воровского, 30А e-mail: buket@mail.ru
+							| ул. Воровского, 30А 
+							a(href="buket@mail.ru") e-mail: buket@mail.ru
 						.number
 							i.phone
-							span.p-red 8(351)
-							span.p-number 567 21 46
+							a(href="83515672146")
+								span.p-red.extent 8(351)
+								span.p-number 567 21 46
 			.col-phablet-1-4
 				.bascet
 					a(href="")
 						img(src="../images/cat.png", alt="")
-					p
+					span.ware
 						span.bold 10 товаров
-					p на сумму
-						span.bold 1000 руб.
+					span на сумму
+						span.bold.extent 1000 руб.
 	include ./header_categories.pug

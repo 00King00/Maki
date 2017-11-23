@@ -29,8 +29,13 @@ body{
 		text-decoration:none;
 	}
 }
-
 .news{
+	// padding-top:75px;
+}
+.news_title{
+	padding-left:10px;
+	// margin-bottom:20px;
+	display:inline-block;
 	font-size:23px;
 	color:#333333;
 	&_all{
@@ -38,6 +43,7 @@ body{
 			color:#7b7b7b;
 			font-size:13px;
 			text-decoration:underline;
+			padding-right:10px;
 		}
 	}
 }
@@ -214,8 +220,8 @@ body{
 	}
 }
 .paging{
-	margin-top: 30px;
-	margin-bottom: 80px;
+	margin-top: 60px;
+	margin-bottom: 60px;
 	text-align:center;
 	ul{
 		display:inline-block;

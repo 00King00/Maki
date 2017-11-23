@@ -92,13 +92,16 @@
 }
 
 .contacts{
-	.contacts-main{
+	.contacts-address{
 		margin: 0 auto;
 		width: 220px;
 		p{
 			font-size: 13px;
 			line-height: 19px;
-
+      a{
+        display: block;
+        color: #000;
+      }
 		}
 		.number{
 			margin-top: 25px;
@@ -110,24 +113,32 @@
 				padding-right: 20px;
 				margin-bottom: -3px;
 			}
-			.p-red{
-				padding-right: 10px;
-				font-size: 15px;
-				color: #ff9999;
-			}
-			.p-number{
-				font-size: 21px
-			}
+      a{
+        color: #000;
+        .p-red{
+  				font-size: 15px;
+  				color: #ff9999;
+  			}
+  			.p-number{
+  				font-size: 21px
+  			}
+      }
 		}
 	}
 }
-
+.extent{
+  padding: 0 5px;
+}
 .bascet{
 	a{
 		display: block;
 		margin-bottom: 19px;
 	}
-	p{
+  .ware{
+    display: block;
+  }
+	span{
+    padding-right: 5px;
 		font-size: 13px;
 		line-height: 18px;
 	}
