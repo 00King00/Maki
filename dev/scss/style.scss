@@ -230,3 +230,29 @@ body{
 	}
 
 }
+
+// start filterst block
+
+@include breakpoint(phablet){
+	.for-phablet{
+		display: block;
+		ul{
+			li{
+				display: block;
+				padding: 10px;
+			}
+		}
+	}
+	.for-tablet{
+		display: none;
+	}
+}
+
+@include breakpoint(tablet){
+	.for-phablet{
+		display: none;
+	}
+	.for-tablet{
+		display: block;
+	}
+}
