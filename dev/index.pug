@@ -15,53 +15,84 @@ html
 							li 3
 							li 4		
 				.col-phablet-1-4
-					.btn Фильтр
-					.article_title
-						|Стоимость
-					.article_title
-						|Букеты с
-					table
-						tr
-							td 
-								label
-									input(type="checkbox",name="Roza")
-									|Розы
-							td
-								label
-									input(type="checkbox",name="Orchid")
-									|Орхидея
-						tr
-							td
-								label
-									input(type="checkbox",name="Lily") 
-									|Лилия
-							td
-								label
-									input(type="checkbox",name="Gerber")
-									|Гербер
-					.article_title
-						|Кому
-					table
-						tr
-							td 
-								label
-									input(type="checkbox",name="man")
-									|Мужчина
-							td
-								label
-									input(type="checkbox",name="kid")
-									|Ребенок
-						tr
-							td
-								label
-									input(type="checkbox",name="woman") 
-									|Женщина
-							td
-								label
-									input(type="checkbox",name="family")
-									|Семья
-					.article_title
-						|Поиск
+                    .btn Фильтр
+                    .for-fhablet
+                        .article_title Стоимость
+                        .article_title Букеты с
+                        
+                        ul
+                            li
+                                label
+                                    input(type="checkbox",name="Roza") Розы
+                            li
+                                label
+                                    input(type="checkbox",name="Orchid") Орхидея
+                            li
+                                label
+                                    input(type="checkbox",name="Lily") Лилия
+                                label
+                                    input(type="checkbox",name="Gerber") Гербер
+				        .article_title Кому
+                            ul
+                            li
+                                label
+                                    input(type="checkbox",name="man") Мужчина
+                            li
+                                label
+                                    input(type="checkbox",name="kid") Ребенок
+                            li
+                                label
+                                    input(type="checkbox",name="woman") Женщина
+                                label
+                                   input(type="checkbox",name="family") Семья
+                        .article_title Поиск
+                    .for-tablet
+                        .article_title
+                            |Стоимость
+                        .article_title
+                            |Букеты с
+                        table
+                            tr
+                                td 
+                                    label
+                                        input(type="checkbox",name="Roza")
+                                        |Розы
+                                td
+                                    label
+                                        input(type="checkbox",name="Orchid")
+                                        |Орхидея
+                            tr
+                                td
+                                    label
+                                        input(type="checkbox",name="Lily") 
+                                        |Лилия
+                                td
+                                    label
+                                        input(type="checkbox",name="Gerber")
+                                        |Гербер
+                        .article_title
+                            |Кому
+                        table
+                            tr
+                                td 
+                                    label
+                                        input(type="checkbox",name="man")
+                                        |Мужчина
+                                td
+                                    label
+                                        input(type="checkbox",name="kid")
+                                        |Ребенок
+                            tr
+                                td
+                                    label
+                                        input(type="checkbox",name="woman") 
+                                        |Женщина
+                                td
+                                    label
+                                        input(type="checkbox",name="family")
+                                        |Семья
+                        .article_title
+                            |Поиск
 			.row.clearfix
 				.news
 					|Новости
