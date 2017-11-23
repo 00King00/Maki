@@ -1,7 +1,10 @@
-
 a{
 	text-decoration:none;
 }
+img{
+	max-width:100%;
+}
+
 @mixin breakpoint($point) {
 	@if $point == desktop {
 	  @media (min-width: 70em) { @content ; }
@@ -17,15 +20,16 @@ a{
    }
    @else if $point == mobileonly {
 	  @media (max-width: 37.5em)  { @content ; }
- 
    }
 }
+
 body{
 	font-family: 'Open Sans', sans-serif;
 	a{
 		text-decoration:none;
 	}
 }
+
 .news{
 	font-size:23px;
 	color:#333333;
@@ -110,6 +114,7 @@ body{
 		}
 	}
 }
+
 .footer{
 	text-align: center;
 	margin-top:95px;
@@ -139,48 +144,84 @@ body{
 		text-decoration:underline;
 	}
 }
+
 .bottom-line{
 	padding:15px 0;
 	background: #ff7575;
 	color:#fff;
 	font-size:13px;
-
 }
+
 .rights{
 	display:inline-block;
 }
+
 .pull-right{
-	float:right;
+	@include breakpoint(phablet){
+		float:right;
+	}
+}
+
+.catalog{
+	text-align:center;
 }
 
 .catalog-item{
-	position:relative;
-	width:220px;
-	height:370px;
-	text-align:center;
-}
-.item__name{
+	margin-top:60px;
 	display:inline-block;
+	height:390px;
+	text-align:center;
+	@include breakpoint(phablet){
+		margin:0;
+	}
+}
+
+.item__name{
 	color:#333333;
 	font-size:15px;
 	margin-top:20px;
+	min-height:40px;
 }
+
 .item__price{
 	width:100%;
-	display:inline-block;
 	color:#333333;
 	font-size:15px;
 	font-weight:bold;
 	margin-top: 10px;
 }
+
 .btn_order{
 	display:inline-block;
-	position:absolute;
-	bottom:3%;
-	left:50%;
-	margin-left:-67px;
+	margin-top: 20px;
 	text-align: center;
 	padding: 15px 30px;
 	border:1px solid #959595;
+	&:hover{
+		color:#fff;
+		background: #ff7575;
+		border:1px solid #ff7575;
+	}
 }
 
+.paging{
+	margin-top: 30px;
+	margin-bottom: 80px;
+	text-align:center;
+	ul{
+		display:inline-block;
+		list-style: none;
+	}
+	li{
+		display:inline-block;
+		padding:10px 13px;
+		border: 1px solid #959595;
+		color:#959595;
+		&:active{
+			color:#fff;
+			background: #ff7575;
+			border:1px solid #ff7575;
+		}
+	}
+
+}

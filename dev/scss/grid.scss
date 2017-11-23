@@ -45,7 +45,9 @@
 	padding: 0 10px;
 	min-height: 1px;
 	border: 2px solid red;
-	
+	@include breakpoint(phablet){
+		float: left;
+	}
 }
 .show-phablet{
   display:none;

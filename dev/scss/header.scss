@@ -73,16 +73,12 @@
 	}
 }
 .header{
-	height: 50vh;
+	//height: 50vh;
 	background: url("/images/background_maki.png");
 	background-size: cover;
-	background-repeat:no-repeat;
+	// background-repeat: repeat-y; 
 	border-top: 1px solid #ebebeb;
 }
-
-
-
-
 .logo{
 	p{
 	    margin-top: 17px;
@@ -124,6 +120,7 @@
 		}
 	}	
 }
+
 .bascet{
 	a{
 		display: block;
