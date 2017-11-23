@@ -15,11 +15,11 @@ html
 							li 3
 							li 4
                             
-				.col-phablet-1-4
+				.col-phablet-1-4.filters
 					.btn Фильтр
 					.for-phablet
-						.article_title Стоимость
-						.article_title Букеты с
+						.filters__parameter Стоимость
+						.filters__parameter Букеты с
 						ul
 							li
 								label(for="roses")
@@ -37,29 +37,29 @@ html
 								label(for="gerber")
 									input(type="checkbox",id="gerber")
 									| Гербер
-						.article_title Кому
+						.filters__parameter Кому
 						ul
 							li
-								label(for="man")
-									input(type="checkbox",id="man")
+								label
+									input(type="checkbox",name="man")
 									| Мужчина
 							li
-								label(for="kid")
-									input(type="checkbox",id="kid")
+								label
+									input(type="checkbox",name="kid")
 									| Ребенок
 							li
-								label(for="woman")
-									input(type="checkbox",id="woman")
+								label
+									input(type="checkbox",name="woman")
 									| Женщина
 							li
-								label(for="family")
-									input(type="checkbox",id="family")
+								label
+									input(type="checkbox",name="family")
 									| Семья
-						.article_title Поиск
+						.filters__parameter Поиск
 					.for-tablet
-						.article_title
+						.filters__parameter
 							|Стоимость
-						.article_title
+						.filters__parameter
 							|Букеты с
 						table
 							tr
@@ -80,7 +80,7 @@ html
 									label(for="gerber")
 										input(type="checkbox",id="gerber")
 										|Гербер
-						.article_title
+						.filters__parameter
 							|Кому
 						table
 							tr
@@ -101,7 +101,7 @@ html
 									label(for="family")
 										input(type="checkbox",id="family")
 										|Семья
-						.article_title
+						.filters__parameter
 							|Поиск
 			.clearfix.news
 				|Новости
@@ -141,3 +141,4 @@ html
 							a(href="#").article__title
 								|Розыгрыш новогоднего подарка
 		include ./parts/footer.pug
+		
