@@ -42,8 +42,8 @@
 	}	
 }
 .categories{
+	margin-top:80px;
 	background:rgba(255,255,255,.5);
-	padding:10px;
 	a{
 		text-decoration: none;
 		color:#333333;
@@ -148,7 +148,7 @@
 		&:focus {
 			display:block;	
 			height:39px;
-			width:  200px;	
+			width:  170px;	
 			padding-left: 32px;	
 			color: #000;
 			background-color: #fff;
