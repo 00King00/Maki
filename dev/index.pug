@@ -15,11 +15,11 @@ html
 							li 3
 							li 4
                             
-				.col-phablet-1-4
+				.col-phablet-1-4.filters
 					.btn Фильтр
 					.for-phablet
-						.article_title Стоимость
-						.article_title Букеты с
+						.filters__parameter Стоимость
+						.filters__parameter Букеты с
 						ul
 							li
 								label
@@ -37,29 +37,29 @@ html
 								label
 									input(type="checkbox",name="Gerber")
 									| Гербер
-						.article_title Кому
-							ul
-								li
-									label
-										input(type="checkbox",name="man")
-										| Мужчина
-								li
-									label
-										input(type="checkbox",name="kid")
-										| Ребенок
-								li
-									label
-										input(type="checkbox",name="woman")
-										| Женщина
-								li
-									label
-										input(type="checkbox",name="family")
-										| Семья
-						.article_title Поиск
+						.filters__parameter Кому
+						ul
+							li
+								label
+									input(type="checkbox",name="man")
+									| Мужчина
+							li
+								label
+									input(type="checkbox",name="kid")
+									| Ребенок
+							li
+								label
+									input(type="checkbox",name="woman")
+									| Женщина
+							li
+								label
+									input(type="checkbox",name="family")
+									| Семья
+						.filters__parameter Поиск
 					.for-tablet
-						.article_title
+						.filters__parameter
 							|Стоимость
-						.article_title
+						.filters__parameter
 							|Букеты с
 						table
 							tr
@@ -80,7 +80,7 @@ html
 									label
 										input(type="checkbox",name="Gerber")
 										|Гербер
-						.article_title
+						.filters__parameter
 							|Кому
 						table
 							tr
@@ -101,7 +101,7 @@ html
 									label
 										input(type="checkbox",name="family")
 										|Семья
-						.article_title
+						.filters__parameter
 							|Поиск
                             
 			.row.clearfix
@@ -144,3 +144,4 @@ html
 						a(href="#").article_title
 							|Розыгрыш новогоднего подарка
 		include ./parts/footer.pug
+		

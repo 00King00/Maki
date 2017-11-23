@@ -120,7 +120,7 @@ body{
 	margin-top:95px;
 	background-color:#f0f0f0;
 	padding:47px 0 47px 0;
-	@include breakpoint(laptop){
+	@include breakpoint(tablet){
 		text-align:left;
 	}
 	ul:first-child{
@@ -128,9 +128,10 @@ body{
 	}
 	ul{
 		display:block;
-		@include breakpoint(laptop){
+		@include breakpoint(tablet){
 			display:inline-block;
-			margin-right:120px;
+			margin-right:80px;
+			text-align: left;
 		}
 	}
 	li{
@@ -233,7 +234,24 @@ body{
 }
 
 // start filterst block
-.for-phablet, .for-tablet{
+.filters{
+	tr{
+		td{
+		//display: inline-block;
+		&:last-child{
+			text-align: right;
+		}
+	}
+	}
+	
+	
+}
+.filters__parameter{
+	margin-bottom: 15px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.for-phablet{
 	display: none;
 }
 @include breakpoint(phablet){
