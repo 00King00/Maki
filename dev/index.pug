@@ -8,7 +8,7 @@ html
 				.col-phablet-3-4
 					.row.clearfix.catalog
 						include ./parts/catalog.pug
-					.row.paging
+					.paging
 						ul
 							li 1
 							li 2
@@ -22,20 +22,20 @@ html
 						.filters__parameter Букеты с
 						ul
 							li
-								label
-									input(type="checkbox",name="Roza")
+								label(for="roses")
+									input(type="checkbox",id="roses")
 									| Розы
 							li
-								label
-									input(type="checkbox",name="Orchid")
+								label(for="orchid")
+									input(type="checkbox",id="orchid")
 									| Орхидея
 							li
-								label
-									input(type="checkbox",name="Lily")
+								label(for="lily")
+									input(type="checkbox",id="lily")
 									| Лилия
 							li
-								label
-									input(type="checkbox",name="Gerber")
+								label(for="gerber")
+									input(type="checkbox",id="gerber")
 									| Гербер
 						.filters__parameter Кому
 						ul
@@ -64,50 +64,50 @@ html
 						table
 							tr
 								td
-									label
-										input(type="checkbox",name="Roza")
+									label(for="roses")
+										input(type="checkbox",id="roses")
 										|Розы
 								td
-									label
-										input(type="checkbox",name="Orchid")
+									label(for="orchid")
+										input(type="checkbox",id="orchid")
 										|Орхидея
 							tr
 								td
-									label
-										input(type="checkbox",name="Lily")
+									label(for="lily")
+										input(type="checkbox",id="lily")
 										|Лилия
 								td
-									label
-										input(type="checkbox",name="Gerber")
+									label(for="gerber")
+										input(type="checkbox",id="gerber")
 										|Гербер
 						.filters__parameter
 							|Кому
 						table
 							tr
 								td
-									label
-										input(type="checkbox",name="man")
+									label(for="man")
+										input(type="checkbox",id="man")
 										|Мужчина
 								td
-									label
-										input(type="checkbox",name="kid")
+									label(for="kid")
+										input(type="checkbox",id="kid")
 										|Ребенок
 							tr
 								td
-									label
-										input(type="checkbox",name="woman") 
+									label(for="woman")
+										input(type="checkbox",id="woman") 
 										|Женщина
 								td
-									label
-										input(type="checkbox",name="family")
+									label(for="family")
+										input(type="checkbox",id="family")
 										|Семья
 						.filters__parameter
 							|Поиск
                             
-			.row.clearfix
-				.news
+			.row.clearfix.news
+				.news_title
 					|Новости
-				.news_all.pull-right
+				.news_title_all.pull-right
 					a(href="#") Все новости
 			.row.clearfix
 				.col-phablet-1-3
