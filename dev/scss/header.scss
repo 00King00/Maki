@@ -65,9 +65,60 @@
 	}
 }
 .header{
-	height: 50vh;
+	//height: 50vh;
 	background: url("/images/background_maki.png");
 	background-size: cover;
-	background-repeat: repeat-y; 
+	// background-repeat: repeat-y; 
 	border-top: 1px solid #ebebeb;
+}
+.logo{
+	p{
+	    margin-top: 17px;
+		color: #b0b1af;
+	}
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.contacts{
+	.contacts-main{
+		margin: 0 auto;
+		width: 220px;
+		p{
+			font-size: 13px;
+			line-height: 19px;
+			
+		}
+		.number{
+			margin-top: 25px;
+			.phone{
+				background: url(/images/tel.png) no-repeat;
+				width: 14px;
+				height: 16px;
+				display: inline-block;
+				padding-right: 20px;
+				margin-bottom: -3px;
+			}
+            .p-red{
+				padding-right: 10px;
+				font-size: 15px;
+				color: #ff9999;
+			}
+			.p-number{
+				font-size: 21px
+			}
+		}
+	}	
+}
+.bascet{
+	a{
+		display: block;
+		margin-bottom: 19px;
+	}
+	p{
+		font-size: 13px;
+		line-height: 18px;
+	}
 }
