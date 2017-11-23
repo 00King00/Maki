@@ -16,16 +16,20 @@
 
   }
 }
+
 .header_menu{
+	
 	li{
 		list-style:none;
-		padding: 10px;
+		
 		display:block;
 		text-align:center;
-		margin-right:45px;
 		color: #333333;
 		font-size: 17px;
-		@include breakpoint(tablet){
+		&.active{
+			border: 1px solid #ffa8a8;
+		}
+		@include breakpoint(phablet){
 			display:inline-block;;
 		}
 	}
@@ -112,6 +116,7 @@
 		}
 	}	
 }
+
 .bascet{
 	a{
 		display: block;
@@ -120,5 +125,85 @@
 	p{
 		font-size: 13px;
 		line-height: 18px;
+	}
+}
+
+.search-right{
+	float: right;
+	box-sizing:border-box;
+	input[type="search"] {
+		background: #ededed url(images/search-icon.png) no-repeat 9px right;
+		width: 15px;
+		height: 30px;
+		color: transparent;	
+		cursor: pointer;
+		float: right;
+		
+		&:hover {	
+			background-color: #fff;
+		}
+		&:focus {	
+			width:  200px;	
+			padding-left: 32px;	
+			color: #000;
+			background-color: #fff;
+			cursor: auto;
+			outline: none;
+			border: 1px solid #ffa8a8;
+		}
+	}		
+}
+//begining nessecary for header_menu js code
+@include breakpoint(mobileonly){
+	.search-right{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.header_menu{
+		ul{
+			display: none;
+			li{
+				padding: 10px 10px;
+				&:first-child{
+					margin-top: 30px;
+				}
+
+			}
+		}
+		img{
+			height: 30px;
+			width: 30px;
+			&:last-child{
+				transform: rotate(180deg);
+				display: none;
+			}
+		}
+	}
+	
+	
+
+}
+@include breakpoint(phablet){
+	.header_menu{
+		img{
+			display: none;
+		}
+		li{
+			padding: 10px 3px;
+			
+		}
+	}
+}
+@include breakpoint(tablet){
+	.header_menu{
+		img{
+			display: none;
+		}
+		li{
+			padding: 10px 5px;
+			margin-right: 30px;
+			
+		}
 	}
 }
