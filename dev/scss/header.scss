@@ -136,24 +136,24 @@
 	float: right;
 	box-sizing:border-box;
 	input[type="search"] {
-		background: #ededed url(images/search-icon.png) no-repeat 9px right;
-		width: 15px;
-		height: 30px;
 		color: transparent;	
 		cursor: pointer;
 		float: right;
+		width:0;
+		height:0;
 		
 		&:hover {	
 			background-color: #fff;
 		}
-		&:focus {	
+		&:focus {
+			display:block;	
+			height:39px;
 			width:  200px;	
 			padding-left: 32px;	
 			color: #000;
 			background-color: #fff;
 			cursor: auto;
 			outline: none;
-			border: 1px solid #ffa8a8;
 		}
 	}		
 }
