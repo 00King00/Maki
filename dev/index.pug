@@ -7,99 +7,110 @@ html
 			.row.clearfix
 				.col-phablet-3-4
 					.row.clearfix.catalog
-						include ./parts/catalog.pug	
+						include ./parts/catalog.pug
 					.row.paging
 						ul
 							li 1
 							li 2
 							li 3
-							li 4		
+							li 4
+                            
 				.col-phablet-1-4
-                    .btn Фильтр
-                    .for-fhablet
-                        .article_title Стоимость
-                        .article_title Букеты с
-                        
-                        ul
-                            li
-                                label
-                                    input(type="checkbox",name="Roza") Розы
-                            li
-                                label
-                                    input(type="checkbox",name="Orchid") Орхидея
-                            li
-                                label
-                                    input(type="checkbox",name="Lily") Лилия
-                                label
-                                    input(type="checkbox",name="Gerber") Гербер
-				        .article_title Кому
-                            ul
-                            li
-                                label
-                                    input(type="checkbox",name="man") Мужчина
-                            li
-                                label
-                                    input(type="checkbox",name="kid") Ребенок
-                            li
-                                label
-                                    input(type="checkbox",name="woman") Женщина
-                                label
-                                   input(type="checkbox",name="family") Семья
-                        .article_title Поиск
-                    .for-tablet
-                        .article_title
-                            |Стоимость
-                        .article_title
-                            |Букеты с
-                        table
-                            tr
-                                td 
-                                    label
-                                        input(type="checkbox",name="Roza")
-                                        |Розы
-                                td
-                                    label
-                                        input(type="checkbox",name="Orchid")
-                                        |Орхидея
-                            tr
-                                td
-                                    label
-                                        input(type="checkbox",name="Lily") 
-                                        |Лилия
-                                td
-                                    label
-                                        input(type="checkbox",name="Gerber")
-                                        |Гербер
-                        .article_title
-                            |Кому
-                        table
-                            tr
-                                td 
-                                    label
-                                        input(type="checkbox",name="man")
-                                        |Мужчина
-                                td
-                                    label
-                                        input(type="checkbox",name="kid")
-                                        |Ребенок
-                            tr
-                                td
-                                    label
-                                        input(type="checkbox",name="woman") 
-                                        |Женщина
-                                td
-                                    label
-                                        input(type="checkbox",name="family")
-                                        |Семья
-                        .article_title
-                            |Поиск
+					.btn Фильтр
+					.for-phablet
+						.article_title Стоимость
+						.article_title Букеты с
+						ul
+							li
+								label
+									input(type="checkbox",name="Roza")
+									| Розы
+							li
+								label
+									input(type="checkbox",name="Orchid")
+									| Орхидея
+							li
+								label
+									input(type="checkbox",name="Lily")
+									| Лилия
+							li
+								label
+									input(type="checkbox",name="Gerber")
+									| Гербер
+						.article_title Кому
+							ul
+								li
+									label
+										input(type="checkbox",name="man")
+										| Мужчина
+								li
+									label
+										input(type="checkbox",name="kid")
+										| Ребенок
+								li
+									label
+										input(type="checkbox",name="woman")
+										| Женщина
+								li
+									label
+										input(type="checkbox",name="family")
+										| Семья
+						.article_title Поиск
+					.for-tablet
+						.article_title
+							|Стоимость
+						.article_title
+							|Букеты с
+						table
+							tr
+								td
+									label
+										input(type="checkbox",name="Roza")
+										|Розы
+								td
+									label
+										input(type="checkbox",name="Orchid")
+										|Орхидея
+							tr
+								td
+									label
+										input(type="checkbox",name="Lily")
+										|Лилия
+								td
+									label
+										input(type="checkbox",name="Gerber")
+										|Гербер
+						.article_title
+							|Кому
+						table
+							tr
+								td
+									label
+										input(type="checkbox",name="man")
+										|Мужчина
+								td
+									label
+										input(type="checkbox",name="kid")
+										|Ребенок
+							tr
+								td
+									label
+										input(type="checkbox",name="woman") 
+										|Женщина
+								td
+									label
+										input(type="checkbox",name="family")
+										|Семья
+						.article_title
+							|Поиск
+                            
 			.row.clearfix
 				.news
 					|Новости
 				.news_all.pull-right
 					a(href="#") Все новости
 			.row.clearfix
-				.col-phablet-1-3 
+				.col-phablet-1-3
 					.article
 						a(href="#").article_pic
 							img(src="/images/news_1.png")
@@ -121,7 +132,7 @@ html
 							|01.01.16
 						a(href="#").article_title
 							|Как украсить дом к Новому году?
-				.col-phablet-1-3 
+				.col-phablet-1-3
 					.article
 						a(href="#").article_pic
 							img(src="/images/news_3.png")
