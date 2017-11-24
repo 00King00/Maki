@@ -30,51 +30,45 @@ body{
 	}
 }
 .news{
-	// padding-top:75px;
-}
-.news_title{
-	padding-left:10px;
-	// margin-bottom:20px;
-	display:inline-block;
+	margin-bottom:90px;
 	font-size:23px;
 	color:#333333;
-	&_all{
-		a{
+	a.pull-right{
 			color:#7b7b7b;
 			font-size:13px;
 			text-decoration:underline;
 			padding-right:10px;
 		}
-	}
+}
+.ta-center{
+	text-align:center;
 }
 .article{
-	margin-top:30px;
-	text-align:center;
-	@include breakpoint(phablet){
-		margin-top:0;
-	}
+	margin: 50px 0;
+	// text-align:center;
 	a{
-		display:inline-block;
-		color:#333333;
+		// display:inline-block;
+		// color:#333333;
 	}
 	img{
 		max-width:100%;
 	}
-	&_title{
+	&__title{
 		text-decoration:none;
 		display: block;
-		margin-top: 10px;
 		font-weight:bold;
 		font-size:15px;
+		color:#333333;
 	}
-	.pub-date{
+	&__pub-date{
+		text-align:left;
 		display:block;
-		margin-top: 20px;
 		font-style:italic;
 		font-size: 13px;
 		color: #999999;
 	}
-	&_pic{
+	&__pic{
+		display:inline-block;
 		position: relative;
 		img {
 			opacity: 1;
@@ -83,7 +77,7 @@ body{
 			transition: .5s ease;
 			backface-visibility: hidden;
 		}
-		.middle{
+		.pic__inner{
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -99,20 +93,9 @@ body{
 			text-transform: uppercase;
 			letter-spacing: 3px;
 		}
-		.text {
-			position:absolute;
-			margin-top:-25px;
-			margin-left:-84px;
-			top: 50%;
-			left: 50%;
-			border:1px solid #fff;
-			color: #fff;
-			font-size: 16px;
-			padding: 16px 32px;
-		}
 	}
-	&_pic:hover{
-		.middle{
+	&__pic:hover{
+		.pic__inner{
 			opacity:1;
 		}
 		img{
@@ -123,7 +106,6 @@ body{
 
 .footer{
 	text-align: center;
-	margin-top:95px;
 	background-color:#f0f0f0;
 	padding:47px 0 47px 0;
 	@include breakpoint(tablet){
@@ -164,9 +146,7 @@ body{
 }
 
 .pull-right{
-	@include breakpoint(phablet){
 		float:right;
-	}
 }
 
 .catalog{
@@ -207,7 +187,6 @@ body{
 
 .btn{
 		display:inline-block;
-		margin-top: 20px;
 		text-align: center;
 		padding: 15px 30px;
 		border:1px solid #959595;
@@ -216,7 +195,23 @@ body{
 			background: #ff7575;
 			border:1px solid #ff7575;
 		}
+	&_article{
+			position:absolute;
+			margin-top:-25px;
+			margin-left:-84px;
+			top: 50%;
+			left: 50%;
+			border:1px solid #fff;
+			color: #fff;
+			font-size: 16px;
+			padding: 16px 32px;
+		&:hover{
+			background:transparent;
+			border:1px solid #fff;
+		}
 	}
+}
+
 
 .paging{
 	margin-top: 60px;
