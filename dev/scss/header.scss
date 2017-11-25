@@ -139,7 +139,9 @@
 	box-sizing:border-box;
 	position: relative;
 	input[type="search"] {
+		border:1px solid #ff7575;
 		color: transparent;
+		opacity:0;
 		cursor: pointer;
 		float: right;
 		width:0;
@@ -152,6 +154,7 @@
 			background-color: #fff;
 		}
 		&:focus {
+			opacity:1;
 			display:block;
 			height:38px;
 			width: 200px;
