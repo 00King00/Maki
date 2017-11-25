@@ -30,51 +30,42 @@ body{
 	}
 }
 .news{
-	// padding-top:75px;
-}
-.news_title{
-	padding-left:10px;
-	// margin-bottom:20px;
-	display:inline-block;
+	margin-bottom:90px;
 	font-size:23px;
 	color:#333333;
-	&_all{
-		a{
+	a.pull-right{
 			color:#7b7b7b;
 			font-size:13px;
 			text-decoration:underline;
 			padding-right:10px;
 		}
-	}
+}
+.ta-center{
+	text-align:center;
 }
 .article{
-	margin-top:30px;
-	text-align:center;
-	@include breakpoint(phablet){
-		margin-top:0;
-	}
-	a{
-		display:inline-block;
-		color:#333333;
-	}
+	margin: 50px 0;
+	display:inline-block;
 	img{
 		max-width:100%;
 	}
-	&_title{
+	&__title{
+		text-align:left;
 		text-decoration:none;
 		display: block;
-		margin-top: 10px;
 		font-weight:bold;
 		font-size:15px;
+		color:#333333;
 	}
-	.pub-date{
+	&__pub-date{
+		text-align:left;
 		display:block;
-		margin-top: 20px;
 		font-style:italic;
 		font-size: 13px;
 		color: #999999;
 	}
-	&_pic{
+	&__pic{
+		display:inline-block;
 		position: relative;
 		img {
 			opacity: 1;
@@ -85,7 +76,7 @@ body{
 			-webkit-backface-visibility: hidden;
 			        backface-visibility: hidden;
 		}
-		.middle{
+		.pic__inner{
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -102,20 +93,9 @@ body{
 			text-transform: uppercase;
 			letter-spacing: 3px;
 		}
-		.text {
-			position:absolute;
-			margin-top:-25px;
-			margin-left:-84px;
-			top: 50%;
-			left: 50%;
-			border:1px solid #fff;
-			color: #fff;
-			font-size: 16px;
-			padding: 16px 32px;
-		}
 	}
-	&_pic:hover{
-		.middle{
+	&__pic:hover{
+		.pic__inner{
 			opacity:1;
 		}
 		img{
@@ -126,10 +106,9 @@ body{
 
 .footer{
 	text-align: center;
-	margin-top:95px;
 	background-color:#f0f0f0;
 	padding:47px 0 47px 0;
-	@include breakpoint(laptop){
+	@include breakpoint(tablet){
 		text-align:left;
 	}
 	ul:first-child{
@@ -137,9 +116,10 @@ body{
 	}
 	ul{
 		display:block;
-		@include breakpoint(laptop){
+		@include breakpoint(tablet){
 			display:inline-block;
-			margin-right:120px;
+			margin-right:80px;
+			text-align: left;
 		}
 	}
 	li{
@@ -166,59 +146,126 @@ body{
 }
 
 .pull-right{
-	@include breakpoint(phablet){
 		float:right;
-	}
 }
 
 .catalog{
 	text-align:center;
 }
+//col-phablet-1-2.line{
+//		&:after{
+//			content: "";
+//			height: 4px;
+//			background: red;
+//			display: block;
+//		}
+//}
+.clearfix-phablet{
+	min-height: 1px;
+	clear: both;
+}
+.clearfix-tablet{
+	min-height: 1px;
+	clear: both;
+}
+@include breakpoint(mobileonly){
+	
+	.line-mobileonly{
+		height: 4px;
+		background: red;
+		display: block;
+		width: 100%;
+	}
+}
+@include breakpoint(phablet){
+	
+	.line-phablet{
+		height: 4px;
+		background: red;
+		display: block;
+		width: 100%;
+	}
+	.clearfix-tablet{
+		display: none;
+	}
+	.line-mobileonly{
+		display: none;
+	}
+}
+@include breakpoint(tablet){
+	
+	.line-tablet{
+		height: 4px;
+		background: red;
+		display: block;
+		width: 100%;
+	}
+	
+	.line-phablet{
+		display: none;
+		
+	}
+	.clearfix-phablet{
+		display: none;
+	}
+	.clearfix-tablet{
+		display: block;
+	}
+}
+
+
+
 
 .product{
-	margin-top:60px;
 	display:inline-block;
 	height:400px;
 	text-align:center;
-
-	@include breakpoint(phablet){
-		margin:0;
-	}
-	.product__pic{
-		img{
-			min-width: 50%;
+	&__pic{
 		}
-	}
-	.product__name{
+	&__name{
 		color:#333333;
 		font-size:15px;
-		margin-top:20px;
+		margin-bottom:20px;
 		@include breakpoint(phablet){
 			min-height:50px;
 		}
 	}
 
-	.procuct__price{
-		width:100%;
+	&__price{
 		color:#333333;
 		font-size:15px;
 		font-weight:bold;
-		margin-top: 10px;
+		margin-bottom:20px;
 	}
 }
 
 .btn{
-		display:inline-block;
-		margin-top: 20px;
-		text-align: center;
-		padding: 15px 30px;
-		border:1px solid #959595;
+	display:inline-block;
+	text-align: center;
+	padding: 15px 30px;
+	border:1px solid #959595;
 		&:hover{
 			color:#fff;
 			background: #ff7575;
 			border:1px solid #ff7575;
 		}
+	&_article{
+			position:absolute;
+			margin-top:-25px;
+			margin-left:-84px;
+			top: 50%;
+			left: 50%;
+			border:1px solid #fff;
+			color: #fff;
+			font-size: 16px;
+			padding: 16px 32px;
+		&:hover{
+			background:transparent;
+			border:1px solid #fff;
+		}
 	}
+}
+
 
 .paging{
 	margin-top: 60px;
@@ -243,7 +290,13 @@ body{
 }
 
 // start filterst block
-.for-phablet, .for-tablet{
+
+.filters__parameter{
+	margin-bottom: 15px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.for-phablet{
 	display: none;
 }
 @include breakpoint(phablet){
@@ -267,6 +320,18 @@ body{
 	}
 	.for-tablet{
 		display: block;
+		ul{
+			display: inline-flex;
+			text-decoration: none;
+			li{
+				justify-content: space-around;
+				align-content: space-between;
+				
+			}
+		}
+		tr>td:child-first{
+			margin-right: 12px;
+		}
 	}
 	.for-tablet{
 		display: none;
