@@ -71,8 +71,10 @@ body{
 			opacity: 1;
 			display: block;
 			height: auto;
+			-webkit-transition: .5s ease;
 			transition: .5s ease;
-			backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+			        backface-visibility: hidden;
 		}
 		.pic__inner{
 			position: absolute;
@@ -84,6 +86,7 @@ body{
 			color: #fff;
 			background: rgba(214,102,107,.8);
 			opacity: 0;
+			-webkit-transition: opacity .7s;
 			transition: opacity .7s;
 			cursor: pointer;
 			font-size:32px;
@@ -329,6 +332,18 @@ body{
 		tr>td:child-first{
 			margin-right: 12px;
 		}
+	}
+	.for-tablet{
+		display: none;
+	}
+}
+
+@include breakpoint(mobileonly){
+	.logo, .bascet{
+		text-align: center;
+	}
+	.contacts{
+		padding: 20px 0;
 	}
 }
 // end filterst block
