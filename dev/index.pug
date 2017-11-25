@@ -10,60 +10,64 @@ html
 						include ./parts/catalog.pug
 					.paging
 						ul
-							li 1
-							li 2
-							li 3
-							li 4
-                            
+							li
+								a(href="#") 1
+							li.active
+								a(href="#") 2
+							li
+								a(href="#") 3
+							li
+								a(href="#") 4    
 				.col-phablet-1-4.filters
 					a(href="#").btn.btn_filter
 						img(src="./images/filter_icon.png")
 						|  Фильтр
-					.for-phablet.for-tablet
-						.filters__parameter 
-							.title Стоимость
-						.filters__parameter
-							.title Букеты с
-							ul
-								li
-									label
-										input(type="checkbox")
-										| Розы
-								li
-									label
-										input(type="checkbox")
-										| Орхидея
-							ul
-								li
-									label
-										input(type="checkbox")
-										| Лилия
-								li
-									label
-										input(type="checkbox")
-										| Гербер
-						.filters__parameter 
-							.title Кому
-							ul
-								li
-									label
-										input(type="checkbox")
-										| Мужчина
-								li
-									label
-										input(type="checkbox")
-										| Ребенок
-							ul
-								li
-									label
-										input(type="checkbox")
-										| Женщина
-								li
-									label
-										input(type="checkbox")
-										| Семья
-						.filters__parameter
+					.filters__parameters
+						.filters__title Стоимость
+					.filters__parameters
+						.filters__title Букеты с
+						ul
+							li
+								label
+									input(type="checkbox")
+									| Розы
+							li
+								label
+									input(type="checkbox")
+									| Орхидея
+							li
+								label
+									input(type="checkbox")
+									| Лилия
+							li
+								label
+									input(type="checkbox")
+									| Гербер
+					.filters__parameters
+						.filters__title Кому
+						ul
+							li
+								label
+									input(type="checkbox")
+									| Мужчина
+							li
+								label
+									input(type="checkbox")
+									| Ребенок
+							li
+								label
+									input(type="checkbox")
+									| Женщина
+							li
+								label
+									input(type="checkbox")
+									| Семья
+					.filters__parameters
+						.filters__title
 							|Поиск
+						label(for="search")
+							input(type="search" placeholder="Искать")
+							img(src="/images/search-icon.png")
 			.clearfix.news
 				|Новости
 				a(href="#").pull-right Все новости

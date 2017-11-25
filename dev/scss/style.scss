@@ -44,7 +44,7 @@ body{
 	text-align:center;
 }
 .article{
-	margin: 50px 0;
+	margin: 20px 0;
 	display:inline-block;
 	img{
 		max-width:100%;
@@ -244,6 +244,7 @@ body{
 }
 
 .btn{
+	text-transform:uppercase;
 	display:inline-block;
 	color:#333333;
 	text-align: center;
@@ -251,8 +252,8 @@ body{
 	border:1px solid #959595;
 		&:hover{
 			color:#fff;
-			background: #ff7575;
-			border:1px solid #ff7575;
+			background: #ffa8a8;
+			border:1px solid #ffa8a8;
 		}
 	&_article{
 		position:absolute;
@@ -272,12 +273,12 @@ body{
 	&_filter{
 		text-transform:uppercase;
 		color:#919191;
-		border:1px solid #ff9999;
+		border:1px solid #ffa8a8;
 		margin-bottom:30px;
 		&:hover{
 			color:#919191;
 			background: #fff;
-			border:1px solid #ff9999;
+			border:1px solid #ffa8a8;
 		}
 	}
 }
@@ -296,20 +297,24 @@ body{
 		padding:10px 13px;
 		border: 1px solid #959595;
 		color:#959595;
-		&:active{
-			color:#fff;
-			background: #ff7575;
-			border:1px solid #ff7575;
+		a{
+			color:#959595;
 		}
+	.active{
+		color:#fff;
+		background: #ffa8a8;
+		border:1px solid #ff7575;
+	}
 	}
 
 }
 
 // start filterst block
 
-.filters__parameter{
+.filters__parameters{
 	margin-bottom: 50px;
-	.title{
+	.filters__title{
+		color:black;
 		font-size: 15px;
 		font-weight: bold;
 	}
@@ -320,14 +325,18 @@ body{
 		display:inline-block;
 		font-weight:normal;
 		margin-right:20px;
-		margin-bottom:-10px;
+		// margin-bottom:-10px;
 	}
 	li{
+		display:inline-block;
 		margin:10px 0;
 		width:92px;
 		input{
 			margin-right:8px;
 		}
+	}
+	input{
+		border: 1px solid transparent;
 	}
 }
 @include breakpoint(mobileonly){
