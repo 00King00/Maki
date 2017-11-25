@@ -16,91 +16,52 @@ html
 							li 4
                             
 				.col-phablet-1-4.filters
-					.btn Фильтр
-					.for-phablet
-						.filters__parameter Стоимость
-						.filters__parameter Букеты с
-						ul
-							li
-								label
-									input(type="checkbox")
-									| Розы
-							li
-								label
-									input(type="checkbox")
-									| Орхидея
-							li
-								label
-									input(type="checkbox")
-									| Лилия
-							li
-								label
-									input(type="checkbox")
-									| Гербер
-						.filters__parameter Кому
-						ul
-							li
-								label
-									input(type="checkbox")
-									| Мужчина
-							li
-								label
-									input(type="checkbox")
-									| Ребенок
-							li
-								label
-									input(type="checkbox")
-									| Женщина
-							li
-								label
-									input(type="checkbox")
-									| Семья
-						.filters__parameter Поиск
-					.for-tablet
+					a(href="#").btn.btn_filter
+						img(src="./images/filter_icon.png")
+						|  Фильтр
+					.for-phablet.for-tablet
+						.filters__parameter 
+							.title Стоимость
 						.filters__parameter
-							|Стоимость
-						.filters__parameter
-							|Букеты с
-						table
-							tr
-								td
-									label(for="roses")
-										input(type="checkbox",id="roses")
-										|Розы
-								td
-									label(for="orchid")
-										input(type="checkbox",id="orchid")
-										|Орхидея
-							tr
-								td
-									label(for="lily")
-										input(type="checkbox",id="lily")
-										|Лилия
-								td
-									label(for="gerber")
-										input(type="checkbox",id="gerber")
-										|Гербер
-						.filters__parameter
-							|Кому
-						table
-							tr
-								td
-									label(for="man")
-										input(type="checkbox",id="man")
-										|Мужчина
-								td
-									label(for="kid")
-										input(type="checkbox",id="kid")
-										|Ребенок
-							tr
-								td
-									label(for="woman")
-										input(type="checkbox",id="woman") 
-										|Женщина
-								td
-									label(for="family")
-										input(type="checkbox",id="family")
-										|Семья
+							.title Букеты с
+							ul
+								li
+									label
+										input(type="checkbox")
+										| Розы
+								li
+									label
+										input(type="checkbox")
+										| Орхидея
+							ul
+								li
+									label
+										input(type="checkbox")
+										| Лилия
+								li
+									label
+										input(type="checkbox")
+										| Гербер
+						.filters__parameter 
+							.title Кому
+							ul
+								li
+									label
+										input(type="checkbox")
+										| Мужчина
+								li
+									label
+										input(type="checkbox")
+										| Ребенок
+							ul
+								li
+									label
+										input(type="checkbox")
+										| Женщина
+								li
+									label
+										input(type="checkbox")
+										| Семья
 						.filters__parameter
 							|Поиск
 			.clearfix.news

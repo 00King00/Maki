@@ -255,18 +255,29 @@ body{
 			border:1px solid #ff7575;
 		}
 	&_article{
-			position:absolute;
-			margin-top:-25px;
-			margin-left:-84px;
-			top: 50%;
-			left: 50%;
-			border:1px solid #fff;
-			color: #fff;
-			font-size: 16px;
-			padding: 16px 32px;
+		position:absolute;
+		margin-top:-25px;
+		margin-left:-84px;
+		top: 50%;
+		left: 50%;
+		border:1px solid #fff;
+		color: #fff;
+		font-size: 16px;
+		padding: 16px 32px;
 		&:hover{
 			background:transparent;
 			border:1px solid #fff;
+		}
+	}
+	&_filter{
+		text-transform:uppercase;
+		color:#919191;
+		border:1px solid #ff9999;
+		margin-bottom:30px;
+		&:hover{
+			color:#919191;
+			background: #fff;
+			border:1px solid #ff9999;
 		}
 	}
 }
@@ -297,52 +308,28 @@ body{
 // start filterst block
 
 .filters__parameter{
-	margin-bottom: 15px;
-	font-size: 15px;
-	font-weight: bold;
-}
-.for-phablet{
-	display: none;
-}
-@include breakpoint(phablet){
-	.for-phablet{
-		display: block;
-		ul{
-			li{
-				display: block;
-				padding: 10px;
-			}
+	margin-bottom: 50px;
+	.title{
+		font-size: 15px;
+		font-weight: bold;
+	}
+	ul{
+		color:#333333;
+		font-size:15px;
+		list-style:none;
+		display:inline-block;
+		font-weight:normal;
+		margin-right:20px;
+		margin-bottom:-10px;
+	}
+	li{
+		margin:10px 0;
+		width:92px;
+		input{
+			margin-right:8px;
 		}
 	}
-	.for-tablet{
-		display: none;
-	}
 }
-
-@include breakpoint(tablet){
-	.for-phablet{
-		display: none;
-	}
-	.for-tablet{
-		display: block;
-		ul{
-			display: inline-flex;
-			text-decoration: none;
-			li{
-				justify-content: space-around;
-				align-content: space-between;
-				
-			}
-		}
-		tr>td:child-first{
-			margin-right: 12px;
-		}
-	}
-	.for-tablet{
-		display: none;
-	}
-}
-
 @include breakpoint(mobileonly){
 	.logo, .bascet{
 		text-align: center;
