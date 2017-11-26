@@ -152,7 +152,7 @@ body{
 .catalog{
 	text-align:center;
 }
-//col-phablet-1-2.line{
+//.col-phablet-1-2.line{
 //		&:after{
 //			content: "";
 //			height: 4px;
@@ -344,7 +344,12 @@ body{
 		text-align: center;
 	}
 	.contacts{
-		padding: 20px 0;
+		text-align: center;
+		float: none;
+	}
+	.rights{
+		display: block;
+		text-align: center;
 	}
 }
 // end filterst block
