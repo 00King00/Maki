@@ -315,6 +315,7 @@ body{
 // start filterst block
 
 .filters__parameters{
+	
 	margin-bottom: 50px;
 	.filters__title{
 		color:black;
@@ -336,10 +337,12 @@ body{
 		margin:10px 0;
 		width:92px;
 	}
-	
-//	input{
-//		border: 1px solid transparent;
-//	}
+	.search-rigth{
+		width: 50%;
+		input[type="search"]{
+			display: block;
+		}
+
 }
 @include breakpoint(mobileonly){
 	.logo, .bascet{

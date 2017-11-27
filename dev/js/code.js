@@ -17,29 +17,28 @@ $(function(){
 	})
 	
 	// this part for search
-	var count = 0;
-	$(".search img").click(function(){
-		count++;
-		if(count % 2 == 0){
-			$('input[type="search"]').css('display' ,'none')
-		} else{
-			$('input[type="search"]').css({
-			opacity:1,
-			display:'block',
-			height:'38px',
-			width: '200px',
-			'padding-left': '32px',
-			color: '#000',
-			'background-color': '#fff',
-			'cursor': 'auto',
-			'outline': 'none',
-			});
-		}
+
+	
+	$("#top-search").click(function(){
+			if($('.search-top input[type="search"]').css("display")== "none"){
+				$('.search-top input[type="search"]').css({
+				opacity:1,
+				display:'block',
+				height:'38px',
+				width: '200px',
+				color: '#000',
+				'background-color': '#fff',
+				'cursor': 'auto',
+				'outline': 'none',
+				});
+			} else {
+				$(".search-top input").css("display", "none")
+			}
+			
+		
+	});
+			
 		
 		
-		console.log(count);
-		
-		
-		
-	})
+	
 });
