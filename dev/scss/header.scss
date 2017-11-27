@@ -43,6 +43,8 @@
 	}
 }
 .categories{
+	padding-top:20px;
+	margin-top:240px;
 	background:rgba(255,255,255,.7);
 	a{
 		display:inline-block;
@@ -171,7 +173,6 @@
 		position: absolute;
 		right: 0;
 		top: 14px;
-
 		&:hover {
 			background-color: #fff;
 		}
