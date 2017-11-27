@@ -7,20 +7,20 @@ img{
 
 @mixin breakpoint($point) {
 	@if $point == desktop {
-	  @media (min-width: 70em) { @content ; }
-   }
+		@media (min-width: 70em) { @content ; }
+	}
 	@else if $point == laptop {
-	  @media (min-width: 64em) { @content ; }
-   }
-	 @else if $point == tablet {
-	  @media (min-width: 50em) { @content ; }
-   }
+		@media (min-width: 64em) { @content ; }
+	}
+	@else if $point == tablet {
+		@media (min-width: 50em) { @content ; }
+	}
 	@else if $point == phablet {
-	  @media (min-width: 37.5em)  { @content ; }
-   }
-   @else if $point == mobileonly {
-	  @media (max-width: 37.5em)  { @content ; }
-   }
+		@media (min-width: 37.5em) { @content ; }
+	}
+	@else if $point == mobileonly {
+		@media (max-width: 37.5em) { @content ; }
+	}
 }
 
 body{
@@ -29,26 +29,30 @@ body{
 		text-decoration:none;
 	}
 }
+
 .news{
 	margin-bottom:90px;
 	font-size:23px;
 	color:#333333;
+	
 	a.pull-right{
-			color:#7b7b7b;
-			font-size:13px;
-			text-decoration:underline;
-			padding-right:10px;
+		color:#7b7b7b;
+		font-size:13px;
+		text-decoration:underline;
+		padding-right:10px;
 		}
 }
 .ta-center{
 	text-align:center;
 }
+
 .article{
 	margin: 20px 0;
 	display:inline-block;
 	img{
 		max-width:100%;
 	}
+	
 	&__title{
 		text-align:left;
 		text-decoration:none;
@@ -57,6 +61,7 @@ body{
 		font-size:15px;
 		color:#333333;
 	}
+	
 	&__pub-date{
 		text-align:left;
 		display:block;
@@ -64,6 +69,7 @@ body{
 		font-size: 13px;
 		color: #999999;
 	}
+	
 	&__pic{
 		display:inline-block;
 		position: relative;
@@ -74,8 +80,9 @@ body{
 			-webkit-transition: .5s ease;
 			transition: .5s ease;
 			-webkit-backface-visibility: hidden;
-			        backface-visibility: hidden;
+			backface-visibility: hidden;
 		}
+		
 		.pic__inner{
 			position: absolute;
 			top: 0;
@@ -94,6 +101,7 @@ body{
 			letter-spacing: 3px;
 		}
 	}
+	
 	&__pic:hover{
 		.pic__inner{
 			opacity:1;
@@ -111,9 +119,11 @@ body{
 	@include breakpoint(tablet){
 		text-align:left;
 	}
+	
 	ul:first-child{
 		margin-top:0;
 	}
+	
 	ul{
 		display:block;
 		@include breakpoint(tablet){
@@ -122,12 +132,14 @@ body{
 			text-align: left;
 		}
 	}
+	
 	li{
 		margin-top:10px;
 		display:block;
 		color:#666666;
 		font-size:13px;
 	}
+	
 	a{
 		color:#666666;
 		text-decoration:underline;
@@ -152,22 +164,7 @@ body{
 .catalog{
 	text-align:center;
 }
-//.col-phablet-1-2.line{
-//		&:after{
-//			content: "";
-//			height: 4px;
-//			background: red;
-//			display: block;
-//		}
-//}
-.clearfix-phablet{
-	min-height: 1px;
-	clear: both;
-}
-.clearfix-tablet{
-	min-height: 1px;
-	clear: both;
-}
+
 @include breakpoint(mobileonly){
 	
 	.line-mobileonly{
@@ -178,6 +175,7 @@ body{
 		width: 100%;
 	}
 }
+
 @include breakpoint(phablet){
 	
 	.line-phablet{
@@ -209,23 +207,22 @@ body{
 		display: none;
 		
 	}
+	
 	.clearfix-phablet{
 		display: none;
 	}
+	
 	.clearfix-tablet{
 		display: block;
 	}
 }
 
-
-
-
 .product{
 	display:inline-block;
-	// height:400px;
 	text-align:center;
 	&__pic{
-		}
+	}
+	
 	&__name{
 		color:#333333;
 		font-size:15px;
@@ -255,6 +252,7 @@ body{
 			background: #ffa8a8;
 			border:1px solid #ffa8a8;
 		}
+	
 	&_article{
 		position:absolute;
 		margin-top:-25px;
@@ -270,6 +268,7 @@ body{
 			border:1px solid #fff;
 		}
 	}
+	
 	&_filter{
 		text-transform:uppercase;
 		color:#919191;
@@ -288,23 +287,27 @@ body{
 	margin-top: 60px;
 	margin-bottom: 60px;
 	text-align:center;
+	
 	ul{
 		display:inline-block;
 		list-style: none;
 	}
+	
 	li{
 		display:inline-block;
 		padding:10px 13px;
 		border: 1px solid #959595;
 		color:#959595;
+		
 		a{
 			color:#959595;
 		}
-	.active{
-		color:#fff;
-		background: #ffa8a8;
-		border:1px solid #ff7575;
-	}
+		
+		.active{
+			color:#fff;
+			background: #ffa8a8;
+			border:1px solid #ff7575;
+		}
 	}
 
 }
@@ -312,12 +315,14 @@ body{
 // start filterst block
 
 .filters__parameters{
+	
 	margin-bottom: 50px;
 	.filters__title{
 		color:black;
 		font-size: 15px;
 		font-weight: bold;
 	}
+	
 	ul{
 		color:#333333;
 		font-size:15px;
@@ -325,31 +330,34 @@ body{
 		display:inline-block;
 		font-weight:normal;
 		margin-right:20px;
-		// margin-bottom:-10px;
 	}
+	
 	li{
 		display:inline-block;
 		margin:10px 0;
 		width:92px;
-		input{
-			margin-right:8px;
+	}
+	.search-rigth{
+		width: 50%;
+		input[type="search"]{
+			display: block;
 		}
-	}
-	input{
-		border: 1px solid transparent;
-	}
+
 }
 @include breakpoint(mobileonly){
 	.logo, .bascet{
 		text-align: center;
 	}
+	// Start for footer
 	.contacts{
 		text-align: center;
 		float: none;
 	}
+	
 	.rights{
 		display: block;
 		text-align: center;
 	}
+	// End for footer
 }
 // end filterst block

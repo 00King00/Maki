@@ -17,7 +17,8 @@ html
 							li
 								a(href="#") 3
 							li
-								a(href="#") 4    
+								a(href="#") 4
+					
 				.col-phablet-1-4.filters
 					a(href="#").btn.btn_filter
 						img(src="./images/filter_icon.png")
@@ -65,10 +66,10 @@ html
 					.filters__parameters
 						.filters__title
 							|Поиск
-						label(for="search")
-							input(type="search" placeholder="Искать")
-							img(src="/images/search-icon.png")
-			.clearfix.news
+						.search-right
+							form
+								input(type="search" )
+			.news
 				|Новости
 				a(href="#").pull-right Все новости
 				.row.clearfix.ta-center
