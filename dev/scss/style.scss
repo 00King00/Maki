@@ -473,3 +473,23 @@ body{
 	width: 23px;
 	height: 19px;
 }
+
+.bottom-line{
+	.phone-number{
+		i, a, span:first-child{
+			color: #fff;
+		}
+	}
+}
+
+.bottom-line .phone-number .phone-w{
+	background: url(/images/tel-w.png) no-repeat
+}
+
+.mail{
+	margin: 0 7px 0 20px;
+	background: url(/images/e-mail.png) no-repeat;
+	width: 16px;
+	height: 11px;
+	display: inline-block;
+}
