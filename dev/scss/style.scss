@@ -73,6 +73,7 @@ body{
 	&__pic{
 		display:inline-block;
 		position: relative;
+		margin-bottom:10px;
 		img {
 			opacity: 1;
 			display: block;
@@ -220,15 +221,23 @@ body{
 .product{
 	display:inline-block;
 	text-align:center;
+	// position:relative;
 	&__pic{
+		display:inline-block;
+		position:relative;
 	}
+	span{
+			position:absolute;
+			top:-15px;
+			left:-25px;
+		}
 	
 	&__name{
 		color:#333333;
 		font-size:15px;
-		margin-bottom:20px;
 		@include breakpoint(phablet){
-			min-height:50px;
+			min-height:60px;
+			line-height:1.4em;
 		}
 	}
 
@@ -272,8 +281,11 @@ body{
 	&_filter{
 		text-transform:uppercase;
 		color:#919191;
+		font-size: 17px;
+		padding:10px 20px;
 		border:1px solid #ffa8a8;
 		margin-bottom:30px;
+		border-radius: 0;
 		&:hover{
 			color:#919191;
 			background: #fff;
@@ -362,3 +374,27 @@ body{
 	// End for footer
 }
 // end filterst block
+.icon {
+    background: url('/images/icons.png')center top no-repeat;
+    display:inline-block;
+}
+.icon_new{
+	background-position: -252px 0px;
+	width:53px;
+	height: 53px;
+}
+.icon_hit{
+	background-position: -200px 0px;
+	width: 53px;
+	height: 53px;
+}
+.icon_sale{
+	background-position: -305px 0px;
+	width: 75px;
+	height: 53px;
+}
+.icon_parameters{
+	background-position: -460px -19px;
+	width: 23px;
+	height: 19px;
+}
