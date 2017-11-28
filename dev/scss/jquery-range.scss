@@ -23,6 +23,9 @@
 } 
 .pointer-label{
   color:#333333;
+  &:after{
+    content:'руб.'
+  }
 }
 .high{
     position: absolute;

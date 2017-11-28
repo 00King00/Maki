@@ -29,21 +29,21 @@
 			onstatechange: function() {},
       ondragend: function() {},
       onbarclicked: function() {},
-			isRange: false,
+			isRange: true,
 			showLabels: true,
 			showScale: false,
-			step: 1,
+			step: 100,
+			width:208,
 			format: '%s',
 			theme: 'theme-green',
-			width: 300,
 			disable: false,
 			snap: false
 		},
 		template: '<div class="slider-container">\
 			<div class="back-bar">\
                 <div class="selected-bar"></div>\
-                <div class="pointer low"></div><div class="pointer-label low"></div>\
-                <div class="pointer high"></div><div class="pointer-label high"></div>\
+                <div class="pointer low"></div><div class="pointer-label low">руб.</div>\
+                <div class="pointer high"></div><div class="pointer-label high">руб.</div>\
                 <div class="clickable-dummy"></div>\
             </div>\
             <div class="scale"></div>\
@@ -59,7 +59,7 @@
 			this.pointers      = $('.pointer', this.domNode);
 			this.lowPointer    = this.pointers.first();
 			this.highPointer   = this.pointers.last();
-			this.labels        = $('.pointer-label', this.domNode);
+			this.labels        = $('.pointer-label',this.domNode);
 			this.lowLabel      = this.labels.first();
 			this.highLabel     = this.labels.last();
 			this.scale         = $('.scale', this.domNode);
