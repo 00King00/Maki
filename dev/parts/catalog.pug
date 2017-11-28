@@ -37,6 +37,12 @@ each item, i in catalog
 		.product
 			a(href="#").product__pic
 				img(src=item.pic)
+				if (i==0)
+					span.icon.icon_hit
+				if (i==1)
+					span.icon.icon_new
+				if (i==2)
+					span.icon.icon_sale
 			.product__name=item.name
 			.product__price=item.price
 			a(href="#").btn
