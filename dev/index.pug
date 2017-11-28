@@ -15,54 +15,63 @@ html
 							li.active
 								a(href="#") 2
 							li
-								a(href="#") 3
+								a.active(href="#") 3
 							li
 								a(href="#") 4
 					
 				.col-phablet-1-4.filters
-					a(href="#").btn.btn_filter
-						img(src="./images/filter_icon.png")
+					button.btn.btn_filter(type="submit")
+						span.icon.icon_parameters
 						|  Фильтр
 					.filters__parameters
 						.filters__title Стоимость
+						input(type="hidden" class="range-slider" value="5000")
 					.filters__parameters
 						.filters__title Букеты с
 						ul
 							li
-								label
-									input(type="checkbox")
-									| Розы
+
+								input(type="checkbox" name="s1" id="s1")
+								label(for="s1")
+									span Розы
 							li
-								label
-									input(type="checkbox")
-									| Орхидея
+								
+								input(type="checkbox" name="s1" id="s2")
+								label(for="s2")
+									span Орхидея
 							li
-								label
-									input(type="checkbox")
-									| Лилия
+								
+								input(type="checkbox" name="s1" id="s3")
+								label(for="s3")
+									span Лилия
 							li
-								label
-									input(type="checkbox")
-									| Гербер
+								
+								input(type="checkbox" name="s1" id="s4")
+								label(for="s4")
+									span Гербер
 					.filters__parameters
 						.filters__title Кому
 						ul
 							li
-								label
-									input(type="checkbox")
-									| Мужчина
+								
+								input(type="checkbox" name="s1" id="s5")
+								label(for="s5")
+									span Мужчина
 							li
-								label
-									input(type="checkbox")
-									| Ребенок
+								
+								input(type="checkbox" name="s1" id="s6")
+								label(for="s6")
+									span Ребенок
 							li
-								label
-									input(type="checkbox")
-									| Женщина
+								
+								input(type="checkbox" name="s1" id="s7")
+								label(for="s7")
+									span Женщина
 							li
-								label
-									input(type="checkbox")
-									| Семья
+								
+								input(type="checkbox" name="s1" id="s8")
+								label(for="s8")
+									span Семья
 					.filters__parameters
 						.filters__title
 							|Поиск
@@ -107,4 +116,4 @@ html
 							a(href="#").article__title
 								|Розыгрыш новогоднего подарка
 		include ./parts/footer.pug
-		
+

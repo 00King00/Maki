@@ -73,6 +73,7 @@ body{
 	&__pic{
 		display:inline-block;
 		position: relative;
+		margin-bottom:10px;
 		img {
 			opacity: 1;
 			display: block;
@@ -126,15 +127,18 @@ body{
 
 	ul{
 		display:block;
+		vertical-align: top;
+		line-height:1.5em;
 		@include breakpoint(tablet){
 			display:inline-block;
+			max-width:190px;
 			margin-right:80px;
 			text-align: left;
 		}
 	}
 
 	li{
-		margin-top:10px;
+		// margin-top:10px;
 		display:block;
 		color:#666666;
 		font-size:13px;
@@ -220,15 +224,23 @@ body{
 .product{
 	display:inline-block;
 	text-align:center;
+	// position:relative;
 	&__pic{
+		display:inline-block;
+		position:relative;
 	}
+	span{
+			position:absolute;
+			top:-25px;
+			left:-15px;
+		}
 
 	&__name{
 		color:#333333;
 		font-size:15px;
-		margin-bottom:20px;
 		@include breakpoint(phablet){
-			min-height:50px;
+			min-height:60px;
+			line-height:1.4em;
 		}
 	}
 
@@ -244,8 +256,9 @@ body{
 	text-transform:uppercase;
 	display:inline-block;
 	color:#333333;
+	background:none;
 	text-align: center;
-	padding: 15px 30px;
+	padding: 12px 30px;
 	border:1px solid #959595;
 		&:hover{
 			color:#fff;
@@ -272,8 +285,11 @@ body{
 	&_filter{
 		text-transform:uppercase;
 		color:#919191;
+		font-size: 17px;
+		padding:10px 20px;
 		border:1px solid #ffa8a8;
 		margin-bottom:30px;
+		border-radius: 0;
 		&:hover{
 			color:#919191;
 			background: #fff;
@@ -295,24 +311,78 @@ body{
 
 	li{
 		display:inline-block;
-		padding:10px 13px;
-		border: 1px solid #959595;
+
+
 		color:#959595;
 
 		a{
 			color:#959595;
+			width: 40px;
+			height: 40px;
+			display: inline-block;
+			line-height: 40px;
+			border: 1px solid #959595;
 		}
-
 		.active{
 			color:#fff;
 			background: #ffa8a8;
-			border:1px solid #ff7575;
+			border: none;
 		}
 	}
 
 }
 
 // start filterst block
+
+// part of checkbox
+[id^=s]{
+	display: none;
+}
+
+[id^=s] + label{
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	border: 1px solid #b9b9b9;
+	-webkit-box-shadow: inset 1px #efefef;
+	        box-shadow: inset 1px #efefef;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(239,239,239,1)),to(rgba(212,212,212,1)));
+	background: linear-gradient(to bottom, rgba(239,239,239,1) 0%,rgba(212,212,212,1) 100%);
+	text-align: center;
+	span{
+			position: relative;
+			top: -18px;
+			left: 18px;
+		}
+}
+
+[id^=s] + label:before{
+	content: '\2713';
+	display: inline-block;
+	color: #ffa8a8;
+	font-size: 14px;
+	line-height: 14px;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	position: relative;
+	top: -1px;
+}
+
+[id^=s]:checked + label:before{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	label{
+		span{
+			position: relative;
+			top: -18px;
+			left: 18px;
+		}
+	}
+}
+
+// end part of checkbox
 
 .filters__parameters{
 
@@ -321,6 +391,7 @@ body{
 		color:black;
 		font-size: 15px;
 		font-weight: bold;
+		margin-bottom:20px;
 	}
 
 	ul{
@@ -338,30 +409,24 @@ body{
 		width:92px;
 	}
 
-	.for-tablet{
-		display: block;
-		ul{
-			display: -webkit-inline-box;
-			display: -ms-inline-flexbox;
-			display: inline-flex;
-			text-decoration: none;
-			li{
-				-ms-flex-pack: distribute;
-				    justify-content: space-around;
-				-ms-flex-line-pack: justify;
-				    align-content: space-between;
-
-			}
+	input[type="search"] {
+		background: url(/images/search-icon.png) no-repeat;
+		background-position: right;
+		height: 38px;
+		display: inline-block;
+		border:1px solid #ff7575;
+		cursor: pointer;
+		width:100%;
+		height:38px;
+		padding: 0 10px;
+		&:focus{
+			border:1px solid #ff7575;
+			outline: none;
 		}
-		tr>td:child-first{
-			margin-right: 12px;
+	}
 
-	.search-rigth{
-		width: 50%;
-		input[type="search"]{
-			display: block;
-		}
 }
+
 @include breakpoint(mobileonly){
 	.logo, .bascet{
 		text-align: center;
@@ -379,5 +444,31 @@ body{
 		margin-top: 40px;
 	}
 	// End for footer
+}
+
 // end filterst block
-}}}}
+
+.icon {
+	background: url('/images/icons.png')center top no-repeat;
+	display:inline-block;
+}
+.icon_new{
+	background-position: -252px 0px;
+	width:53px;
+	height: 53px;
+}
+.icon_hit{
+	background-position: -200px 0px;
+	width: 53px;
+	height: 53px;
+}
+.icon_sale{
+	background-position: -305px 0px;
+	width: 75px;
+	height: 53px;
+}
+.icon_parameters{
+	background-position: -460px -19px;
+	width: 23px;
+	height: 19px;
+}
