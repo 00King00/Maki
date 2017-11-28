@@ -337,13 +337,32 @@ body{
 		margin:10px 0;
 		width:92px;
 	}
-	.search-rigth{
-		width: 50%;
-		input[type="search"]{
-			display: block;
+	
+	
+	
+	input[type="search"] {
+		background: url(/images/search-icon.png) no-repeat;
+		background-position: right;
+		height: 38px;
+		display: inline-block;
+		border:1px solid #ff7575;
+		cursor: pointer;
+		width:100%;
+		height:38px;
+		padding: 0 10px;
+		&:focus{
+			border:1px solid #ff7575;
+			outline: none;
 		}
-
+	}
+	
+	
+	
 }
+
+
+
+	
 @include breakpoint(mobileonly){
 	.logo, .bascet{
 		text-align: center;
@@ -358,6 +377,4 @@ body{
 		display: block;
 		text-align: center;
 	}
-	// End for footer
 }
-// end filterst block
