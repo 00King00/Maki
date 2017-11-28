@@ -317,7 +317,6 @@ body{
 		a{
 			color:#959595;
 		}
-		
 		.active{
 			color:#fff;
 			background: #ffa8a8;
@@ -338,14 +337,21 @@ body{
 	display: inline-block;
 	width: 13px;
 	height: 13px;
-	border: 1px solid black;
+	border: 1px solid #efefef;
+	outline:1px solid #b9b9b9;
+	background: linear-gradient(to bottom, rgba(239,239,239,1) 0%,rgba(212,212,212,1) 100%); 
 	text-align: center;
+	span{
+			position: relative;
+			top: -18px;
+			left: 18px;
+		}
 }
 
 [id^=s] + label:before{
 	content: '\2713';
 	display: inline-block;
-	color: red;
+	color: #ffa8a8;
 	font-size: 14px;
 	line-height: 14px;
 	-webkit-transform: scale(0);
@@ -353,18 +359,18 @@ body{
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 	position: relative;
-	top: -2px;
+	top: -1px;
 }
 
 [id^=s]:checked + label:before{
 	-webkit-transform: scale(1);
 	transform: scale(1);
-}
-label{
-	font{
-		position: relative;
-		top: -10px;
-		left: 10px;
+	label{
+		span{
+			position: relative;
+			top: -18px;
+			left: 18px;
+		}
 	}
 }
 
