@@ -256,6 +256,7 @@ body{
 	text-transform:uppercase;
 	display:inline-block;
 	color:#333333;
+	background:none;
 	text-align: center;
 	padding: 12px 30px;
 	border:1px solid #959595;
@@ -342,8 +343,8 @@ body{
 	display: inline-block;
 	width: 13px;
 	height: 13px;
-	border: 1px solid #efefef;
-	outline:1px solid #b9b9b9;
+	border: 1px solid #b9b9b9;
+	box-shadow: inset 1px #efefef; 
 	background: linear-gradient(to bottom, rgba(239,239,239,1) 0%,rgba(212,212,212,1) 100%); 
 	text-align: center;
 	span{

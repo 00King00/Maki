@@ -38,7 +38,7 @@ $(function(){
 		
 	});
 		$('.range-slider').jRange({
-			from:0,
+			from:1000,
 			to: 10000,
 			step: 100,
 			scale: [1000,5000],
@@ -46,10 +46,7 @@ $(function(){
 			width: '90%',
 			showLabels: true,
 			isRange : true
-	});
+	}).jRange('setValue', '1000,5000');
 
-			
 		
-		
-	
 });
