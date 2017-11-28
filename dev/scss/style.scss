@@ -405,12 +405,23 @@ body{
 		margin:10px 0;
 		width:92px;
 	}
-	.search-rigth{
-		width: 50%;
-		input[type="search"]{
-			display: block;
+		
+	input[type="search"] {
+		background: url(/images/search-icon.png) no-repeat;
+		background-position: right;
+		height: 38px;
+		display: inline-block;
+		border:1px solid #ff7575;
+		cursor: pointer;
+		width:100%;
+		height:38px;
+		padding: 0 10px;
+		&:focus{
+			border:1px solid #ff7575;
+			outline: none;
 		}
 	}
+	
 }
 
 @include breakpoint(mobileonly){
@@ -429,10 +440,12 @@ body{
 	}
 	// End for footer
 }
+
 // end filterst block
+
 .icon {
-    background: url('/images/icons.png')center top no-repeat;
-    display:inline-block;
+	background: url('/images/icons.png')center top no-repeat;
+	display:inline-block;
 }
 .icon_new{
 	background-position: -252px 0px;
@@ -454,3 +467,4 @@ body{
 	width: 23px;
 	height: 19px;
 }
+
