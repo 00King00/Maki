@@ -34,7 +34,7 @@ body{
 	margin-bottom:90px;
 	font-size:23px;
 	color:#333333;
-	
+
 	a.pull-right{
 		color:#7b7b7b;
 		font-size:13px;
@@ -52,7 +52,7 @@ body{
 	img{
 		max-width:100%;
 	}
-	
+
 	&__title{
 		text-align:left;
 		text-decoration:none;
@@ -61,7 +61,7 @@ body{
 		font-size:15px;
 		color:#333333;
 	}
-	
+
 	&__pub-date{
 		text-align:left;
 		display:block;
@@ -69,7 +69,7 @@ body{
 		font-size: 13px;
 		color: #999999;
 	}
-	
+
 	&__pic{
 		display:inline-block;
 		position: relative;
@@ -83,7 +83,7 @@ body{
 			-webkit-backface-visibility: hidden;
 			backface-visibility: hidden;
 		}
-		
+
 		.pic__inner{
 			position: absolute;
 			top: 0;
@@ -102,7 +102,7 @@ body{
 			letter-spacing: 3px;
 		}
 	}
-	
+
 	&__pic:hover{
 		.pic__inner{
 			opacity:1;
@@ -120,11 +120,11 @@ body{
 	@include breakpoint(tablet){
 		text-align:left;
 	}
-	
+
 	ul:first-child{
 		margin-top:0;
 	}
-	
+
 	ul{
 		display:block;
 		vertical-align: top;
@@ -136,14 +136,14 @@ body{
 			text-align: left;
 		}
 	}
-	
+
 	li{
 		// margin-top:10px;
 		display:block;
 		color:#666666;
 		font-size:13px;
 	}
-	
+
 	a{
 		color:#666666;
 		text-decoration:underline;
@@ -170,7 +170,7 @@ body{
 }
 
 @include breakpoint(mobileonly){
-	
+
 	.line-mobileonly{
 		margin:30px 0;
 		height: 1px;
@@ -181,7 +181,7 @@ body{
 }
 
 @include breakpoint(phablet){
-	
+
 	.line-phablet{
 		margin:30px 0;
 		height: 1px;
@@ -197,7 +197,7 @@ body{
 	}
 }
 @include breakpoint(tablet){
-	
+
 	.line-tablet{
 		margin:30px 0;
 		height: 1px;
@@ -205,17 +205,17 @@ body{
 		display: block;
 		width: 100%;
 	}
-	
+
 	.line-phablet{
 		margin:30px 0;
 		display: none;
-		
+
 	}
-	
+
 	.clearfix-phablet{
 		display: none;
 	}
-	
+
 	.clearfix-tablet{
 		display: block;
 	}
@@ -234,7 +234,7 @@ body{
 			top:-25px;
 			left:-15px;
 		}
-	
+
 	&__name{
 		color:#333333;
 		font-size:15px;
@@ -265,7 +265,7 @@ body{
 			background: #ffa8a8;
 			border:1px solid #ffa8a8;
 		}
-	
+
 	&_article{
 		position:absolute;
 		margin-top:-25px;
@@ -281,7 +281,7 @@ body{
 			border:1px solid #fff;
 		}
 	}
-	
+
 	&_filter{
 		text-transform:uppercase;
 		color:#919191;
@@ -303,18 +303,18 @@ body{
 	margin-top: 60px;
 	margin-bottom: 60px;
 	text-align:center;
-	
+
 	ul{
 		display:inline-block;
 		list-style: none;
 	}
-	
+
 	li{
 		display:inline-block;
 
-		
+
 		color:#959595;
-		
+
 		a{
 			color:#959595;
 			width: 40px;
@@ -345,8 +345,10 @@ body{
 	width: 13px;
 	height: 13px;
 	border: 1px solid #b9b9b9;
-	box-shadow: inset 1px #efefef; 
-	background: linear-gradient(to bottom, rgba(239,239,239,1) 0%,rgba(212,212,212,1) 100%); 
+	-webkit-box-shadow: inset 1px #efefef;
+	        box-shadow: inset 1px #efefef;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(239,239,239,1)),to(rgba(212,212,212,1)));
+	background: linear-gradient(to bottom, rgba(239,239,239,1) 0%,rgba(212,212,212,1) 100%);
 	text-align: center;
 	span{
 			position: relative;
@@ -384,7 +386,7 @@ body{
 // end part of checkbox
 
 .filters__parameters{
-	
+
 	margin-bottom: 50px;
 	.filters__title{
 		color:black;
@@ -392,7 +394,7 @@ body{
 		font-weight: bold;
 		margin-bottom:20px;
 	}
-	
+
 	ul{
 		color:#333333;
 		font-size:15px;
@@ -401,29 +403,29 @@ body{
 		font-weight:normal;
 		margin-right:20px;
 	}
-	
+
 	li{
 		display:inline-block;
 		margin:10px 0;
 		width:92px;
 	}
-		
+
 	input[type="search"] {
 		background: url(/images/search-icon.png) no-repeat;
 		background-position: right;
 		height: 38px;
 		display: inline-block;
-		border:1px solid #ff7575;
+		border:1px solid #ffa8a8;
 		cursor: pointer;
 		width:100%;
 		height:38px;
 		padding: 0 10px;
 		&:focus{
-			border:1px solid #ff7575;
+			border:1px solid #ffa8a8;
 			outline: none;
 		}
 	}
-	
+
 }
 
 @include breakpoint(mobileonly){
@@ -435,10 +437,12 @@ body{
 		text-align: center;
 		float: none;
 	}
-	
 	.rights{
 		display: block;
 		text-align: center;
+	}
+	.header .categories{
+		margin-top: 40px;
 	}
 	// End for footer
 }
@@ -469,4 +473,3 @@ body{
 	width: 23px;
 	height: 19px;
 }
-
