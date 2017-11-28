@@ -37,6 +37,17 @@ $(function(){
 			
 		
 	});
+		$('.range-slider').jRange({
+			from:0,
+			to: 10000,
+			step: 100,
+			scale: [1000,5000],
+			format: '%s',
+			width: '90%',
+			showLabels: true,
+			isRange : true
+	});
+
 			
 		
 		

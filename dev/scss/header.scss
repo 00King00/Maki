@@ -67,13 +67,16 @@
 		flex-wrap:wrap;
 	}
 	li{
-		margin:0 30px;
+		margin:0 30px 10px 0;
 		height:140px;
 		max-width:100px;
 		display:inline-block;
 		text-align:center;
 		color: #333333;
 		border-bottom:5px solid transparent;
+		@include breakpoint(phablet){
+			margin: 0 30px;
+		}
 	}
 	li:active{
 		-webkit-box-sizing:border-box;
@@ -163,7 +166,7 @@
 	input[type="search"] {
 //		background: url(/images/search-icon.png) no-repeat;
 //		background-position: right;
-		border:1px solid #ff7575;
+		border:1px solid #ffa8a8;
 		cursor: pointer;
 		float: right;
 		width:200px;
