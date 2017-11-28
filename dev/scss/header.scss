@@ -156,7 +156,7 @@
 	.t-goods{
 		display: block;
 	}
-	
+
 	span{
 		padding-right: 5px;
 		font-size: 13px;
@@ -180,7 +180,7 @@
 		display: none;
 		position: absolute;
 		right: 38px;
-		-webkit-transition: all .5s;
+		transition: all .5s;
 		transition: all .5s;
 		padding: 0 10px;
 		&:hover {
