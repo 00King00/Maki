@@ -310,17 +310,22 @@ body{
 	
 	li{
 		display:inline-block;
-		padding:10px 13px;
-		border: 1px solid #959595;
+
+		
 		color:#959595;
 		
 		a{
 			color:#959595;
+			width: 40px;
+			height: 40px;
+			display: inline-block;
+			line-height: 40px;
+			border: 1px solid #959595;
 		}
 		.active{
 			color:#fff;
 			background: #ffa8a8;
-			border:1px solid #ff7575;
+			border: none;
 		}
 	}
 
