@@ -314,6 +314,47 @@ body{
 
 // start filterst block
 
+// part of checkbox
+[id^=s]{
+	display: none;
+}
+
+[id^=s] + label{
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+[id^=s] + label:before{
+	content: '\2713';
+	display: inline-block;
+	color: red;
+	font-size: 14px;
+	line-height: 14px;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	position: relative;
+	top: -2px;
+}
+
+[id^=s]:checked + label:before{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+label{
+	font{
+		position: relative;
+		top: -10px;
+		left: 10px;
+	}
+}
+
+// end part of checkbox
+
 .filters__parameters{
 	
 	margin-bottom: 50px;
@@ -342,8 +383,11 @@ body{
 		input[type="search"]{
 			display: block;
 		}
-
+	}
+	
+	
 }
+
 @include breakpoint(mobileonly){
 	.logo, .bascet{
 		text-align: center;
