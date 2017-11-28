@@ -327,6 +327,7 @@ body{
 			color:#fff;
 			background: #ffa8a8;
 			border: none;
+			border: 1px solid #ffa8a8;
 		}
 	}
 
@@ -414,13 +415,13 @@ body{
 		background-position: right;
 		height: 38px;
 		display: inline-block;
-		border:1px solid #ff7575;
+		border:1px solid #ffa8a8;
 		cursor: pointer;
 		width:100%;
 		height:38px;
 		padding: 0 10px;
 		&:focus{
-			border:1px solid #ff7575;
+			border:1px solid #ffa8a8;
 			outline: none;
 		}
 	}
