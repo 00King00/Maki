@@ -67,13 +67,16 @@
 		flex-wrap:wrap;
 	}
 	li{
-		margin:0 30px;
+		margin:0 30px 10px 0;
 		height:140px;
 		max-width:100px;
 		display:inline-block;
 		text-align:center;
 		color: #333333;
 		border-bottom:5px solid transparent;
+		@include breakpoint(phablet){
+			margin: 0 30px;
+		}
 	}
 	li:active{
 		-webkit-box-sizing:border-box;

@@ -127,15 +127,18 @@ body{
 	
 	ul{
 		display:block;
+		vertical-align: top;
+		line-height:1.5em;
 		@include breakpoint(tablet){
 			display:inline-block;
+			max-width:190px;
 			margin-right:80px;
 			text-align: left;
 		}
 	}
 	
 	li{
-		margin-top:10px;
+		// margin-top:10px;
 		display:block;
 		color:#666666;
 		font-size:13px;
@@ -254,7 +257,7 @@ body{
 	display:inline-block;
 	color:#333333;
 	text-align: center;
-	padding: 15px 30px;
+	padding: 12px 30px;
 	border:1px solid #959595;
 		&:hover{
 			color:#fff;
