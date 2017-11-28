@@ -20,10 +20,9 @@
 .header_menu{
 	margin-bottom: 50px;
 	
-	
 	img{
-			height: 38px;
-			width: 38px;
+		height: 38px;
+		width: 38px;
 	}
 
 	li{
@@ -34,7 +33,8 @@
 		color: #333333;
 		font-size: 17px;
 		border: 1px solid transparent;
-		&:active{
+		padding: 15px;
+		&.active{
 			border: 1px solid #ffa8a8 ;
 			
 		}
@@ -228,7 +228,7 @@
 
 @include breakpoint(phablet){
 	.header_menu{
-		margin-top: 25px;
+		margin-top: 15px;
 		img{
 			display: none;
 		}
@@ -258,7 +258,7 @@
 		}
 		li{
 			
-			margin-right: 30px;
+			margin-right: 10px;
 
 		}
 	}
