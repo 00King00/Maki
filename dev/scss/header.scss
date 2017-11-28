@@ -97,9 +97,10 @@
 	img{
 		margin-bottom: 17px;
 	}
-	p{
-		color: #b0b1af;
-	}
+}
+
+.slogan{
+  color: #b0b1af;
 }
 
 .bold{
@@ -119,7 +120,7 @@
 				color: #000;
 			}
 		}
-		.number{
+		.phone-number{
 			.phone{
 				background: url(/images/tel.png) no-repeat;
 				width: 14px;
@@ -130,26 +131,27 @@
 			}
 			a{
 				color: #000;
-				.p-red{
-						font-size: 15px;
-						color: #ff9999;
-					}
-					.p-number{
-						font-size: 21px
-					}
 			}
+      & span:first-child{
+        font-size: 15px;
+        color: #ff9999;
+        padding: 0 5px;
+      }
+      & span:last-child{
+        font-size: 21px
+      }
 		}
 	}
 }
 .extent{
 	padding: 0 5px;
 }
-.bascet{
+.basket{
 	a{
 		display: block;
 		margin-bottom: 19px;
 	}
-	.ware{
+	.t-goods{
 		display: block;
 	}
 	span{
@@ -206,12 +208,9 @@
 		ul{
 			display: none;
 			li{
-
 				&:first-child{
 					margin-top: 40px;
 				}
-
-
 			}
 		}
 		img{
@@ -222,10 +221,20 @@
 				display: none;
 			}
 		}
-	}
-
-
-
+  }
+  .logo, .slogan, .basket, .phone-number{
+    text-align: center;
+    display: block;
+    }
+  .contacts{
+    margin: 20px 0;
+    }
+  .contacts .contacts-address p{
+    margin-bottom: 10px;
+  }
+  .categories{
+    margin-top: 25px;
+  }
 }
 @include breakpoint(phablet){
 	.header_menu{
