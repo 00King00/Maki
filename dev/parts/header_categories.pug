@@ -29,8 +29,14 @@
 .categories
 	.wrapper
 		ul
-			each item in categories
-				li 
-					a(href="#")
-						img(src=item.pic)
-						span #{item.text}
+			each item,i in categories
+				if i==3
+					li.active
+						a(href="#")
+							img(src=item.pic)
+							span #{item.text}
+				else
+					li
+						a(href="#")
+							img(src=item.pic)
+							span #{item.text}
