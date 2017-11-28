@@ -1,20 +1,19 @@
 @mixin breakpoint($point) {
-   @if $point == desktop {
-     @media (min-width: 70em) { @content ; }
-  }
-   @else if $point == laptop {
-     @media (min-width: 64em) { @content ; }
-  }
-    @else if $point == tablet {
-     @media (min-width: 50em) { @content ; }
-  }
-   @else if $point == phablet {
-     @media (min-width: 37.5em)  { @content ; }
-  }
-  @else if $point == mobileonly {
-     @media (max-width: 37.5em)  { @content ; }
-
-  }
+	@if $point == desktop {
+		@media (min-width: 70em) { @content ; }
+	}
+	@else if $point == laptop {
+		@media (min-width: 64em) { @content ; }
+	}
+	@else if $point == tablet {
+		@media (min-width: 50em) { @content ; }
+	}
+	@else if $point == phablet {
+		@media (min-width: 37.5em)  { @content ; }
+	}
+	@else if $point == mobileonly {
+		@media (max-width: 37.5em)  { @content ; }
+	}
 }
 
 .header_menu{
@@ -63,13 +62,7 @@
 		display:-webkit-box;
 		display:-ms-flexbox;
 		display:flex;
-		-ms-flex-pack:distribute;
-		    justify-content:space-around;
-		-webkit-box-align: start;
-		    -ms-flex-align: start;
-		        align-items: start;
-		-ms-flex-wrap:wrap;
-		    flex-wrap:wrap;
+		flex-wrap:wrap;
 	}
 	li{
 		margin:0 30px 10px 0;
@@ -82,12 +75,10 @@
 		@include breakpoint(phablet){
 			margin: 0 30px;
 		}
-	}
-	li:active{
-		-webkit-box-sizing:border-box;
-		        box-sizing:border-box;
-		color:#ff9999;
-		border-bottom: 5px solid #ff9999;
+		&.active{
+			color:#ffa8a8;
+			border-bottom: 5px solid #ffa8a8;
+		}
 	}
 }
 .header{
@@ -124,32 +115,27 @@
 				color: #000;
 			}
 		}
-
-	}
-}
-
-.phone-number{
-  .phone{
-    background: url(/images/tel.png) no-repeat;
-    width: 14px;
-    height: 16px;
-    display: inline-block;
-    padding-right: 20px;
-    margin-bottom: -3px;
-  }
-  a{
-    color: #000;
-  }
-  & span:first-child{
-    font-size: 15px;
-    color: #ff9999;
-    padding: 0 5px;
-  }
-  & span:last-child{
-    font-size: 21px
-  }
-}
-
+		.phone-number{
+			.phone{
+				background: url(/images/tel.png) no-repeat;
+				width: 14px;
+				height: 16px;
+				display: inline-block;
+				padding-right: 20px;
+				margin-bottom: -3px;
+			}
+			a{
+				color: #000;
+			}
+	  & span:first-child{
+		font-size: 15px;
+		color: #ff9999;
+		padding: 0 5px;
+	  }
+	  & span:last-child{
+		font-size: 21px
+	  }
+		}
 .extent{
 	padding: 0 5px;
 }
@@ -225,23 +211,23 @@
 			margin: 3px;
 			&:last-child{
 				-webkit-transform: rotate(180deg);
-				        transform: rotate(180deg);
+						transform: rotate(180deg);
 				display: none;
 			}
 		}
   }
   .logo, .slogan, .basket, .phone-number{
-    text-align: center;
-    display: block;
-    }
+	text-align: center;
+	display: block;
+	}
   .contacts{
-    margin: 20px 0;
-    }
+	margin: 20px 0;
+	}
   .contacts .contacts-address p{
-    margin-bottom: 10px;
+	margin-bottom: 10px;
   }
   .categories{
-    margin-top: 25px;
+	margin-top: 25px;
   }
 }
 
