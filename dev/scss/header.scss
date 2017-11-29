@@ -115,26 +115,18 @@
 			}
 		}
 		.phone-number{
-			.phone{
-				background: url(/images/tel.png) no-repeat;
-				width: 14px;
-				height: 16px;
-				display: inline-block;
-				padding-right: 20px;
-				margin-bottom: -3px;
-			}
-			
 			a{
 				color: #000;
+				margin-right:10px;
 			}
 
-	  		& span:first-child{
+	  		span:nth-child(2){
 				font-size: 15px;
 				color: #ff9999;
 				padding: 0 5px;
 	  		}
-		  	& span:last-child{
-				font-size: 21px
+		  	span:last-child{
+				font-size: 21px;
 			}
 		}
 	}
