@@ -233,7 +233,7 @@ body{
 	span{
 			position:absolute;
 			top:-25px;
-			left:-15px;
+			left:0px;
 		}
 
 	&__name{
@@ -493,4 +493,59 @@ body{
 	width: 16px;
 	height: 11px;
 	display: inline-block;
+}
+.burst-12 {
+    background: #fab055;
+    color:#fff;
+    font-size:13px;
+    line-height:31px;
+    width: 31px;
+    height: 31px;
+    position: relative;
+    text-align: center;
+    z-index:2;
+    border-radius:3px;
+}
+.burst-12:before, .burst-12:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius:3px;
+    height: 31px;
+    width: 31px;
+    background: #fab055;
+    z-index: -1;
+}
+.burst-12:before {
+    -webkit-transform: rotate(30deg);
+       -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+         -o-transform: rotate(30deg);
+}
+.burst-12:after {
+    -webkit-transform: rotate(60deg);
+       -moz-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+         -o-transform: rotate(60deg);
+}
+.circle {
+	width: 40px;
+	height: 40px;
+	line-height:40px;
+	font-size:13px;
+	background: linear-gradient(to bottom, rgba(144,221,177,1) 0%,rgba(134,203,163,1) 100%); 
+	color:#fff;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+.rectangle{
+	width:70px;
+	height:30px;
+	line-height:30px;
+	font-size:13px;
+	color:#fff;
+	background: linear-gradient(to bottom, rgba(255,149,149,1) 0%,rgba(255,106,106,1) 100%); 
+	border-radius:3px;
 }

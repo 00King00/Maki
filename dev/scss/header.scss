@@ -61,14 +61,13 @@
 	ul{
 		text-align:center;
 		list-style:none;
-		display:flex;
-		flex-wrap:wrap;
 	}
 	li{
 		margin:0 30px 10px 0;
 		height:140px;
-		max-width:100px;
+		max-width:99px;
 		display:inline-block;
+		vertical-align: top;
 		text-align:center;
 		color: #333333;
 		border-bottom:5px solid transparent;

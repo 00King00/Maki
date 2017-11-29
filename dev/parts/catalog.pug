@@ -38,11 +38,11 @@ each item, i in catalog
 			a(href="#").product__pic
 				img(src=item.pic)
 				if (i==0)
-					span.icon.icon_hit
+					span.burst-12 Хит
 				if (i==1)
-					span.icon.icon_new
+					span.circle New
 				if (i==2)
-					span.icon.icon_sale
+					span.rectangle Акция
 			.product__name=item.name
 			.product__price=item.price
 			a(href="#").btn
