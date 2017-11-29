@@ -238,6 +238,11 @@ body{
 			top:-25px;
 			left:0px;
 		}
+	span.circle{
+		position:absolute;
+		top:-30px;
+		left:0px;
+	}
 
 	&__name{
 		color:#333333;
@@ -299,6 +304,11 @@ body{
 			background: #fff;
 			border:1px solid #ffa8a8;
 		}
+	}
+	&_basket{
+		color:#fff;
+		background: #ffa8a8;
+		border:1px solid #ffa8a8;
 	}
 }
 
@@ -486,23 +496,10 @@ body{
 }
 
 .bottom-line{
-	.phone-number{
-		i, a, span:first-child{
+	 a,{
 			color: #fff;
+			margin-left:10px;
 		}
-	}
-}
-
-.bottom-line .phone-number .phone-w{
-	background: url(/images/tel-w.png) no-repeat
-}
-
-.mail{
-	margin: 0 7px 0 20px;
-	background: url(/images/e-mail.png) no-repeat;
-	width: 16px;
-	height: 11px;
-	display: inline-block;
 }
 .burst-12 {
     background: #fab055;
