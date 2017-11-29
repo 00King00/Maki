@@ -43,7 +43,7 @@ $(function(){
 			step: 100,
 			scale: [1000,5000],
 			format: '%s',
-			width: '90%',
+			width: '100%',
 			showLabels: true,
 			isRange : true
 	}).jRange('setValue', '1000,5000');

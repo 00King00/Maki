@@ -400,20 +400,27 @@ body{
 	}
 
 	ul{
+		width:300px;
 		color:#333333;
 		font-size:15px;
 		list-style:none;
 		display:inline-block;
 		font-weight:normal;
 		margin-right:20px;
+		@include breakpoint(phablet){
+			width:100%;
+		}
 	}
 
 	li{
+		margin-right:40px;
 		display:inline-block;
-		margin:10px 0;
-		width:92px;
-	}
+		width:92px;	
+		@include breakpoint(phablet){
+			margin:10px 0;
+		}
 
+	}
 	input[type="search"] {
 		background: url(/images/search-icon.png) no-repeat;
 		background-position: right;
