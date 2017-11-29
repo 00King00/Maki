@@ -48,13 +48,10 @@ $(function(){
 			});
 			//getRes();
 			
-		}
-			
-			
-		
+		}	
 	});
-	
-	
+  
+  
 	$('.range-slider').jRange({
 		from:1000,
 		to: 10000,
@@ -64,7 +61,6 @@ $(function(){
 		width: '90%',
 		showLabels: true,
 		isRange : true
-	}).jRange('setValue', '1000,5000');
 
-		
+	}).jRange('setValue', '1000,5000');
 });
