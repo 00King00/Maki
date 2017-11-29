@@ -20,6 +20,7 @@ $(function(){
 
 	
 	$("#top-search").click(function(){
+		if($('.search-top input[type="search"]').val()==""){
 			if($('.search-top input[type="search"]').css("display")== "none"){
 				$('.search-top input[type="search"]').css({
 				opacity:1,
@@ -34,18 +35,35 @@ $(function(){
 			} else {
 				$(".search-top input").css("display", "none")
 			}
+		}else{
+			function getRes(){
+				var res;
+				//res =$("input").val();
+				res= $(this);
+				
+				alert(res);
+			}
+			$(this).parent().submit (function () {
+				return confirm ( 'Ви дійсно хочете відправити дані?');
+			});
+			//getRes();
+			
+		}
+			
 			
 		
 	});
-		$('.range-slider').jRange({
-			from:1000,
-			to: 10000,
-			step: 100,
-			scale: [1000,5000],
-			format: '%s',
-			width: '90%',
-			showLabels: true,
-			isRange : true
+	
+	
+	$('.range-slider').jRange({
+		from:1000,
+		to: 10000,
+		step: 100,
+		scale: [1000,5000],
+		format: '%s',
+		width: '90%',
+		showLabels: true,
+		isRange : true
 	}).jRange('setValue', '1000,5000');
 
 		
