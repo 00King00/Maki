@@ -117,7 +117,7 @@ body{
 	text-align: center;
 	background-color:#f0f0f0;
 	padding:47px 0 47px 0;
-	@include breakpoint(tablet){
+	@include breakpoint(phablet){
 		text-align:left;
 	}
 
@@ -129,11 +129,14 @@ body{
 		display:block;
 		vertical-align: top;
 		line-height:1.5em;
-		@include breakpoint(tablet){
+		@include breakpoint(phablet){
 			display:inline-block;
 			max-width:190px;
-			margin-right:80px;
+			margin-right:30px;
 			text-align: left;
+		}
+		@include breakpoint(tablet){
+			margin-right:80px;
 		}
 	}
 
@@ -397,20 +400,27 @@ body{
 	}
 
 	ul{
+		width:300px;
 		color:#333333;
 		font-size:15px;
 		list-style:none;
 		display:inline-block;
 		font-weight:normal;
 		margin-right:20px;
+		@include breakpoint(phablet){
+			width:100%;
+		}
 	}
 
 	li{
+		margin-right:40px;
 		display:inline-block;
-		margin:10px 0;
-		width:92px;
-	}
+		width:92px;	
+		@include breakpoint(phablet){
+			margin:10px 0;
+		}
 
+	}
 	input[type="search"] {
 		background: url(/images/search-icon.png) no-repeat;
 		background-position: right;
