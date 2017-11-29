@@ -32,7 +32,7 @@
 		color: #333333;
 		font-size: 17px;
 		border: 1px solid transparent;
-		padding: 15px;
+		padding: 15px 10px;
 		&.active{
 			border: 1px solid #ffa8a8 ;
 
@@ -271,11 +271,6 @@
 		img{
 			display: none;
 		}
-		li{
-			
-			margin-right: 10px;
-
-
-		}
+		
 	}
 }

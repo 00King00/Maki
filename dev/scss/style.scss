@@ -224,6 +224,7 @@ body{
 .product{
 	display:inline-block;
 	text-align:center;
+	margin-bottom: 30px;
 	// position:relative;
 	&__pic{
 		display:inline-block;
@@ -240,7 +241,7 @@ body{
 		font-size:15px;
 		@include breakpoint(phablet){
 			min-height:60px;
-			line-height:1.4em;
+			
 		}
 	}
 
