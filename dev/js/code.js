@@ -25,7 +25,7 @@ $(function(){
 				$('.search-top input[type="search"]').css({
 				opacity:1,
 				display:'block',
-				height:'38px',
+				height:'39px',
 				width: '200px',
 				color: '#000',
 				'background-color': '#fff',

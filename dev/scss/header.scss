@@ -82,7 +82,7 @@
 }
 .header{
 	padding-top: 22px;
-	background: url("/images/background_maki.png");
+	background: url("../images/background_maki.png");
 	background-size: cover;
 	border-top: 1px solid #ebebeb;
 	margin-bottom:90px;
@@ -162,6 +162,7 @@
 //		background: url(/images/search-icon.png) no-repeat;
 //		background-position: right;
 		border:1px solid #ffa8a8;
+		border-right: none;
 		cursor: pointer;
 		float: right;
 		width:200px;

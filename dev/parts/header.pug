@@ -2,7 +2,7 @@
 	.row.clearfix
 		.col-phablet-3-4
 			.header_menu
-				img.down(src="/images/dropdown.png")
+				img.down(src="images/dropdown.png")
 				ul
 					li.active
 						a(href="#") Доставка
@@ -14,20 +14,20 @@
 						a(href="#") Контакты
 					li
 						a(href="#") Статус заказа
-				img.up(src="/images/dropdown.png")
+				img.up(src="images/dropdown.png")
 		.col-phablet-1-4.search-top
 			form
 				input(type="search" )
 				a#top-search(href="#")
-					img(src="../images/search-icon.png")
+					.btn.btn_search
+						i.fa.fa-search
 .header
 	.wrapper
 		.row.clearfix
 			.col-phablet-1-4
-				.logo
-					a(href="/")
-						img(src="../images/logo.png", alt="")
-				span.slogan Интернет-магазин цветов
+				a(href="/").logo
+					img(src="images/logo.png", alt="")
+					span.slogan Интернет-магазин цветов
 			.col-phablet-1-2
 				.contacts
 					.contacts-address
