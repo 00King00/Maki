@@ -4,5 +4,14 @@ html
 	body
 		include ./parts/header.pug
 		.wrapper
+			.col-phablet-1-2
+			.col-phablet-1-2
+				.col-phablet-1-2
+					.counter
+						span.btn.btn_counter.minus -
+						input(type="text" value="1")
+						span.btn.btn_counter.plus +
+				.col-phablet-1-2
+					|купити
 			include ./parts/news.pug
 		include ./parts/footer.pug
