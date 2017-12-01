@@ -25,7 +25,7 @@ $(function(){
 				$('.search-top input[type="search"]').css({
 				opacity:1,
 				display:'block',
-				height:'39px',
+				height:'40px',
 				width: '200px',
 				color: '#000',
 				'background-color': '#fff',
@@ -58,9 +58,25 @@ $(function(){
 		step: 100,
 		scale: [1000,5000],
 		format: '%s',
-		width: '90%',
+		width: '100%',
 		showLabels: true,
 		isRange : true
 
-	}).jRange('setValue', '1000,5000');
+		}).jRange('setValue', '1000,5000');
+	});
+	$(document).ready(function() {
+		$('.minus').click(function () {
+			var $input = $(this).parent().find('input');
+			var count = parseInt($input.val()) - 1;
+			count = count < 1 ? 1 : count;
+			$input.val(count);
+			$input.change();
+			return false;
+		});
+		$('.plus').click(function () {
+			var $input = $(this).parent().find('input');
+			$input.val(parseInt($input.val()) + 1);
+			$input.change();
+			return false;
+		});
 });

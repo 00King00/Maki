@@ -76,8 +76,10 @@ html
 						.filters__title
 							|Поиск
 						.search-right
-							form
-								input(type="search" )
+							form(action="#" method="#")
+								input(type="text" placeholder="Что вы ищите?" )
+								button.btn.btn_search(type="submit")
+									i.fa.fa-search
 			include ./parts/news.pug
 		include ./parts/footer.pug
 		
