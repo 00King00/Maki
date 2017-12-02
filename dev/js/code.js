@@ -51,7 +51,7 @@ $(function(){
 		}	
 	});
   
-  
+	// this part for range
 	$('.range-slider').jRange({
 		from:1000,
 		to: 10000,
@@ -61,22 +61,56 @@ $(function(){
 		width: '100%',
 		showLabels: true,
 		isRange : true
-
 		}).jRange('setValue', '1000,5000');
+	
+	// this part for add products
+	
+	$('.minus').click(function () {
+		var $input = $(this).parent().find('input');
+		var count = parseInt($input.val()) - 1;
+		count = count < 1 ? 1 : count;
+		$input.val(count);
+		$input.change();
+		return false;
 	});
-	$(document).ready(function() {
-		$('.minus').click(function () {
-			var $input = $(this).parent().find('input');
-			var count = parseInt($input.val()) - 1;
-			count = count < 1 ? 1 : count;
-			$input.val(count);
-			$input.change();
-			return false;
-		});
-		$('.plus').click(function () {
-			var $input = $(this).parent().find('input');
-			$input.val(parseInt($input.val()) + 1);
-			$input.change();
-			return false;
-		});
+	$('.plus').click(function () {
+		var $input = $(this).parent().find('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
+		return false;
+	});
+	
+	// this part for slider products
+	
+	$('#lightSlider').lightSlider({
+		item: 4,
+		slideMove:1,
+		loop:true,
+		
+		responsive:[
+			{
+				breakpoint: 800,
+				settings:{
+					item:3,
+//					slideMove:3,
+//					loop:true,
+				}
+				
+				
+			},
+			{
+				breakpoint: 600,
+				settings:{
+					item:1,
+//					slideMove:1,
+//					loop:true,
+				}
+				
+				
+			},
+		],
+	})
+	
+	
 });
+
