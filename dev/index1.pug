@@ -13,5 +13,61 @@ html
 						span.btn.btn_counter.plus +
 				.col-phablet-1-2
 					|купити
+			-
+				var catalog=
+				[		
+					{
+						pic: 'images/bouquet_1.png',
+						name: 'Новогодний подарок',
+						price: '2000 руб.'
+					},
+					{
+						pic: 'images/bouquet_2.png',
+						name: 'Букет из красных роз, 1000 шт.',
+						price: '5589 руб.'
+					},
+					{
+						pic: 'images/bouquet_3.png',
+						name: 'Букет из альстромерий и коробка конфет Rafaello',
+						price: '1562 руб.'
+					},
+					{
+						pic: 'images/bouquet_4.png',
+						name: 'Новогодний подарок',
+						price: '2000 руб.'
+					},
+					{
+						pic: 'images/bouquet_5.png',
+						name: 'Букет из красных роз, 1000 шт.',
+						price: '5589 руб.'
+					},
+					{
+						pic: 'images/bouquet_6.png',
+						name: 'Букет из альстромерий и коробка конфет Rafaello',
+						price: '1562 руб.'
+					},
+				]
+			.clearfix
+			.outer
+				.inner
+					ul#lightSlider
+						each item, i in catalog
+							li
+								.myslide
+									.product
+										a(href="#").product__pic
+											img(src=item.pic)
+											if (i==0)
+												span.burst-12 Хит
+											if (i==1)
+												span.circle New
+											if (i==2)
+												span.rectangle Акция
+										.product__name=item.name
+										.product__price=item.price
+										a(href="#").btn.btn_buy
+											|Заказать
+		.clearfix
+		.wrapper
 			include ./parts/news.pug
 		include ./parts/footer.pug
