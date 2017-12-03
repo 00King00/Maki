@@ -50,7 +50,6 @@ $(function(){
 			
 		}	
 	});
-  
 	// this part for range
 	$('.range-slider').jRange({
 		from:1000,
@@ -65,7 +64,7 @@ $(function(){
 	
 	// this part for add products
 	
-	$('.minus').click(function () {
+	$('.counter-btn_minus').click(function () {
 		var $input = $(this).parent().find('input');
 		var count = parseInt($input.val()) - 1;
 		count = count < 1 ? 1 : count;
@@ -73,7 +72,7 @@ $(function(){
 		$input.change();
 		return false;
 	});
-	$('.plus').click(function () {
+	$('.counter-btn_plus').click(function () {
 		var $input = $(this).parent().find('input');
 		$input.val(parseInt($input.val()) + 1);
 		$input.change();
@@ -138,8 +137,13 @@ $(function(){
 				
 			},
 		],
-	})
-	
-	
+	})		
 });
+$("#amount").change(function () { 
+        var quantity = $("#amount").val();          
+        var price = 2350;
+        var result = +quantity * price; 
+        $("#order-sum").val(result); 
+      });
+
 
