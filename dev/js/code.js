@@ -110,6 +110,35 @@ $(function(){
 			},
 		],
 	})
+	//client slider
+	$('#ClientSlider').lightSlider({
+		item: 6,
+		slideMove:1,
+		loop:false,
+		
+		responsive:[
+			{
+				breakpoint: 800,
+				settings:{
+					item:3,
+					slideMove:1,
+//					loop:true,
+				}
+				
+				
+			},
+			{
+				breakpoint: 600,
+				settings:{
+					item:2,
+					slideMove:1,
+//					loop:true,
+				}
+				
+				
+			},
+		],
+	})
 	
 	
 });
