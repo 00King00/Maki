@@ -5,6 +5,23 @@ html
 		include ./parts/header.pug
 		.wrapper.clearfix
 			.col-phablet-1-2
+				.catalog-foto
+					.catalog-foto__main-foto
+						img(src="images/bouquet_1.png")
+					.catalog-foto__sub-foto
+						img(src="images/bouquet_2.png")
+						img(src="images/bouquet_3.png")
+						img(src="images/bouquet_4.png")
+				.testimonials
+					h3 Отзывы покупателей
+					.count
+					.testimonials__data
+					.testimonials__name
+					.testimonials__rating
+					.testimonials__text
+					
+					
+					
 			.col-phablet-1-2
 				.col-phablet-1-2.col-tablet-1-4
 					.counter
@@ -24,51 +41,53 @@ html
 			//- 	.col-phablet-1-2.col-tablet-1-4
 			//- 		|купити
 			.clients
-				ul#ClientSlider
-					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_1
-					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_2
-					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_3
-					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_4
-					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_5
-					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_6
-					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_4
-					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_3
-					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_1
-					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_3
-					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_6
+				.outer
+					.inner
+						ul#ClientSlider
+							li
+								.myslide
+									a(href="#")
+										span.clients_img.client_1
+							li
+								.myslide
+									a(href="#")
+										span.clients_img.client_2
+							li
+								.myslide
+									a(href="#")
+										span.clients_img.client_3
+							li
+								.myslide
+									a(href="#")
+										span.clients_img.client_4
+							li
+								.myslide
+									a(href="#")
+										span.clients_img.client_5
+							li
+								.myslide
+									a(href="#")
+										span.clients_img.client_6
+							li
+								.myslide
+									a(href="#")
+										span.clients_img.client_4
+							li
+								.myslide
+									a(href="#")
+										span.clients_img.client_3
+							li
+								.myslide
+									a(href="#")
+										span.clients_img.client_1
+							li
+								.myslide
+									a(href="#")
+										span.clients_img.client_3
+							li
+								.myslide
+									a(href="#")
+										span.clients_img.client_6
 			-
 				var catalog=
 				[		
