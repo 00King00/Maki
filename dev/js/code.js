@@ -84,15 +84,15 @@ $(function(){
 	
 	$('#lightSlider').lightSlider({
 		item: 4,
-		slideMove:1,
-		loop:true,
+		slideMove:4,
+		//loop:true,
 		
 		responsive:[
 			{
 				breakpoint: 800,
 				settings:{
 					item:3,
-//					slideMove:3,
+					slideMove:3,
 //					loop:true,
 				}
 				
@@ -102,7 +102,7 @@ $(function(){
 				breakpoint: 600,
 				settings:{
 					item:1,
-//					slideMove:1,
+					slideMove:1,
 //					loop:true,
 				}
 				
