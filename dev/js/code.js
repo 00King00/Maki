@@ -144,10 +144,6 @@ $(function(){
 	$(".catalog-foto__sub-foto img").click(function(){
 		var sourse =  $(this).attr('src');
 		$(".catalog-foto__main-foto img").attr( 'src', sourse);
-		
-		
-		console.log(sourse)
-		
 	});
 	
 	
