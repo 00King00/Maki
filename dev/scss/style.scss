@@ -684,21 +684,31 @@ body{
 }
 
 .catalog-foto{
-	
+	margin-bottom: 40px;
+	text-align: center;
 	
 	&__main-foto{
 		max-height: 400px;
+		
 	}
 	
 	&__sub-foto{
-		display: inline-block;
-		height: 100px;
-		width: 100px;
+		img{
+			display: inline-block;
+			height: 100px;
+			width: 100px;
+			
+		}
+		
+		
 	}
 }
 
 .testimonials{
+	
+	color: #666666;
 	h3{
+		display: inline-block;
 		
 	}
 	
@@ -707,10 +717,11 @@ body{
 	}
 	
 	&__data{
-		
+		color: #999999;
 	}
 	
 	&__name{
+		margin-bottom: 10px;
 		
 	}
 	
@@ -719,7 +730,13 @@ body{
 	}
 	
 	&__text{
+		text-align: justify;
+		padding: 18px;
+		background: #f0f0f0;
 		
+	}
+	&__box{
+		margin-top: 25px;
 	}
 }
 
