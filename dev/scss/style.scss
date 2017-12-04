@@ -36,6 +36,7 @@ body{
 // 	margin-top: 40px;
 // 	padding-top: 20px;
 // 	max-height: 441px;
+//	 padding: 0 20px;
 // }
 
 // .inner {
@@ -48,6 +49,7 @@ body{
 .myslide{
 	text-align: center;
 }
+
 
 .news{
 	margin-bottom:90px;
@@ -631,7 +633,7 @@ body{
 	}
 }
 .clients_img{
-	background: url('/images/clients_sprite.png')center top no-repeat;
+	background: url('../images/clients_sprite.png')center top no-repeat;
 	display:inline-block;	
 }
 .client_1{

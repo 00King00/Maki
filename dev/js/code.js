@@ -112,7 +112,7 @@ $(function(){
 	})
 	//client slider
 	$('#ClientSlider').lightSlider({
-		item: 6,
+		item: 5,
 		slideMove:1,
 		loop:false,
 		
