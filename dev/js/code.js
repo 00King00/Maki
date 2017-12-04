@@ -143,7 +143,5 @@ $("#amount").change(function () {
         var quantity = $("#amount").val();          
         var price = 2350;
         var result = +quantity * price; 
-        $("#order-sum").val(result); 
+        $("#order-sum").text(val(result)); 
       });
-
-
