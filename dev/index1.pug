@@ -27,14 +27,20 @@ html
 						.testimonials__text Быстрая доставка. Сервис на уровне. Спасибо большое!!!
 				.testimonials
 					
+			
 			.col-phablet-1-2
-				.col-phablet-1-2.col-tablet-1-4
+				.order-form
+					.order__sum(id="order-sum")
+					span Количество
 					.counter
-						span.btn.btn_counter.minus -
-						input(type="text" value="1")
-						span.btn.btn_counter.plus +
-				.col-phablet-1-2.col-tablet-1-4
-					|купити
+						span.counter-btn.counter-btn_minus
+							span
+						input(type="text" value="1" id="amount")
+						span.counter-btn.counter-btn_plus
+							span
+					a(href="#").btn.btn_order
+							|заказать
+					p При заказе букета вы получите 3% бонусов или 90 рублей. Вы их можете использовать при следующем заказе.
 		.wrapper.clearfix
 			//- .col-phablet-1-2
 			//- .col-phablet-1-2
