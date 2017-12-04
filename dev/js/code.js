@@ -48,7 +48,7 @@ $(function(){
 			});
 			//getRes();
 			
-		}	
+		}
 	});
 	// this part for range
 	$('.range-slider').jRange({
@@ -111,7 +111,7 @@ $(function(){
 	})
 	//client slider
 	$('#ClientSlider').lightSlider({
-		item: 6,
+		item: 5,
 		slideMove:1,
 		loop:false,
 		
@@ -137,13 +137,36 @@ $(function(){
 				
 			},
 		],
-	})		
+
+	})
+	
+	//this part for looking catalog-foto
+	$(".catalog-foto__sub-foto img").click(function(){
+		var sourse =  $(this).attr('src');
+		$(".catalog-foto__main-foto img").attr( 'src', sourse);
+		
+		
+		console.log(sourse)
+		
+	});
+	
+	
+	
+	$("#amount").change(function () {
+		var quantity = $("#amount").val();
+		var price = 2350;
+		var result = +quantity * price;
+		$("#order-sum").val(result);
+	});
+
+	
+	
+	
+	
+	
+	
+
 });
-$("#amount").change(function () { 
-        var quantity = $("#amount").val();          
-        var price = 2350;
-        var result = +quantity * price; 
-        $("#order-sum").val(result); 
-      });
+
 
 
