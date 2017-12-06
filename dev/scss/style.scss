@@ -737,7 +737,7 @@ body{
 }
 
 .testimonials{
-	
+	margin-bottom: 50px;
 	color: #666666;
 	h3{
 		display: inline-block;
@@ -769,6 +769,21 @@ body{
 	}
 	&__box{
 		margin-top: 25px;
+	}
+	
+	&__send
+	
+	textarea{
+		width: 100%;
+	}
+	
+	input[type="text"]{
+		display: none;
+	}
+	input[type="submit"]{
+		text-align: center;
+		display: block;
+		margin: 0 auto;
 	}
 }
 
