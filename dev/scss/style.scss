@@ -36,6 +36,7 @@ body{
 // 	margin-top: 40px;
 // 	padding-top: 20px;
 // 	max-height: 441px;
+//	 padding: 0 20px;
 // }
 
 // .inner {
@@ -48,6 +49,7 @@ body{
 .myslide{
 	text-align: center;
 }
+
 
 .news{
 	margin-bottom:90px;
@@ -394,8 +396,8 @@ body{
 				background:#fff;
 		}
 		span:after{
-				transform:rotate(90deg);
-		}	
+			transform:rotate(90deg);
+		}
 	}
 }
 
@@ -511,7 +513,7 @@ body{
 	li{
 		margin-right:40px;
 		display:inline-block;
-		width:92px;	
+		width:92px;
 		@include breakpoint(phablet){
 			margin:10px 0;
 		}
@@ -659,7 +661,7 @@ body{
 	}
 }
 .clients_img{
-	background: url('/images/clients_sprite.png')center top no-repeat;
+	background: url('../images/clients_sprite.png')center top no-repeat;
 	display:inline-block;	
 }
 .client_1{
@@ -710,6 +712,67 @@ body{
 		background-position: -765px -106px;
 	}
 }
+
+
+.catalog-foto{
+	margin-bottom: 40px;
+	text-align: center;
+	
+	&__main-foto{
+		max-height: 400px;
+		
+	}
+	
+	&__sub-foto{
+		text-align: left;
+		img{
+			display: inline-block;
+			height: 100px;
+			width: 100px;
+			
+		}
+		
+		
+	}
+}
+
+.testimonials{
+	
+	color: #666666;
+	h3{
+		display: inline-block;
+		
+	}
+	
+	.count{
+		
+	}
+	
+	&__data{
+		color: #999999;
+	}
+	
+	&__name{
+		margin-bottom: 10px;
+		
+	}
+	
+	&__rating{
+		
+	}
+	
+	&__text{
+		text-align: justify;
+		padding: 18px;
+		background: #f0f0f0;
+		
+	}
+	&__box{
+		margin-top: 25px;
+	}
+}
+
+
 .order-form{
 	padding:35px;
 	background:#f0f0f0;
@@ -753,3 +816,4 @@ body{
 .order{
 	display:inline-block;
 }
+
