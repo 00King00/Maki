@@ -803,6 +803,14 @@ body{
 		margin: 0 auto;
 	}
 }
+#rating{
+	color: #ff9f9f;
+	position: relative;
+	//background: green;
+	.fa-star-o{
+		color: #ff9f9f;
+	}
+}
 
 
 .order-form{

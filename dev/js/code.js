@@ -155,8 +155,18 @@ $(function(){
 		$("#order-sum").val(result);
 	});
 
+	//this part for rating
 	
+	$("#rating").mousemove(function(e){
+		var offset = $("#rating").offset(), coords = e.clientX - offset.left;
+		var stars = Math.round((coords+3.75)/7.5);
+//		75 100
+//		x - 10
+		
+		console.log(stars);
 	
+		
+	});
 	
 	
 	

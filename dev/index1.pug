@@ -30,7 +30,13 @@ html
 						h3 Написать отзыв:
 						form
 							.testimonials__rating.pull-right
-								input(type="text")
+								input(type="hidden")
+								#rating
+									i(class="fa fa-star-o" aria-hidden="true")
+									i(class="fa fa-star-o" aria-hidden="true")
+									i(class="fa fa-star-o" aria-hidden="true")
+									i(class="fa fa-star-o" aria-hidden="true")
+									i(class="fa fa-star-o" aria-hidden="true")
 							textarea(rows="5" name="text" )
 							input.btn.btn_buy(type="submit" value="ОТПРАВИТЬ")
 
