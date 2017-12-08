@@ -350,12 +350,19 @@ body{
 		width:40px;
 	}
 	&_order{
+		float:none;
 		font-size:20px;
-		margin:10px 0 20px 0;
+		margin-bottom:10px;
 		color:#fff;
 		font-weight:normal;
 		padding:20px 35px;
 		background: linear-gradient(to bottom, rgba(255,170,170,1) 0%,rgba(255,170,170,1) 100%); 
+		@media (min-width:438px) and (max-width:599px){
+			float:right;
+		}
+		@media (min-width:855px){
+			float:right;
+		}
 	}
 }
 .counter-btn{
@@ -489,10 +496,9 @@ body{
 // end part of checkbox
 
 .filters__parameters{
-
+	color:#333333;
 	margin-bottom: 50px;
 	.filters__title{
-		color:black;
 		font-size: 15px;
 		font-weight: bold;
 		margin-bottom:20px;
@@ -582,7 +588,20 @@ body{
 .icon {
 	background: url('/images/icons.png')center top no-repeat;
 	display:inline-block;
+	&_delivery{
+		vertical-align: bottom;
+		width: 39px;
+		height: 21px;
+		background-position: -109px -19px;
+	}
+	&_night-delivery{
+		vertical-align: bottom;
+		width: 39px;
+		height: 25px;
+		background-position: -68px -19px;
+	}
 }
+
 .bottom-line{
 	 a,{
 			color: #fff;
@@ -658,55 +677,53 @@ body{
 	}
 	li{
 		display:inline-block;
+		vertical-align:bottom;
+		margin-left:10px;
 	}
+
 }
 .clients_img{
 	background: url('../images/clients_sprite.png')center top no-repeat;
-	display:inline-block;	
+	display:inline-block;
+	height:81px;
 }
 .client_1{
 	width: 86px;
-	height: 80px;
-	background-position: 0px -9px;
+	background-position: 0px -7px;
 	&:hover{
-		background-position: 0px -110px;
+		background-position: 0px -10px;
 	}
 }
 .client_2{
 	width: 155px;
-	height: 72px;
-	background-position: -131px -19px;
+	background-position: -131px -8px;
 	&:hover{
-		background-position: -131px -120px;
+		background-position: -131px -109px;
 	}
 }
 .client_3{
 	width: 112px;
-	height: 58px;
-	background-position: -339px -25px;
+	background-position: -339px -2px;
 	&:hover{
-		background-position: -339px -126px;
+		background-position: -339px -103px;
 	}
 }
 .client_4{
 	width: 100px;
-	height: 71px;
-	background-position: -483px -19px;
+	background-position: -483px -6px;
 	&:hover{
-		background-position: -483px -120px;
+		background-position: -483px -107px;
 	}
 }
 .client_5{
 	width: 106px;
-	height: 71px;
-	background-position: -626px -17px;
+	background-position: -626px -6px;
 	&:hover{
-		background-position: -626px -118px;
+		background-position: -626px -107px;
 	}
 }
 .client_6{
 	width: 106px;
-	height: 81px;
 	background-position: -765px -5px;
 	&:hover{
 		background-position: -765px -106px;
@@ -793,7 +810,7 @@ body{
 	background:#f0f0f0;
 	font-size:13px;
 	color:#666666;
-	text-align:center;
+	margin-bottom:20px;
 		@include breakpoint(tablet){
 		text-align:left;
 	}
@@ -805,13 +822,13 @@ body{
 		}
 	}
 }
-.order__sum{
-	font-size:20px;
-	@include breakpoint(laptop){
-		text-align:left;
+.order-form__sum{
+	display:inline-block;
+	span:first-child{
+		font-size:20px;
 	}
 }
-.counter{
+.order-form__counter{
 	padding:3px;
 	background:#fff;
 	display:inline-block;
@@ -824,9 +841,9 @@ body{
 		border: none;
 		margin-right: 4;
 	}
-	&:last-child{
-		text-align:right;
-	}
+	// &:last-child{
+	// 	text-align:right;
+	// }
 }
 .order{
 	display:inline-block;
