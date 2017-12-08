@@ -27,12 +27,14 @@ html
 						.testimonials__text Быстрая доставка. Сервис на уровне. Спасибо большое!!!
 				.testimonails
 					.testimonials__send
-						h3 Написать отзыв:
 						form
+							.title Написать отзыв:
 							.testimonials__rating.pull-right
-								input(type="text")
+								input(type="hidden")
+								#rating
+								#rating-hover
 							textarea(rows="5" name="text" )
-							input.btn.btn_buy(type="submit" value="ОТПРАВИТЬ")
+							input.btn.btn_testimonials(type="submit" value="ОТПРАВИТЬ")
 			.col-phablet-1-2
 				.product-card
 					.product-card__title Нежный букет из роз
