@@ -288,17 +288,36 @@ body{
 	display:inline-block;
 	text-align:center;
 	&_buy{
-	color:#333333;
-	background:none;
-	text-align: center;
-	padding: 12px 30px;
-	border:1px solid #959595;
+		color:#333333;
+		background:none;
+		text-align: center;
+		padding: 12px 30px;
+		border:1px solid #959595;
 		&:hover{
 			color:#fff;
 			background: #ffa8a8;
 			border:1px solid #ffa8a8;
 		}
 	}
+	
+	&_testimonials{
+		color:#333333;
+		background:none;
+		text-align: center;
+		padding: 12px 30px;
+		border:1px solid #959595;
+		display: block;
+		margin: 20px auto;
+		
+		
+		&:hover{
+			color:#fff;
+			background: #ffa8a8;
+			border:1px solid #ffa8a8;
+		}
+	}
+	
+	
 
 	&_article{
 		position:absolute;
@@ -763,10 +782,8 @@ body{
 	font-size:13px;
 	margin-bottom: 50px;
 	color: #666666;
-	h3{
-		display: inline-block;
-		
-	}
+	
+	
 	&__name{
 		font-size:13px;
 		color: #666666;
@@ -776,6 +793,8 @@ body{
 	}
 	
 	&__rating{
+		text-align: center;
+		
 		
 	}
 	
@@ -791,30 +810,45 @@ body{
 		margin-bottom: 25px;
 	}
 	
-	&__send
+	&__send{
+		.title{
+		display: inline-block;
+		font-size: 15px;
+			margin-bottom: 10px;
+		}
 	
-	textarea{
-		width: 100%;
-		resize: none;
-		overflow: hidden;
-	}
 	
-	input[type="text"]{
-		display: none;
-	}
-	input[type="submit"]{
-		text-align: center;
-		display: block;
-		margin: 0 auto;
+		textarea{
+			width: 100%;
+			resize: none;
+			overflow: hidden;
+		}
+	
+		input[type="text"]{
+			display: none;
+		}
+		
 	}
 }
 #rating{
-	color: #ff9f9f;
-	position: relative;
+	width: 128px;
+	height: 21px;
+	background: url(../images/rating.png);
+	
+	
+		
+	
 	//background: green;
 	.fa-star-o{
 		color: #ff9f9f;
 	}
+}
+
+#rating-hover{
+	margin-top: -21px;
+	width: 0%;
+	height: 21px;
+	background: url(../images/rating.png) 0 -22px;
 }
 
 

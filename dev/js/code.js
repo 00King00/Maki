@@ -158,26 +158,48 @@ $(function(){
 	//this part for rating
 	
 	$("#rating").mousemove(function(e){
+		if($(".testimonials__rating").hasClass("rated")){
+			return false;
+		}
 		var offset = $("#rating").offset(), coords = e.clientX - offset.left;
-		var stars = Math.round((coords+3.75)/7.5);
-		 $("#rating").css({
-			 "background": "orange",
-			 "width": "stars*10%",
-		 })
-//		75 100
-//		x - 10
-//		for( var i=1; i<=stars; i++){
-//			if()
-//		}
-		
-		//console.log(stars);
+		var stars = Math.round((coords+6.4)/12.8);
+		var stars_value =stars*10 + "%";
+		$("#rating-hover").css("width",stars_value);
 	});
 	
-	$("#rating").click(function(e){
+	$("#rating-hover").mousemove(function(e){
+		if($(".testimonials__rating").hasClass("rated")){
+			return false;
+		}
 		var offset = $("#rating").offset(), coords = e.clientX - offset.left;
-		var stars = Math.round((coords+3.75)/7.5);
-		console.log(stars);
+		var stars = Math.round((coords+6.4)/12.8);
+		var stars_value =stars*10 + "%";
+		$("#rating-hover").css("width",stars_value);
+	
 	});
+	
+	$(".testimonials__rating").mouseleave(function(){
+		if($(this).hasClass("rated")){
+			return false;
+		}
+		$("#rating-hover").css("width",0);
+	});
+		
+	$(".testimonials__rating").click(function(e){
+		var offset = $("#rating").offset(), coords = e.clientX - offset.left;
+		var stars = Math.round((coords+6.4)/12.8);
+		var stars_value =stars*10 + "%";
+		$("#rating-hover").css("width",stars_value)
+		$(this).addClass("rated")
+		
+		return
+		
+	
+	
+	});
+	
+	
+	
 	
 	
 	
