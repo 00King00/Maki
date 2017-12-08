@@ -26,22 +26,47 @@ html
 						.testimonials__rating
 						.testimonials__text Быстрая доставка. Сервис на уровне. Спасибо большое!!!
 				.testimonials
+					.testimonials__send
+						h3 Написать отзыв:
+						form
+							.testimonials__rating.pull-right
+								input(type="text")
+							textarea(rows="5" name="text" )
+							input.btn.btn_buy(type="submit" value="ОТПРАВИТЬ")
+
 			.col-phablet-1-2
+				h2 Нежный букет из роз
+				br
 				.order-form
-					.order__sum(id="order-sum")
-						|2350 руб.
-					span Количество
-					.counter
-						span.counter-btn.counter-btn_minus
-							span
-						input(type="text" value="1" id="amount")
-						span.counter-btn.counter-btn_plus
-							span
-					a(href="#").btn.btn_order.pull-right
+					.order-form__sum
+						span(id="order-sum") 2350 руб.
+						br
+						span Количество
+						.order-form__counter
+							span.counter-btn.counter-btn_minus
+								span
+							input(type="text" value="1" id="amount")
+							span.counter-btn.counter-btn_plus
+								span
+					a(href="#").btn.btn_order
 							|заказать
 					.clearfix
 					p При заказе букета вы получите 3% бонусов или 90 рублей. Вы их можете использовать при следующем заказе.
-
+				.filters__parameters
+					.filters__title
+						|Доставка
+					.delivery
+						span.icon.icon_delivery
+						span С 9.00 до 24.00 - 
+						span.bold 500 руб.
+					.delivery
+						span.icon.icon_night-delivery
+						span Доставка в ночное время - 
+						span.bold 700 руб.
+				.filters__parameters
+					.filters__title
+						|Описание букета
+					p Шикарный букет из 24 крупных роз с легко читаемым подтекстом. В этой композиции 24 алых цветка и всего лишь один бутон белоснежный. Сам букет собран в форме сердца, огромного страстного сердца в котором живет всего одна, единственная, непохожая ни на кого, роза. Букет «Только ты» – отличный выбор для первого признания или предложения руки и сердца. Он так же может стать той самой «оливковой ветвью» мира при ссоре – перед искренностью такого признания не устоит ни одно женское сердце. Роскошный букет алых роз будет отличным подарком и самым романтичным признанием в любви. 
 		.wrapper.clearfix
 			//- .col-phablet-1-2
 			//- .col-phablet-1-2
@@ -53,52 +78,40 @@ html
 			//- 	.col-phablet-1-2.col-tablet-1-4
 			//- 		|купити
 			.clients
-				
 				ul#ClientSlider
 					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_1
+						a(href="#")
+							span.clients_img.client_1
 					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_2
+						a(href="#")
+							span.clients_img.client_2
 					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_3
+						a(href="#")
+							span.clients_img.client_3
 					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_4
+						a(href="#")
+							span.clients_img.client_4
 					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_5
+						a(href="#")
+							span.clients_img.client_5
 					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_6
+						a(href="#")
+							span.clients_img.client_6
 					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_4
+						a(href="#")
+							span.clients_img.client_4
 					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_3
+						a(href="#")
+							span.clients_img.client_3
 					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_1
+						a(href="#")
+							span.clients_img.client_1
 					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_3
+						a(href="#")
+							span.clients_img.client_3
 					li
-						.myslide
-							a(href="#")
-								span.clients_img.client_6
+						a(href="#")
+							span.clients_img.client_6
 			-
 				var catalog=
 				[		
