@@ -795,6 +795,8 @@ body{
 	
 	textarea{
 		width: 100%;
+		resize: none;
+		overflow: hidden;
 	}
 	
 	input[type="text"]{

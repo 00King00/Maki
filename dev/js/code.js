@@ -160,12 +160,23 @@ $(function(){
 	$("#rating").mousemove(function(e){
 		var offset = $("#rating").offset(), coords = e.clientX - offset.left;
 		var stars = Math.round((coords+3.75)/7.5);
+		 $("#rating").css({
+			 "background": "orange",
+			 "width": "stars*10%",
+		 })
 //		75 100
 //		x - 10
+//		for( var i=1; i<=stars; i++){
+//			if()
+//		}
 		
-		console.log(stars);
+		//console.log(stars);
+	});
 	
-		
+	$("#rating").click(function(e){
+		var offset = $("#rating").offset(), coords = e.clientX - offset.left;
+		var stars = Math.round((coords+3.75)/7.5);
+		console.log(stars);
 	});
 	
 	
