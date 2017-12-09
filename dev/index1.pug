@@ -67,18 +67,11 @@ html
 					.block
 						.block__title
 							|Описание букета
-						p Шикарный букет из 24 крупных роз с легко читаемым подтекстом. В этой композиции 24 алых цветка и всего лишь один бутон белоснежный. Сам букет собран в форме сердца, огромного страстного сердца в котором живет всего одна, единственная, непохожая ни на кого, роза. Букет «Только ты» – отличный выбор для первого признания или предложения руки и сердца. Он так же может стать той самой «оливковой ветвью» мира при ссоре – перед искренностью такого признания не устоит ни одно женское сердце. Роскошный букет алых роз будет отличным подарком и самым романтичным признанием в любви. 
+						p Шикарный букет из 24 крупных роз с легко читаемым подтекстом. В этой композиции 24 алых цветка и всего лишь один бутон белоснежный. Сам букет собран в форме сердца, огромного страстного сердца в котором живет всего одна, единственная, непохожая ни на кого, роза. Букет «Только ты» – отличный выбор для первого признания или предложения руки и сердца. Он так же может стать той самой «оливковой ветвью» мира при ссоре – перед искренностью такого признания не устоит ни одно женское сердце. Роскошный букет алых роз будет отличным подарком и самым романтичным признанием в любви.
 		.wrapper.clearfix
-			//- .col-phablet-1-2
-			//- .col-phablet-1-2
-			//- 	.col-phablet-1-2.col-tablet-1-4
-			//- 		.counter
-			//- 			span.btn.btn_counter.minus -
-			//- 			input(type="text" value="1")
-			//- 			span.btn.btn_counter.plus +
-			//- 	.col-phablet-1-2.col-tablet-1-4
-			//- 		|купити
-			.clients
+			.block.block_slider
+				.block__title.block__title_slider
+					|Наши клиенты
 				ul#ClientSlider
 					li
 						a(href="#")
@@ -147,25 +140,28 @@ html
 						price: '1562 руб.'
 					},
 				]
-			.outer
-				.inner
-					ul#lightSlider
-						each item, i in catalog
-							li
-								.myslide
-									.product
-										a(href="#").product__pic
-											img(src=item.pic)
-											if (i==0)
-												span.burst-12 Хит
-											if (i==1)
-												span.circle New
-											if (i==2)
-												span.rectangle Акция
-										.product__name=item.name
-										.product__price=item.price
-										a(href="#").btn.btn_buy
-											|Заказать
+			.block.block_slider
+				.block__title.block__title_slider
+					|Вас может заинтересовать
+				.outer
+					.inner
+						ul#lightSlider
+							each item, i in catalog
+								li
+									.myslide
+										.product
+											a(href="#").product__pic
+												img(src=item.pic)
+												if (i==0)
+													span.burst-12 Хит
+												if (i==1)
+													span.circle New
+												if (i==2)
+													span.rectangle Акция
+											.product__name=item.name
+											.product__price=item.price
+											a(href="#").btn.btn_buy
+												|Заказать
 		.clearfix
 		.wrapper
 			include ./parts/news.pug

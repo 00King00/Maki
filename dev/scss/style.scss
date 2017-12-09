@@ -307,6 +307,7 @@ body{
 		padding: 12px 30px;
 		border:1px solid #959595;
 		display: block;
+		border-radius:0px;
 		margin: 20px auto;
 		
 		
@@ -516,11 +517,19 @@ body{
 	color:#333333;
 	margin-bottom: 50px;
 	font-size:15px;
+	&_slider{
+		border-bottom: 1px solid #f0f0f0;
+		margin-bottom:70px;
+	}
 	&__title{
 		font-weight: bold;
 		margin-bottom:20px;
 		&_testimonails{
 			display:inline-block;
+		}
+		&_slider{
+			font-size:23px;
+			font-weight:normal;
 		}
 	}
 
@@ -635,6 +644,7 @@ body{
 			}
 		}
 }
+
 .burst-12 {
 	background: #fab055;
 	color:#fff;
@@ -647,6 +657,7 @@ body{
 	z-index:2;
 	border-radius:3px;
 }
+
 .burst-12:before, .burst-12:after {
 	content: "";
 	position: absolute;
@@ -658,18 +669,21 @@ body{
 	background: #fab055;
 	z-index: -1;
 }
+
 .burst-12:before {
 	-webkit-transform: rotate(30deg);
 	   -moz-transform: rotate(30deg);
 		-ms-transform: rotate(30deg);
 		 -o-transform: rotate(30deg);
 }
+
 .burst-12:after {
 	-webkit-transform: rotate(60deg);
 	   -moz-transform: rotate(60deg);
 		-ms-transform: rotate(60deg);
 		 -o-transform: rotate(60deg);
 }
+
 .circle {
 	width: 40px;
 	height: 40px;
@@ -681,6 +695,7 @@ body{
 	-webkit-border-radius: 20px;
 	border-radius: 20px;
 }
+
 .rectangle{
 	width:70px;
 	height:30px;
@@ -702,11 +717,13 @@ body{
 	}
 
 }
+
 .clients_img{
 	background: url('../images/clients_sprite.png')center top no-repeat;
 	display:inline-block;
 	height:81px;
 }
+
 .client_1{
 	width: 86px;
 	background-position: 0px -7px;
@@ -714,6 +731,7 @@ body{
 		background-position: 0px -108px;
 	}
 }
+
 .client_2{
 	width: 155px;
 	background-position: -131px -8px;
@@ -721,6 +739,7 @@ body{
 		background-position: -131px -109px;
 	}
 }
+
 .client_3{
 	width: 112px;
 	background-position: -339px -2px;
@@ -728,6 +747,7 @@ body{
 		background-position: -339px -103px;
 	}
 }
+
 .client_4{
 	width: 100px;
 	background-position: -483px -6px;
@@ -735,6 +755,7 @@ body{
 		background-position: -483px -107px;
 	}
 }
+
 .client_5{
 	width: 106px;
 	background-position: -626px -6px;
@@ -742,6 +763,7 @@ body{
 		background-position: -626px -107px;
 	}
 }
+
 .client_6{
 	width: 106px;
 	background-position: -765px -5px;
@@ -782,54 +804,56 @@ body{
 	font-size:13px;
 	margin-bottom: 50px;
 	color: #666666;
-	
-	
 	&__name{
 		font-size:13px;
 		color: #666666;
 		font-weight:bold;
-		margin-bottom: 10px;
-		
-	}
-	
+		margin-bottom: 10px;	
+	}	
 	&__rating{
-		text-align: center;
-		
-		
+		text-align: center;	
 	}
-	
 	&__text{
+		position:relative;
 		font-size:13px;
 		color: #666666;
 		text-align: justify;
 		padding: 18px;
 		background: #f0f0f0;
-		
+			&:before{
+				content:'';
+				position:absolute;
+				top: -16px;
+				left: 70%;
+				width: 0;
+				height: 0;
+				border-bottom: 21px solid #f0f0f0;
+				border-right: 22px solid transparent;
+				transform: rotate(-20deg);
+			}
 	}
 	&__box{
 		margin-bottom: 25px;
 	}
-	
 	&__send{
 		.title{
 		display: inline-block;
 		font-size: 15px;
 			margin-bottom: 10px;
 		}
-	
-	
 		textarea{
 			width: 100%;
 			resize: none;
 			overflow: hidden;
+			border-color: #e7e7e7;
 		}
-	
 		input[type="text"]{
 			display: none;
 		}
 		
 	}
 }
+
 #rating{
 	width: 128px;
 	height: 21px;
@@ -850,7 +874,6 @@ body{
 	height: 21px;
 	background: url(../images/rating.png) 0 -22px;
 }
-
 
 .order-form{
 	padding:35px;
@@ -875,6 +898,7 @@ body{
 		font-size:20px;
 	}
 }
+
 .order-form__counter{
 	padding:3px;
 	background:#fff;
@@ -892,9 +916,11 @@ body{
 	// 	text-align:right;
 	// }
 }
+
 .order{
 	display:inline-block;
 }
+
 .product-card__title{
 	font-size:37px;
 	color:#333333;
