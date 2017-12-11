@@ -140,11 +140,13 @@ $(function(){
 
 	})
 	
-	//this part for looking catalog-foto
-	$(".catalog-foto__sub-foto img").click(function(){
+	//this part for looking product-img
+	$(".product-img__thumbnails img").click(function(){
 		var sourse =  $(this).attr('src');
-		$(".catalog-foto__main-foto img").attr( 'src', sourse);
+		$(".product-img__main-img img").attr( 'src', sourse);
 	});
+	
+	//end part for looking product-img
 	
 	
 	
