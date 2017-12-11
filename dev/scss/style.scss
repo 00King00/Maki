@@ -773,16 +773,16 @@ body{
 }
 
 
-.catalog-foto{
+.product-img{
 	margin-bottom: 40px;
 	text-align: center;
 	
-	&__main-foto{
+	&__main-img{
 		max-height: 400px;
 		
 	}
 	
-	&__sub-foto{
+	&__thumbnails{
 		text-align: left;
 		img{
 			display: inline-block;
