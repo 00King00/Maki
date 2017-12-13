@@ -12,29 +12,6 @@ html
 						img(src="images/bouquet_1.png")
 						img(src="images/bouquet_2.png")
 						img(src="images/bouquet_3.png")
-				.block
-					.block__title.block__title_testimonials Отзывы покупателей
-					.count.pull-right 2 отзыва
-					.testimonials__box
-						.pub-date 01.01.2016
-						.testimonials__name Михаил Святославович
-						.testimonials__rating
-						.testimonials__text Канна. Название интересное, цветок тропический. В диком виде в нашей стране она не произрастает, а вот на клумбах наших городов часто можно встретить Канну причём в основном красных оттенков почему то. На самом деле Канна...
-					.testimonials__box
-						.pub-date 01.01.2016
-						.testimonials__name Светлана Алексеева
-						.testimonials__rating
-						.testimonials__text Быстрая доставка. Сервис на уровне. Спасибо большое!!!
-				.testimonails
-					.testimonials__send
-						form
-							.title Написать отзыв:
-							.testimonials__rating.pull-right
-								input(type="hidden")
-								#rating
-								#rating-hover
-							textarea(rows="5" name="text" )
-							input.btn.btn_testimonials(type="submit" value="ОТПРАВИТЬ")
 			.col-phablet-1-2
 				.product-card
 					.product-card__title Нежный букет из роз
@@ -68,6 +45,29 @@ html
 						.block__title
 							|Описание букета
 						p Шикарный букет из 24 крупных роз с легко читаемым подтекстом. В этой композиции 24 алых цветка и всего лишь один бутон белоснежный. Сам букет собран в форме сердца, огромного страстного сердца в котором живет всего одна, единственная, непохожая ни на кого, роза. Букет «Только ты» – отличный выбор для первого признания или предложения руки и сердца. Он так же может стать той самой «оливковой ветвью» мира при ссоре – перед искренностью такого признания не устоит ни одно женское сердце. Роскошный букет алых роз будет отличным подарком и самым романтичным признанием в любви.
+			.col-phablet-1-2
+				.block
+					.block__title.block__title_comment Отзывы покупателей
+					.count.pull-right 2 отзыва
+					.comment
+						.pub-date 01.01.2016
+						.comment__author Михаил Святославович
+						.comment__rating
+						.comment__text Канна. Название интересное, цветок тропический. В диком виде в нашей стране она не произрастает, а вот на клумбах наших городов часто можно встретить Канну причём в основном красных оттенков почему то. На самом деле Канна...
+					.comment
+						.pub-date 01.01.2016
+						.comment__author Светлана Алексеева
+						.comment__rating
+						.comment__text Быстрая доставка. Сервис на уровне. Спасибо большое!!!
+				.comment__form
+					form
+						.title Написать отзыв:
+						.testimonials__rating.pull-right
+							input(type="hidden")
+							.rating
+							.rating-hover
+						textarea(rows="5" name="text" )
+						input.btn.btn_testimonials(type="submit" value="ОТПРАВИТЬ")
 		.wrapper.clearfix
 			.block.block_slider
 				.block__title.block__title_slider

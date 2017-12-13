@@ -524,7 +524,7 @@ body{
 	&__title{
 		font-weight: bold;
 		margin-bottom:20px;
-		&_testimonails{
+		&_comment{
 			display:inline-block;
 		}
 		&_slider{
@@ -800,18 +800,22 @@ body{
 		color: #666666;
 	}
 
-.testimonials{
+.comment{
+	margin-bottom: 25px;
 	font-size:13px;
 	margin-bottom: 50px;
 	color: #666666;
-	&__name{
+	&__author{
 		font-size:13px;
 		color: #666666;
 		font-weight:bold;
 		margin-bottom: 10px;	
 	}	
 	&__rating{
-		text-align: center;	
+		width:128px;
+		height: 21px;
+		background:url(../images/rating.png);
+		transform: scale(0.7);
 	}
 	&__text{
 		position:relative;
@@ -824,7 +828,7 @@ body{
 				content:'';
 				position:absolute;
 				top: -16px;
-				left: 70%;
+				left: 54%;
 				width: 0;
 				height: 0;
 				border-bottom: 21px solid #f0f0f0;
@@ -832,10 +836,7 @@ body{
 				transform: rotate(-20deg);
 			}
 	}
-	&__box{
-		margin-bottom: 25px;
-	}
-	&__send{
+	&__form{
 		.title{
 		display: inline-block;
 		font-size: 15px;
@@ -854,7 +855,7 @@ body{
 	}
 }
 
-#rating{
+.rating{
 	width: 128px;
 	height: 21px;
 	background: url(../images/rating.png);
@@ -868,7 +869,7 @@ body{
 	}
 }
 
-#rating-hover{
+.rating-hover{
 	margin-top: -21px;
 	width: 0%;
 	height: 21px;
