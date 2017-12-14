@@ -809,13 +809,16 @@ body{
 		font-size:13px;
 		color: #666666;
 		font-weight:bold;
-		margin-bottom: 10px;	
+		margin-bottom: 10px;
+		display:inline-block;	
 	}	
 	&__rating{
+		display:inline-block;
+		float:right;
 		width:128px;
 		height: 21px;
 		background:url(../images/rating.png);
-		transform: scale(0.7);
+		transform: scale(0.7) translateX(30px);
 	}
 	&__text{
 		position:relative;
@@ -828,7 +831,7 @@ body{
 				content:'';
 				position:absolute;
 				top: -16px;
-				left: 54%;
+				left: 81%;
 				width: 0;
 				height: 0;
 				border-bottom: 21px solid #f0f0f0;
@@ -926,4 +929,8 @@ body{
 	font-size:37px;
 	color:#333333;
 	margin-bottom:25px;
+}
+.content-flex{
+	display:flex;
+	flex-wrap:wrap;
 }
