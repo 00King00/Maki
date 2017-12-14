@@ -24,10 +24,9 @@
     margin: 0;
 }
 .lSSlideWrapper {
-    max-width: 90%;
+    max-width: 100%;
     overflow: hidden;
     position: relative;
-    margin: 0 auto;
 
 }
 .lSSlideWrapper > .lightSlider:after {
@@ -241,6 +240,7 @@
 }
 .lSSlideOuter .lightSlider > *,  .lSSlideOuter .lSGallery li {
     float: left;
+    text-align:center;
 }
 .lSSlideOuter.lSrtl .lightSlider > *,  .lSSlideOuter.lSrtl .lSGallery li {
     float: right !important;

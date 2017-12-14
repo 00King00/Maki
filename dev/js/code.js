@@ -83,6 +83,7 @@ $(function(){
 	
 	$('#lightSlider').lightSlider({
 		item: 4,
+		controls:false,
 		slideMove:4,
 		//loop:true,
 		
@@ -110,14 +111,14 @@ $(function(){
 		],
 	})
 	//client slider
-	$('#ClientSlider').lightSlider({
+	var slider=$('#ClientSlider').lightSlider({
 		item: 5,
 		slideMove:1,
 		loop:false,
-		// controls:false,
-		slideMargin: 20,
+		controls:false,
+		slideMargin: 10,
 		keyPress: true,
-		
+		autoWidth:false,
 		responsive:[
 			{
 				breakpoint: 800,
@@ -140,8 +141,13 @@ $(function(){
 				
 			},
 		],
-
 	})
+	$(".ls-prevSlide").click(function(){
+        slider.goToPrevSlide(); 
+    });
+    $(".ls-nextSlide").click(function(){
+        slider.goToNextSlide(); 
+    });
 	
 	//this part for looking product-img
 	$(".product-img__thumbnails img").click(function(){
