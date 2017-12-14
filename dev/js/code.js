@@ -114,6 +114,9 @@ $(function(){
 		item: 5,
 		slideMove:1,
 		loop:false,
+		// controls:false,
+		slideMargin: 20,
+		keyPress: true,
 		
 		responsive:[
 			{

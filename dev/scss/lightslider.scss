@@ -24,9 +24,11 @@
     margin: 0;
 }
 .lSSlideWrapper {
-    max-width: 100%;
+    max-width: 90%;
     overflow: hidden;
     position: relative;
+    margin: 0 auto;
+
 }
 .lSSlideWrapper > .lightSlider:after {
     clear: both;
