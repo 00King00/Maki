@@ -180,8 +180,8 @@ $(function(){
 		}
 		var offset = $(".rating").offset(), coords = e.clientX - offset.left;
 		var stars = Math.round((coords+6.4)/12.8);
-		var stars_value =stars*10 + "%";
-		$(".rating-hover").css("width",stars_value);
+		var stars_width =stars*10 + "%";
+		$(".rating-hover").css("width",stars_width);
 	});
 	
 	$("#rating-hover").mousemove(function(e){
@@ -190,8 +190,8 @@ $(function(){
 		}
 		var offset = $(".rating").offset(), coords = e.clientX - offset.left;
 		var stars = Math.round((coords+6.4)/12.8);
-		var stars_value =stars*10 + "%";
-		$(".rating-hover").css("width",stars_value);
+		var stars_width =stars*10 + "%";
+		$(".rating-hover").css("width",stars_width);
 	
 	});
 	
@@ -205,8 +205,8 @@ $(function(){
 	$(".testimonials__rating").click(function(e){
 		var offset = $(".rating").offset(), coords = e.clientX - offset.left;
 		var stars = Math.round((coords+6.4)/12.8);
-		var stars_value =stars*10 + "%";
-		$(".rating-hover").css("width",stars_value)
+		var stars_width =stars*10 + "%";
+		$(".rating-hover").css("width",stars_width)
 		$(this).addClass("rated")
 		
 		return
