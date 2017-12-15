@@ -983,3 +983,33 @@ body{
 	width:90%;
 	margin:0 auto;
 }
+
+// start order_page.pug
+
+.order_page{
+	
+	ul{
+		list-style: none;
+		}
+	span{
+		display: inline-block;
+		min-width: 230px;
+		text-align: left;
+		//font-weight: bold;
+		
+	}
+	
+	&__top-line{
+		margin: 20px 0;
+		background-color: #f7f7f7;
+		li{
+			display: inline-block;
+			min-width:  250px;
+			padding: 15px 25px;
+			&:first-child{
+				min-width:  180px;
+			}
+		}
+		
+	}
+}

@@ -3,24 +3,36 @@ html
 		include ./parts/head.pug
 	body
 		include ./parts/header.pug
-		ul.order_page
-			li
-				.order_page__title Ваш заказ
-					.order_page__top-line
-			li
-				.order_page__title Доставка
-					.order_page__top-line
-			li
-				.order_page__title Оплата
-					.order_page__top-line
-						ul
-							li
-								input(type="checkbox" name="s1" id="s5")
-								label(for="s5")
-									span При получение
-							li
-								input(type="checkbox" name="s1" id="s6")
-								label(for="s6")
-									span Онлайн
-		
+		.wrapper
+			.order_page
+				ul
+					li
+						.order_page__title Ваш заказ
+							.order_page__top-line
+					li
+						.order_page__title Доставка
+							.order_page__top-line
+								ul
+									li
+										input(type="checkbox" name="s2" id="s9")
+										label(for="s9")
+											span Я получу заказ
+									li
+										input(type="checkbox" name="s2" id="s10")
+										label(for="s10")
+											span Отправить заказ адресату
+					li
+						.order_page__title Оплата
+							.order_page__top-line
+
+								ul
+									li
+										input(type="checkbox" name="s2" id="s11")
+											label(for="s11")
+												span При получение
+									li
+										input(type="checkbox" name="s2" id="s12")
+											label(for="s12")
+												span Онлайн
+
 		include ./parts/footer.pug
