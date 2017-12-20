@@ -169,27 +169,26 @@ html
 			.block.block_slider
 				.block__title.block__title_slider
 					|Вас может заинтересовать
+				.slider
 					.ls-prevSlide
 					.ls-nextSlide
-				.outer
-					.inner
-						ul#lightSlider
-							each item, i in catalog
-								li
-									.myslide
-										.product
-											a(href="#").product__pic
-												img(src=item.pic)
-												if (i==0)
-													span.burst-12 Хит
-												if (i==1)
-													span.circle New
-												if (i==2)
-													span.rectangle Акция
-											.product__name=item.name
-											.product__price=item.price
-											a(href="#").btn.btn_buy
-												|Заказать
+					ul#ProductSlider
+						each item, i in catalog
+							li
+								.myslide
+									.product
+										a(href="#").product__pic
+											img(src=item.pic)
+											if (i==0)
+												span.burst-12 Хит
+											if (i==1)
+												span.circle New
+											if (i==2)
+												span.rectangle Акция
+										.product__name=item.name
+										.product__price=item.price
+										a(href="#").btn.btn_buy
+											|Заказать
 		.clearfix
 		.wrapper
 			include ./parts/news.pug
