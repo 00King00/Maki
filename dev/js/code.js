@@ -81,7 +81,7 @@ $(function(){
 	
 	// this part for slider products
 	
-	$('#lightSlider').lightSlider({
+	var slide=$('#lightSlider').lightSlider({
 		item: 4,
 		controls:false,
 		slideMove:4,
@@ -110,6 +110,12 @@ $(function(){
 			},
 		],
 	})
+	$(".ls-prevSlide").click(function(){
+		slide.goToPrevSlide(); 
+	});
+	$(".ls-nextSlide").click(function(){
+		slide.goToNextSlide(); 
+	});
 	//client slider
 	var slider=$('#ClientSlider').lightSlider({
 		item: 5,
