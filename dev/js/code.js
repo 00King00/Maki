@@ -163,7 +163,6 @@ $(function(){
 	//end part for looking product-img
 	
 	
-	
 	$(".amount").change(function () {
 		
 		var quantity = +($(this).val());
