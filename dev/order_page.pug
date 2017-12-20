@@ -4,35 +4,59 @@ html
 	body
 		include ./parts/header.pug
 		.wrapper
-			.order_page
-				ul
-					li
-						.order_page__title Ваш заказ
-							.order_page__top-line
-					li
-						.order_page__title Доставка
-							.order_page__top-line
-								ul
-									li
-										input(type="checkbox" name="s2" id="s9")
-										label(for="s9")
-											span Я получу заказ
-									li
-										input(type="checkbox" name="s2" id="s10")
-										label(for="s10")
-											span Отправить заказ адресату
-					li
-						.order_page__title Оплата
-							.order_page__top-line
+			
 
-								ul
-									li
-										input(type="checkbox" name="s2" id="s11")
-										label(for="s11")
-											span При получение
-									li
-										input(type="checkbox" name="s2" id="s12")
-										label(for="s12")
-											span Онлайн
+			ul.order_page
+				li
+					.block.block_slider.order_page__title
+						.block__title.block__title_slider Ваш заказ
+						table(id="miyazaki")
+							tr
+								th Наименование
+								th Цена
+								th Количество
+								th Сумма
+							tr
+								td
+									img(src="/images/category_icon_3.png")
+									|Нежный букет из роз
+								td 2 450 руб.
+								td
+									.order-form__counter
+										span.counter-btn.counter-btn_minus
+											span
+										input(type="text" value="1" id="amount")
+										span.counter-btn.counter-btn_plus
+											span
+								td 2 450 руб.
+							tr
+								td
+									img(src="/images/category_icon_1.png")
+									span Нежный букет из роз
+								td 1200 руб.
+								td
+									.order-form__counter
+										span.counter-btn.counter-btn_minus
+											span
+										input(type="text" value="1" id="amount")
+										span.counter-btn.counter-btn_plus
+											span
+								td 2 400 руб.
 
+				li
+					.order_page__title Доставка
+						.order_page__top-line
+				li
+					.order_page__title Оплата
+						.order_page__top-line
+							ul
+								li
+									input(type="checkbox" name="s1" id="s5")
+									label(for="s5")
+										span При получение
+								li
+									input(type="checkbox" name="s1" id="s6")
+									label(for="s6")
+										span Онлайн
+	
 		include ./parts/footer.pug

@@ -81,7 +81,7 @@ $(function(){
 	
 	// this part for slider products
 	
-	var slide=$('#lightSlider').lightSlider({
+	var ProductSlider=$('#ProductSlider').lightSlider({
 		item: 4,
 		controls:false,
 		slideMove:4,
@@ -110,20 +110,19 @@ $(function(){
 			},
 		],
 	})
-	$(".ls-prevSlide").click(function(){
-		slide.goToPrevSlide(); 
+	$(".slider > .ls-prevSlide").click(function(){
+		ProductSlider.goToPrevSlide(); 
 	});
-	$(".ls-nextSlide").click(function(){
-		slide.goToNextSlide(); 
+	$(".slider > .ls-nextSlide").click(function(){
+		ProductSlider.goToNextSlide(); 
 	});
 	//client slider
-	var slider=$('#ClientSlider').lightSlider({
+	var ClientSlider=$('#ClientSlider').lightSlider({
 		item: 5,
 		slideMove:1,
 		loop:false,
 		controls:false,
 		slideMargin: 10,
-		keyPress: true,
 		autoWidth:false,
 		responsive:[
 			{
@@ -148,11 +147,11 @@ $(function(){
 			},
 		],
 	})
-	$(".ls-prevSlide").click(function(){
-        slider.goToPrevSlide(); 
+	$(".block__title_slider .ls-prevSlide").click(function(){
+        ClientSlider.goToPrevSlide(); 
     });
-    $(".ls-nextSlide").click(function(){
-        slider.goToNextSlide(); 
+    $(".block__title_slider .ls-nextSlide").click(function(){
+        ClientSlider.goToNextSlide(); 
     });
 	
 	//this part for looking product-img
@@ -214,8 +213,22 @@ $(function(){
 	
 	
 	});
-	
-	
+	var headertext = [],
+	headers = document.querySelectorAll("#miyazaki th"),
+	tablerows = document.querySelectorAll("#miyazaki th"),
+	tablebody = document.querySelector("#miyazaki tbody");
+
+	for(var i = 0; i < headers.length; i++) {
+	  var current = headers[i];
+	  headertext.push(current.textContent.replace(/\r?\n|\r/,""));
+	} 
+	for (var i = 0, row; row = tablebody.rows[i]; i++) {
+	  for (var j = 0, col; col = row.cells[j]; j++) {
+	    col.setAttribute("data-th", headertext[j]);
+	  } 
+	}
+
+
 	
 	
 	
