@@ -170,7 +170,7 @@ $(function(){
 		
 		var result = quantity * price;
 		//$(".order-sum").val(result);
-		console.log(result)
+		$(this).parent().parent().siblings('td[data-th="Сумма"]').html(result +'руб.');
 		
 	});
 	
