@@ -10,14 +10,14 @@ html
 						|Ваш заказ
 						table(id="miyazaki")
 							tr
-								th Наименование
+								th(colspan="2") Наименование
 								th Цена
 								th Количество
 								th Сумма
 							tr
 								td
 									img(src="/images/category_icon_3.png")
-									|Нежный букет из роз
+								td Нежный букет из роз
 								td 2450 руб.
 								td
 									.order-form__counter
@@ -30,7 +30,8 @@ html
 							tr
 								td
 									img(src="/images/category_icon_1.png")
-									span Нежный букет из роз
+									
+								td Нежный букет из роз
 								td 1200 руб.
 								td
 									.order-form__counter
@@ -39,7 +40,10 @@ html
 										input(type="text" value="1" class="amount")
 										span.counter-btn.counter-btn_plus
 											span
-								td 2400 руб.
+								td 1200 руб.
+							tr
+								td(colspan="4") Сумма:
+								td 440033 руб.
 				li
 					.order_page__title Доставка
 						.order_page__top-line

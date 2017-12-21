@@ -170,7 +170,7 @@ $(function(){
 		
 		var result = quantity * price;
 		//$(".order-sum").val(result);
-		$(this).parent().parent().siblings('td[data-th="Сумма"]').html(result +'руб.');
+		$(this).parent().parent().siblings('td[data-th="Сумма"]').html(result +' руб.');
 		
 	});
 	
@@ -227,9 +227,9 @@ $(function(){
 	  var current = headers[i];
 	  headertext.push(current.textContent.replace(/\r?\n|\r/,""));
 	} 
-	for (var i = 0, row; row = tablebody.rows[i]; i++) {
-	  for (var j = 0, col; col = row.cells[j]; j++) {
-	    col.setAttribute("data-th", headertext[j]);
+	for (var i = 1, row; row = tablebody.rows[i]; i++) {
+	  for (var j = 1, col; col = row.cells[j]; j++) {
+	    col.setAttribute("data-th", headertext[j-1]);
 	  } 
 	}
 
