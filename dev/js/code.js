@@ -163,13 +163,18 @@ $(function(){
 	//end part for looking product-img
 	
 	
-	
-	$("#amount").change(function () {
-		var quantity = $("#amount").val();
-		var price = 2350;
-		var result = +quantity * price;
-		$("#order-sum").val(result);
+	$(".amount").change(function () {
+		
+		var quantity = +($(this).val());
+		var price = +($(this).parent().parent().siblings('td[data-th="Цена"]').text().substr(0,5));
+		
+		var result = quantity * price;
+		//$(".order-sum").val(result);
+		console.log(result)
+		
 	});
+	
+	
 
 	//this part for rating
 	
@@ -228,8 +233,10 @@ $(function(){
 	  } 
 	}
 
-
 	
+	//this part for order products
+	
+		$("td[data-th]").attr
 	
 	
 	
