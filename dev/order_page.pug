@@ -6,8 +6,8 @@ html
 		.wrapper
 			ul.order_page
 				li
-					.block.block_slider.order_page__title
-						.block__title.block__title_slider Ваш заказ
+					.order_page__title 
+						|Ваш заказ
 						table(id="miyazaki")
 							tr
 								th Наименование
@@ -55,5 +55,19 @@ html
 									input(type="checkbox" name="s1" id="s6")
 									label(for="s6")
 										span Онлайн
+						.payment-method
+							ul
+								li
+									a(href="#")
+										img(src="/images/webmoney.png")
+								li
+									a(href="#")
+										img(src="/images/yandex.png")
+								li
+									a(href="#")
+										img(src="/images/qiwi.png")
+								li
+									a(href="#")
+										img(src="/images/visa_master-card.png")
 	
 		include ./parts/footer.pug

@@ -1001,6 +1001,8 @@ body{
 
 //table
 table#miyazaki { 
+
+	padding:15px;
 	margin: 0 auto;
 	width:100%;
 	text-rendering: optimizeLegibility;
@@ -1016,8 +1018,10 @@ table#miyazaki {
 		border-bottom:1px solid #e1e1e1;
 	}
 	td{
-		vertical-align:middle;
-		// text-align:center;
+	
+	}
+	tr{
+
 	}
 }
 
@@ -1025,18 +1029,22 @@ table#miyazaki {
 
 @media screen and (max-width: 700px) {
 	table#miyazaki{
+		border-collapse: collapse;
+		vertical-align:center;
 		th { 
 			display: none; 
 		}
-		td { 
+		td{ 
 			display: block; padding: .6rem; 
 		}
 		td:before { 
 			content: attr(data-th); 
-			font-weight: normal;
 			display: inline-block;
 			text-align:left;
-			width: 7rem; 
+			width: 8rem; 
+			color:#666666;
+			font-weight:normal;
+			font-size:13px;
 		}
 	}
 }
@@ -1044,4 +1052,22 @@ table#miyazaki {
 .order_page{
 	list-style:none;
 }
-
+.payment-method{
+	display:inline-block;
+	padding:25px;
+	img{
+		max-width:100%;
+	}
+	margin-bottom:100px;
+	box-shadow: 0 0 30px 20px rgba(221, 221, 221, .5);
+	ul{
+		text-align:center;
+		list-style:none;
+	}
+	li{
+		vertical-align:middle;
+		margin:15px;
+		display:inline-block;
+		max-width:140px;
+	}
+}
