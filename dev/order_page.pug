@@ -6,7 +6,7 @@ html
 		.wrapper
 			ul.order_page
 				li
-					.block.block_slider.order_page__title 
+					.block.block_slider.order_page__title
 						.block__title.block__title_slider Ваш заказ
 						table(id="miyazaki")
 							tr
@@ -18,17 +18,17 @@ html
 								td
 									img(src="/images/category_icon_3.png")
 									|Нежный букет из роз
-								td 2 450 руб.
+								td 2450 руб.
 								td
 									.order-form__counter
 										span.counter-btn.counter-btn_minus
 											span
-										input(type="text" value="1" id="amount")
+										input(type="text" value="1" class="amount")
 										span.counter-btn.counter-btn_plus
-											span 
-								td 2 450 руб.
+											span
+								td 2450 руб.
 							tr
-								td 
+								td
 									img(src="/images/category_icon_1.png")
 									span Нежный букет из роз
 								td 1200 руб.
@@ -36,11 +36,10 @@ html
 									.order-form__counter
 										span.counter-btn.counter-btn_minus
 											span
-										input(type="text" value="1" id="amount")
+										input(type="text" value="1" class="amount")
 										span.counter-btn.counter-btn_plus
 											span
-								td 2 400 руб.
-
+								td 2400 руб.
 				li
 					.order_page__title Доставка
 						.order_page__top-line
@@ -56,5 +55,5 @@ html
 									input(type="checkbox" name="s1" id="s6")
 									label(for="s6")
 										span Онлайн
-		
+	
 		include ./parts/footer.pug
