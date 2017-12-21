@@ -232,15 +232,18 @@ $(function(){
 	    col.setAttribute("data-th", headertext[j-1]);
 	  } 
 	}
-
-	
-	//this part for order products
-	
-		$("td[data-th]").attr
-	
-	
-	
 	
 
+	$("input[name='s1']").click(function() {
+		if($("#s5").prop("checked")){
+			$(".payment-method").hide()
+		}
+		else $(".payment-method").show()
+	})
+
+
+	
+	//this part for order products	
+	
 });
 
