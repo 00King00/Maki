@@ -1031,11 +1031,19 @@ table#miyazaki {
 	table#miyazaki{
 		border-collapse: collapse;
 		vertical-align:center;
+		tr{
+			border: 1px solid #e1e1e1;	
+		}
 		th { 
 			display: none; 
 		}
 		td{ 
 			display: block; padding: .6rem; 
+		}
+		tr:last-child{
+			td:before{
+				content:'';
+			}
 		}
 		td:before { 
 			content: attr(data-th); 
