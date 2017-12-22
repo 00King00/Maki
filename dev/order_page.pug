@@ -6,7 +6,7 @@ html
 		.wrapper
 			ul.order_page
 				li
-					.order_page__title 
+					.order_page__title
 						|Ваш заказ
 						table(id="miyazaki")
 							tr
@@ -47,6 +47,21 @@ html
 				li
 					.order_page__title Доставка
 						.order_page__top-line
+					.order_page__order-address
+						ul
+							li Отправитель
+							li
+								input(type='text' value='Имя')
+							li
+								input(type='text' value='Имя')
+						ul
+							li Получатель
+							li
+								input(type='text')
+							li
+								input(type='text')
+							li
+								input(type='text')
 				li
 					.order_page__title Оплата
 						.order_page__top-line
