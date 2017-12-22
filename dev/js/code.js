@@ -171,8 +171,12 @@ $(function(){
 		var result = quantity * price;
 		//$(".order-sum").val(result);
 		$(this).parent().parent().siblings('td[data-th="Сумма"]').html(result +' руб.');
-		
-	});
+		var sum = 0;
+  		$('#order tr').each(function(){
+      	sum+=parseInt($('td[data-th="Сумма"]', this));
+  		});
+  		$('.order-sum').html(sum);
+		});
 	
 	
 
@@ -219,28 +223,38 @@ $(function(){
 	
 	});
 	var headertext = [],
-	headers = document.querySelectorAll("#miyazaki th"),
-	tablerows = document.querySelectorAll("#miyazaki th"),
-	tablebody = document.querySelector("#miyazaki tbody");
+	headers = document.querySelectorAll("#order th"),
+	tablerows = document.querySelectorAll("#order th"),
+	tablebody = document.querySelector("#order tbody");
 
 	for(var i = 0; i < headers.length; i++) {
 	  var current = headers[i];
 	  headertext.push(current.textContent.replace(/\r?\n|\r/,""));
 	} 
-	for (var i = 1, row; row = tablebody.rows[i]; i++) {
+	for (var i = 0, row; row = tablebody.rows[i]; i++) {
 	  for (var j = 1, col; col = row.cells[j]; j++) {
 	    col.setAttribute("data-th", headertext[j-1]);
 	  } 
 	}
-
-	
-	//this part for order products
-	
-		$("td[data-th]").attr
-	
-	
-	
 	
 
+	$("input[name='s1']").click(function() {
+		if($("#s5").prop("checked")){
+			$(".payment-method").css({
+				"filter":"grayscale(100%)",
+				"transition":"all 0.5s ease",
+				"pointer-events": "none"
+				})
+		}
+		else $(".payment-method").css({
+			"filter":"grayscale(0%)",
+			"pointer-events": "auto"
+		})
+	})
+
+
+	
+	//this part for order products	
+	
 });
 
