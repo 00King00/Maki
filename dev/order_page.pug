@@ -8,7 +8,7 @@ html
 				li
 					.order_page__title 
 						|Ваш заказ
-						table(id="miyazaki")
+						table(id="order")
 							tr
 								th(colspan="2") Наименование
 								th Цена
@@ -43,7 +43,8 @@ html
 								td 1200 руб.
 							tr
 								td(colspan="4") Сумма:
-								td 440033 руб.
+								td 
+									.order-sum 440033 руб.
 				li
 					.order_page__title Доставка
 						.order_page__top-line
