@@ -1007,36 +1007,143 @@ body{
 	}
 	
 	&__order-address{
-	ul{
-		//text-align: right;
-		position: relative;
-
-	}
-	li{
-		display: inline-block;
-		margin: 5px;
 		
-		&:first-child{
-			width: 110px;
-			
+		ul{
+			&:last-child{
+				margin-bottom: 20px;
+				li{
+
+					&:first-child{
+						width: 130px;
+					}
+					&:last-child{
+						input{
+							width: 300px;
+						}
+					}
+				}
+			}
+
 		}
-		&.receiver{
-			
+		li{
+			display: inline-block;
+			margin: 5px;
+
+			&:first-child{
+				width: 110px;
+
+			}
+
 		}
 
-	}
-
-	input{
-		height: 30px;
-		border-radius: 2px;
-		width: 180px;
-	}
+		input{
+			height: 30px;
+			border-radius: 2px;
+			width: 180px;
+		}
 
 	}
 }
 
+a.btn.brn-free{
+	margin-left: 50px;
+	background: #90ddb1;
+	text-transform: none;
+	padding: 10px;
+	color: white;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+textarea.order_page__order-address{
+	width: 100%;
+	min-height: 80px;
+	resize: none;
+	
+}
+
+@media (max-width:935px){
+	.order_page__order-address{
+		ul:not(:last-child){
+			
+			li:nth-child(3n){
+				margin-right:8vw;
+			}
+			li:nth-child(4n){
+				margin-left:129px;
+
+			}
+		}
+		
+		
+	}
+}
+
+@media (max-width:686px){
+	.order_page__order-address{
+		ul:last-child{
+			li:nth-child(3n){
+				margin-left: 129px;
+			}
+		}
+	}
+	
+}
+@media (max-width:591px){
+	.order_page__order-address{
+		li:nth-child(3n){
+			margin-left: 129px;
+			
+		}
+		li:nth-child(5n){
+			margin-left:129px;
+			
+		}
+	}
+}
+
+@media (max-width:465px){
+	.order_page__order-address{
+		ul{
+			li{
+				display: block;
+				margin: 5px;
+				text-align: center;
+			}
+	////////////
+			li:nth-child(3n){
+				margin-left: 0;
+
+			}
+			li:nth-child(5n){
+				margin-left:0;
+
+			}
+		}
+		
+		ul:not(:last-child){
+			
+			li:nth-child(3n){
+				margin-right:0;
+			}
+			li:nth-child(4n){
+				margin-left:0;
+
+			}
+		}
+		ul:last-child{
+			li:nth-child(3n){
+				margin-left: 0;
+			}
+		}
+		
+		
+	}
+		
+}
+
+
 //table
-table#order { 
+table#order {
 
 	padding:15px;
 	margin: 0 auto;
@@ -1048,7 +1155,7 @@ table#order {
 	box-shadow: 0 0 30px 20px rgba(221, 221, 221, .5);
 	th {
 		text-align:center;
-		padding: 15px; 
+		padding: 15px;
 		color:#666666;
 		font-weight:normal;
 		font-size:13px;
@@ -1082,7 +1189,7 @@ table#order {
 		border-collapse: collapse;
 		vertical-align:center;
 		tr{
-			border: 1px solid #e1e1e1;	
+			border: 1px solid #e1e1e1;
 		}
 		th { 
 			display: none; 
