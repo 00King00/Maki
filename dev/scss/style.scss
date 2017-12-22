@@ -999,17 +999,10 @@ body{
 	}
 	
 	&__order-address{
-		a.btn{
-			margin-left: 50px;
-			background: #90ddb1;
-			text-transform: none;
-			padding: 10px;
-			color: white;
-			border-radius: 3px;
-			margin-top: 20px;
-		}
+		
 		ul{
 			&:last-child{
+				margin-bottom: 20px;
 				li{
 
 					&:first-child{
@@ -1042,6 +1035,22 @@ body{
 		}
 
 	}
+}
+
+a.btn.brn-free{
+	margin-left: 50px;
+	background: #90ddb1;
+	text-transform: none;
+	padding: 10px;
+	color: white;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+textarea.order_page__order-address{
+	width: 100%;
+	min-height: 80px;
+	resize: none;
+	
 }
 
 @media (max-width:935px){
