@@ -163,19 +163,23 @@ $(function(){
 	//end part for looking product-img
 	
 	
+	//this part for order-sum
 	$(".amount").change(function () {
 		
 		var quantity = +($(this).val());
-		var price = +($(this).parent().parent().siblings('td[data-th="Цена"]').text().substr(0,5));
+		var price = +($(this).parent().parent().siblings('td[data-th="Цена"]').text().slice(0,-4));
+		
+		//console.log(price);
 		
 		var result = quantity * price;
-		//$(".order-sum").val(result);
-		$(this).parent().parent().siblings('td[data-th="Сумма"]').html(result +' руб.');
+		
+		$(this).parent().parent().siblings('td[data-th="Сумма"]').text(result +' руб.');
 		var sum = 0;
-  		$('#order tr').each(function(){
-      	sum+=parseInt($('td[data-th="Сумма"]', this));
+  		$('#order td[data-th="Сумма"]').each(function(){
+      	sum+= +$(this).text().slice(0,-4);
+			//console.log(sum);
   		});
-  		$('.order-sum').html(sum);
+  		$('.order-sum').text(sum +' руб.');
 		});
 	
 	
