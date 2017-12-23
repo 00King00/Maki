@@ -270,8 +270,8 @@ $(function(){
 		dropdown: true,
 		scrollbar: true
 	});
-
-
+	$("#datepicker").datepicker();
+	$.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
 	//this part for order products
 
 });
