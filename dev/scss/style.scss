@@ -675,6 +675,14 @@ body{
 		top:0;
 		right:0;
 	}
+	&_date{
+		width: 34px;
+		height: 34px;
+		background-position: -197px -14px;
+		position: absolute;
+		top:0;
+		right:0;
+	}
 }
 
 .bottom-line{
@@ -1248,20 +1256,21 @@ table#order {
 
 	}
 }
-.delivery-time{
+.delivery-time,.delivery-date{
 	display: inline-block;
 	position: relative;
 	border: 1px solid #cccccc;
 	height: 34px;
-	input#timepicker{
-		position: relative;
-		top:3px;
-		margin: 0 -1px;
-		border-top: none;
-		border-bottom: none;
-		border-left: 1px solid #cccccc;
-		border-right: 1px solid #cccccc;
-		padding: 8px;
-		color: #cccccc;
-	}
+}
+input#timepicker,input#datepicker{
+	outline: none;
+	position: relative;
+	top:2px;
+	margin: 0 -1px;
+	border-top: none;
+	border-bottom: none;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	padding: 8px;
+	color: #cccccc;
 }
