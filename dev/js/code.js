@@ -7,7 +7,7 @@ $(function(){
 			$(".up").show(300);
 		},1000)
 	})
-	
+
 	$(".up").click(function(){
 		$(this).hide(300);
 		$(".header_menu ul").slideUp(1000);
@@ -15,10 +15,10 @@ $(function(){
 			$(".down").show(300);
 		},700)
 	})
-	
+
 	// this part for search
 
-	
+
 	$("#top-search").click(function(){
 		if($('.search-top input[type="search"]').val()==""){
 			if($('.search-top input[type="search"]').css("display")== "none"){
@@ -40,14 +40,14 @@ $(function(){
 				var res;
 				//res =$("input").val();
 				res= $(this);
-				
+
 				alert(res);
 			}
 			$(this).parent().submit (function () {
 				return confirm ( 'Ви дійсно хочете відправити дані?');
 			});
 			//getRes();
-			
+
 		}
 	});
 	// this part for range
@@ -61,9 +61,9 @@ $(function(){
 		showLabels: true,
 		isRange : true
 		}).jRange('setValue', '1000,5000');
-	
+
 	// this part for add products
-	
+
 	$('.counter-btn_minus').click(function () {
 		var $input = $(this).parent().find('input');
 		var count = parseInt($input.val()) - 1;
@@ -78,15 +78,15 @@ $(function(){
 		$input.change();
 		return false;
 	});
-	
+
 	// this part for slider products
-	
+
 	var ProductSlider=$('#ProductSlider').lightSlider({
 		item: 4,
 		controls:false,
 		slideMove:4,
 		//loop:true,
-		
+
 		responsive:[
 			{
 				breakpoint: 800,
@@ -95,8 +95,8 @@ $(function(){
 					slideMove:3,
 //					loop:true,
 				}
-				
-				
+
+
 			},
 			{
 				breakpoint: 600,
@@ -105,16 +105,16 @@ $(function(){
 					slideMove:1,
 //					loop:true,
 				}
-				
-				
+
+
 			},
 		],
 	})
 	$(".slider > .ls-prevSlide").click(function(){
-		ProductSlider.goToPrevSlide(); 
+		ProductSlider.goToPrevSlide();
 	});
 	$(".slider > .ls-nextSlide").click(function(){
-		ProductSlider.goToNextSlide(); 
+		ProductSlider.goToNextSlide();
 	});
 	//client slider
 	var ClientSlider=$('#ClientSlider').lightSlider({
@@ -132,8 +132,8 @@ $(function(){
 					slideMove:1,
 //					loop:true,
 				}
-				
-				
+
+
 			},
 			{
 				breakpoint: 600,
@@ -142,37 +142,37 @@ $(function(){
 					slideMove:1,
 //					loop:true,
 				}
-				
-				
+
+
 			},
 		],
 	})
 	$(".block__title_slider .ls-prevSlide").click(function(){
-        ClientSlider.goToPrevSlide(); 
+        ClientSlider.goToPrevSlide();
     });
     $(".block__title_slider .ls-nextSlide").click(function(){
-        ClientSlider.goToNextSlide(); 
+        ClientSlider.goToNextSlide();
     });
-	
+
 	//this part for looking product-img
 	$(".product-img__thumbnails img").click(function(){
 		var sourse =  $(this).attr('src');
 		$(".product-img__main-img img").attr( 'src', sourse);
 	});
-	
+
 	//end part for looking product-img
-	
-	
+
+
 	//this part for order-sum
 	$(".amount").change(function () {
-		
+
 		var quantity = +($(this).val());
 		var price = +($(this).parent().parent().siblings('td[data-th="Цена"]').text().slice(0,-4));
-		
+
 		//console.log(price);
-		
+
 		var result = quantity * price;
-		
+
 		$(this).parent().parent().siblings('td[data-th="Сумма"]').text(result +' руб.');
 		var sum = 0;
   		$('#order td[data-th="Сумма"]').each(function(){
@@ -181,11 +181,11 @@ $(function(){
   		});
   		$('.order-sum').text(sum +' руб.');
 		});
-	
-	
+
+
 
 	//this part for rating
-	
+
 	$(".rating").mousemove(function(e){
 		if($(".testimonials__rating").hasClass("rated")){
 			return false;
@@ -195,7 +195,7 @@ $(function(){
 		var stars_width =stars*10 + "%";
 		$(".rating-hover").css("width",stars_width);
 	});
-	
+
 	$("#rating-hover").mousemove(function(e){
 		if($(".testimonials__rating").hasClass("rated")){
 			return false;
@@ -204,27 +204,27 @@ $(function(){
 		var stars = Math.round((coords+6.4)/12.8);
 		var stars_width =stars*10 + "%";
 		$(".rating-hover").css("width",stars_width);
-	
+
 	});
-	
+
 	$(".testimonials__rating").mouseleave(function(){
 		if($(this).hasClass("rated")){
 			return false;
 		}
 		$(".rating-hover").css("width",0);
 	});
-		
+
 	$(".testimonials__rating").click(function(e){
 		var offset = $(".rating").offset(), coords = e.clientX - offset.left;
 		var stars = Math.round((coords+6.4)/12.8);
 		var stars_width =stars*10 + "%";
 		$(".rating-hover").css("width",stars_width)
 		$(this).addClass("rated")
-		
+
 		return
-		
-	
-	
+
+
+
 	});
 	var headertext = [],
 	headers = document.querySelectorAll("#order th"),
@@ -234,15 +234,19 @@ $(function(){
 	for(var i = 0; i < headers.length; i++) {
 	  var current = headers[i];
 	  headertext.push(current.textContent.replace(/\r?\n|\r/,""));
-	} 
+	}
 	for (var i = 0, row; row = tablebody.rows[i]; i++) {
 	  for (var j = 1, col; col = row.cells[j]; j++) {
 	    col.setAttribute("data-th", headertext[j-1]);
-	  } 
+	  }
 	}
-	
+
 
 	$("input[name='s1']").click(function() {
+		if($("#s9").prop("checked")){
+			$("textarea.greeting-card").show()
+		}
+		else($("textarea.greeting-card").hide())
 		if($("#s5").prop("checked")){
 			$(".payment-method").css({
 				"filter":"grayscale(100%)",
@@ -257,8 +261,7 @@ $(function(){
 	})
 
 
-	
-	//this part for order products	
-	
-});
 
+	//this part for order products
+
+});
