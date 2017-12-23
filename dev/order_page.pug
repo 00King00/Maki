@@ -8,43 +8,44 @@ html
 				li
 					.order_page__title
 						|Ваш заказ
-						table(id="order")
-							tr
-								th(colspan="2") Наименование
-								th Цена
-								th Количество
-								th Сумма
-							tr
-								td
-									img(src="/images/category_icon_3.png")
-								td Нежный букет из роз
-								td 2450 руб.
-								td
-									.order-form__counter
-										span.counter-btn.counter-btn_minus
-											span
-										input(type="text" value="1" class="amount")
-										span.counter-btn.counter-btn_plus
-											span
-								td 2450 руб.
-							tr
-								td
-									img(src="/images/category_icon_1.png")
-									
-								td Нежный букет из роз
-								td 1200 руб.
-								td
-									.order-form__counter
-										span.counter-btn.counter-btn_minus
-											span
-										input(type="text" value="1" class="amount")
-										span.counter-btn.counter-btn_plus
-											span
-								td 1200 руб.
-							tr
-								td(colspan="4") Сумма:
-								td.order-sum 3600 руб.
+						.order-table
+							table(id="order")
+								tr
+									th(colspan="2") Наименование
+									th Цена
+									th Количество
+									th Сумма
+								tr
+									td
+										img(src="/images/category_icon_3.png")
+									td Нежный букет из роз
+									td 2450 руб.
+									td
+										.order-form__counter
+											span.counter-btn.counter-btn_minus
+												span
+											input(type="text" value="1" class="amount")
+											span.counter-btn.counter-btn_plus
+												span
+									td 2450 руб.
+								tr
+									td
+										img(src="/images/category_icon_1.png")
 										
+									td Нежный букет из роз
+									td 1200 руб.
+									td
+										.order-form__counter
+											span.counter-btn.counter-btn_minus
+												span
+											input(type="text" value="1" class="amount")
+											span.counter-btn.counter-btn_plus
+												span
+									td 1200 руб.
+								tr
+									td(colspan="4") Сумма:
+									td.order-sum 3600 руб.
+											
 				li
 					.order_page__title Доставка
 						.order_page__top-line
@@ -76,7 +77,7 @@ html
 						label(for="s9")
 							span Добавить откритку
 						a.btn.brn-free Бесплатно
-						textarea.order_page__order-address( name='text')
+						textarea.greeting-card( name='text')
 				li
 					.order_page__title Оплата:
 						.order_page__top-line
