@@ -167,15 +167,15 @@ $(function(){
 	$(".amount").change(function () {
 
 		var quantity = +($(this).val());
-		var price = +($(this).parent().parent().siblings('td[data-th="Цена"]').text().slice(0,-4));
+		var price = +($(this).parent().parent().siblings('td[data-th="Цена ₽"]').text().slice(0,-4));
 
 		//console.log(price);
 
 		var result = quantity * price;
 
-		$(this).parent().parent().siblings('td[data-th="Сумма"]').text(result +' руб.');
+		$(this).parent().parent().siblings('td[data-th="Сумма ₽"]').text(result +' руб.');
 		var sum = 0;
-  		$('#order td[data-th="Сумма"]').each(function(){
+  		$('#order td[data-th="Сумма ₽"]').each(function(){
       	sum+= +$(this).text().slice(0,-4);
 			//console.log(sum);
   		});
@@ -259,7 +259,17 @@ $(function(){
 			"pointer-events": "auto"
 		})
 	})
-
+	$("#timepicker").timepicker({
+		timeFormat: 'HH:mm',
+		interval: 30,
+		minTime: '0',
+		maxTime: '23:30',
+		defaultTime: '0',
+		startTime: '00:00',
+		dynamic: false,
+		dropdown: true,
+		scrollbar: true
+	});
 
 
 	//this part for order products

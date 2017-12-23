@@ -667,6 +667,14 @@ body{
 		height: 25px;
 		background-position: -68px -19px;
 	}
+	&_time{
+		width: 34px;
+		height: 34px;
+		background-position: -150px -14px;
+		position: absolute;
+		top:0;
+		right:0;
+	}
 }
 
 .bottom-line{
@@ -991,21 +999,6 @@ body{
 
 
 	}
-
-
-
-	&__top-line{
-		margin: 20px 0;
-		background-color: #f7f7f7;
-		li{
-			display: inline-block;
-
-			padding: 15px 25px;
-
-		}
-
-	}
-
 	&__order-address{
 
 		ul{
@@ -1045,16 +1038,18 @@ body{
 	}
 }
 
-a.btn.brn-free{
-	margin-left: 50px;
+a.btn.btn-free{
+	margin-left: 45px;
 	background: #90ddb1;
 	text-transform: none;
 	padding: 10px;
 	color: white;
 	border-radius: 3px;
 	margin-bottom: 20px;
+	margin-top: 20px;
 }
 textarea.greeting-card{
+	display: none;
 	width: 100%;
 	min-height: 80px;
 	resize: none;
@@ -1241,5 +1236,32 @@ table#order {
 		margin:15px;
 		display:inline-block;
 		max-width:140px;
+	}
+}
+.order__options{
+	margin: 20px 0;
+	background-color: #f7f7f7;
+	li{
+		display: inline-block;
+
+		padding: 15px 25px;
+
+	}
+}
+.delivery-time{
+	display: inline-block;
+	position: relative;
+	border: 1px solid #cccccc;
+	height: 34px;
+	input#timepicker{
+		position: relative;
+		top:3px;
+		margin: 0 -1px;
+		border-top: none;
+		border-bottom: none;
+		border-left: 1px solid #cccccc;
+		border-right: 1px solid #cccccc;
+		padding: 8px;
+		color: #cccccc;
 	}
 }
