@@ -689,7 +689,10 @@ body{
 		background-position: -292px -14px;
 		position: absolute;
 		top:1px;
-		right:6px;
+		right:1px;
+		@include breakpoint(phablet){
+			right: 6px;
+		}
 	}
 }
 
@@ -1156,11 +1159,19 @@ table#order {
 }
 
 
-.delivery__time,.delivery__date,.delivery__adress{
+.delivery__time,.delivery__date{
 	display: inline-block;
 	position: relative;
 	height: 34px;
 	margin-bottom: 10px;
+}
+.delivery__adress{
+	position: relative;
+	height: 34px;
+	margin-bottom: 10px;
+	@include breakpoint(phablet){
+		display: inline-block;
+	}
 }
 input#timepicker,input#datepicker{
 	width: 113px;
@@ -1173,7 +1184,6 @@ input#timepicker,input#datepicker{
 	color: #333333;
 }
 input#autocomplete{
-	width: 170px;
 	outline: none;
 	position: relative;
 	border: none;
@@ -1181,24 +1191,33 @@ input#autocomplete{
 	border: 1px solid #cccccc;
 	color: #333333;
 }
-
+// .delivery{
+// 	text-align: center;
+// 	@include breakpoint(phablet){
+// 		text-align: left;
+// 	}
+// }
 .delivery__info{
 overflow: hidden;
 position: relative;
-padding-left:130px;
+padding-left:0;
 	>span{
-		position: absolute;
-		left:0;
-		top: 5px;
+		display: block;
+		margin-bottom:10px;
 	}
 	&:last-child{
-		padding-left: 187px;
 		>span{
 			display: block;
+			@include breakpoint(phablet){
+				position: absolute;
+				left: 0;
+				top:5;
+				display: block;
+			}
 		}
 	}
 	input{
-	width: 170px;
+	width: 100%;
 	margin-right: 5px;
 	outline: none;
 	padding: 8px;
@@ -1211,9 +1230,7 @@ padding-left:130px;
 		font-size: 12px;
 		color: #adadad;
 		display: inline-block;
-		position: relative;
-		top: 10px;
-		height: 50px;
+		vertical-align: middle;
 
 
 	}
@@ -1233,6 +1250,26 @@ padding-left:130px;
 		}
 
 
+	}
+	@include breakpoint(phablet){
+		padding-left:130px;
+		>span{
+			position: absolute;
+			left:0;
+			top: 5px;
+		}
+		input{
+			width: 170px;
+			margin-right: 5px;
+			outline: none;
+			padding: 8px;
+			border: 1px solid #cccccc;
+			height: 34px;
+			margin-bottom: 10px;
+		}
+		&:last-child{
+			padding-left: 187px;
+		}
 	}
 }
 
