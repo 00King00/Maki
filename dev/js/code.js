@@ -177,11 +177,11 @@ $(function(){
 		var sum = 0;
   		$('#order td[data-th="Сумма ₽"]').each(function(){
       	sum+= +$(this).text().slice(0,-4);
-			
+
   		});
   		$('.order-sum').text(sum +' руб.');
 		$('span.sum').text(sum  + ' руб.')
-		
+
 		if($("#s8").prop("checked")){
 			var element = +($('#timepicker').val().slice(0,2));
 			//console.log(element);
@@ -194,9 +194,9 @@ $(function(){
 					$('span.sum').text(res+500+' руб.')
 				}
 		}
-		
-		
-	
+
+
+
 	});
 
 
@@ -328,5 +328,21 @@ $(function(){
 	$("#datepicker").datepicker();
 	$.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
 	//this part for order products
-
+	//autocomplete
+	var city = [
+		"Москва",
+		"Санкт-Петербург",
+		"Челябинск",
+		"Мурманск",
+		"Владивосток",
+		"Иваново",
+		"Новосибирск",
+		"Омск",
+		"Кемерово",
+		"Воронеж",
+		"Самара",
+		"Ростов-на-Дону",
+		"Тюмень"
+	];
+	$( "#autocomplete" ).autocomplete({source: city});
 })
