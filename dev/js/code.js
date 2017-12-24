@@ -277,7 +277,7 @@ $(function(){
 		
 	})
 	
-	$("#timepicker").change(function () {
+	$("#timepicker").click(function () {
 		var quantity = ($(this).val())
 		//.slice(0,-4));
 
