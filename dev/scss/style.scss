@@ -1013,6 +1013,7 @@ body{
 	}
 	span{
 		display: inline-block;
+
 	}
 }
 
@@ -1153,6 +1154,8 @@ table#order {
 
 	}
 }
+	
+	
 .delivery__time,.delivery__date,.delivery__adress{
 	display: inline-block;
 	position: relative;
@@ -1178,6 +1181,7 @@ input#autocomplete{
 	border: 1px solid #cccccc;
 	color: #cccccc;
 }
+	
 .delivery__info{
 overflow: hidden;
 position: relative;
@@ -1202,13 +1206,36 @@ padding-left:130px;
 	height: 34px;
 	margin-bottom: 10px;
 	}
+	
+	.delivery__details{
+		font-size: 12px;
+		color: #adadad;
+		display: inline-block;
+		position: relative;
+		top: 10px;
+		height: 50px;
+		
+		
+	}
+	
+	.delivery__sum-order,delivery__sum{
+		display: inline-block;
+		//float: right;
+	}
+	
+	.delivery-wrapper-sum{
+		text-align: right;
+	}
+
 	input.street{
 		@include breakpoint(phablet){
 			width: 290px;
 		}
 
+
 	}
 }
+
 .order_page__title{
 	font-size: 23px;
 	font-weight: bold;

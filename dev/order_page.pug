@@ -31,7 +31,6 @@ html
 							tr
 								td
 									img(src="/images/category_icon_1.png")
-									
 								td Нежный букет из роз
 								td 1200 руб.
 								td
@@ -54,7 +53,7 @@ html
 								label(for="s7")
 									span Я получу заказ
 							li
-								input(type="radio" name="s1" id="s8")
+								input(type="radio" name="s1" id="s8" checked)
 								label(for="s8")
 									span Отправить заказ адресату
 					.delivery
@@ -91,6 +90,19 @@ html
 								input(type='text' id='timepicker')
 								label(for='timepicker')
 									span.icon.icon_time
+							.delivery__details
+								span * С 9.00 до 24.00 - 500 руб.
+								br
+								span Доставка в ночное время - 700 руб.
+					.delivery__info
+						.delivery-wrapper-sum
+							.delivery__sum-order
+								span Стоимость доставки составит:
+								span 500 руб.
+							.delivery__sum
+								span Итого:
+								span.sum
+							
 				li
 					.order_page__title Оплата
 					.order__options
@@ -117,5 +129,4 @@ html
 							li
 								a(href="#")
 									img(src="/images/visa_master-card.png")
-	
 		include ./parts/footer.pug
