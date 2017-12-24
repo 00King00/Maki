@@ -89,15 +89,20 @@ html
 						ul
 							li Дата и время доставки:
 							li
-								.delivery-date
+								.delivery__date
 									input(type='text' id='datepicker')
 									label(for='datepicker')
 										span.icon.icon_date
 							li
-								.delivery-time
+								.delivery__time
 									input(type='text' id='timepicker')
 									label(for='timepicker')
 										span.icon.icon_time
+							li
+								.delivery__adress
+									input(type='text' id='autocomplete')
+									label(for='autocomplete')
+										span.icon.icon_adress
 				li
 					.order_page__title Оплата:
 						.order__options
