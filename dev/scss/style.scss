@@ -672,7 +672,7 @@ body{
 		height: 34px;
 		background-position: -150px -14px;
 		position: absolute;
-		top:0;
+		top:1px;
 		right:0;
 	}
 	&_date{
@@ -680,7 +680,7 @@ body{
 		height: 34px;
 		background-position: -197px -14px;
 		position: absolute;
-		top:0;
+		top:1px;
 		right:0;
 	}
 	&_adress{
@@ -688,7 +688,7 @@ body{
 		height: 34px;
 		background-position: -292px -14px;
 		position: absolute;
-		top:0;
+		top:1px;
 		right:0;
 	}
 }
@@ -1009,6 +1009,9 @@ body{
 	ul{
 		list-style: none;
 	}
+	>li{
+		margin-bottom: 35px;
+	}
 	span{
 		display: inline-block;
 
@@ -1069,7 +1072,12 @@ textarea.greeting-card{
 	width: 100%;
 	min-height: 80px;
 	resize: none;
-
+	outline: none;
+	margin-bottom: 10px;
+	border: 1px solid #cccccc;
+	@include breakpoint(phablet){
+		width: 50%;
+	} ;
 }
 
 @media (max-width:935px){
@@ -1267,18 +1275,44 @@ table#order {
 .delivery__time,.delivery__date,.delivery__adress{
 	display: inline-block;
 	position: relative;
-	border: 1px solid #cccccc;
 	height: 34px;
+	margin-bottom: 10px;
+	margin-right: 10px;
 }
 input#timepicker,input#datepicker,input#autocomplete{
 	outline: none;
 	position: relative;
-	top:2px;
 	margin: 0 -1px;
-	border-top: none;
-	border-bottom: none;
-	border-left: 1px solid #cccccc;
-	border-right: 1px solid #cccccc;
+	border: none;
 	padding: 8px;
+	border: 1px solid #cccccc;
 	color: #cccccc;
+}
+.delivery__info{
+position: relative;
+padding-left:130px;
+	>span{
+		position: absolute;
+		left:0;
+	}
+	&:last-child{
+		padding-left: 187px;
+		>span{
+			display: block;
+		}
+	}
+	input{
+	width: 180px;
+	margin-right: 10px;
+	outline: none;
+	padding: 8px;
+	border: 1px solid #cccccc;
+	height: 34px;
+	margin-bottom: 10px;
+	}
+}
+.order_page__title{
+	font-size: 23px;
+	font-weight: bold;
+	margin-bottom: 20px;
 }
