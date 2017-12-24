@@ -8,12 +8,13 @@ html
 				li
 					.order_page__title
 						|Ваш заказ
+					.order-table
 						table(id="order")
 							tr
 								th(colspan="2") Наименование
-								th Цена
+								th Цена ₽
 								th Количество
-								th Сумма
+								th Сумма ₽
 							tr
 								td
 									img(src="/images/category_icon_3.png")
@@ -44,64 +45,76 @@ html
 							tr
 								td(colspan="4") Сумма:
 								td.order-sum 3600 руб.
-										
 				li
 					.order_page__title Доставка
-						.order_page__top-line
-					.order_page__order-address
+					.order__options
 						ul
-							li Отправитель:
 							li
-								input(type='text' placeholder='Имя')
+								input(type="radio" name="s1" id="s7")
+								label(for="s7")
+									span Я получу заказ
 							li
-								input(type='text' placeholder='Имя')
-						ul
-							li Получатель:
-							li
-								input(type='text' placeholder='Фамилия')
-							li
-								input(type='text' placeholder='Имя')
-							li
-								input(type='text' placeholder='Отчество')
-							li
-								input(type='text' placeholder='Телефон')
-						ul
-							li Адрес доставки:
-							li
-								input(type='text' placeholder='г.Челябинск')
-							li
-								input(type='text' placeholder='ул.Советская, д.62, кв.3')
-					div
+								input(type="radio" name="s1" id="s8")
+								label(for="s8")
+									span Отправить заказ адресату
+					.delivery
+						.delivery__info
+							span Отправитель:
+							input(type='text' placeholder='Имя')
+							input(type='text' placeholder='Телефон')
+						.delivery__info
+							span Получатель:
+							input(type='text' placeholder='Фамилия')
+							input(type='text' placeholder='Имя')
+							input(type='text' placeholder='Отчество')
+							input(type='text' placeholder='Телефон')
+						.delivery__info
+							span Адрес доставки:
+							.delivery__adress
+								input(type='text' id='autocomplete')
+								label(for='autocomplete')
+									span.icon.icon_adress
+							input(type='text' placeholder='ул.Советская, д.62, кв.3')
 						input(type="checkbox" name="s1" id="s9")
 						label(for="s9")
-							span Добавить откритку
-						a.btn.brn-free Бесплатно
-						textarea.order_page__order-address( name='text')
+							span Добавить открытку
+						a.btn.btn-free Бесплатно
+						br
+						textarea.greeting-card( name='text')
+						.delivery__info
+							span Дата и время доставки:
+							.delivery__date
+								input(type='text' id='datepicker')
+								label(for='datepicker')
+									span.icon.icon_date
+							.delivery__time
+								input(type='text' id='timepicker')
+								label(for='timepicker')
+									span.icon.icon_time
 				li
-					.order_page__title Оплата:
-						.order_page__top-line
-							ul
-								li
-									input(type="radio" name="s1" id="s5")
-									label(for="s5")
-										span При получение
-								li
-									input(type="radio" name="s1" id="s6")
-									label(for="s6")
-										span Онлайн
-						.payment-method
-							ul
-								li
-									a(href="#")
-										img(src="/images/webmoney.png")
-								li
-									a(href="#")
-										img(src="/images/yandex.png")
-								li
-									a(href="#")
-										img(src="/images/qiwi.png")
-								li
-									a(href="#")
-										img(src="/images/visa_master-card.png")
-	
+					.order_page__title Оплата
+					.order__options
+						ul
+							li
+								input(type="radio" name="s1" id="s5")
+								label(for="s5")
+									span При получение
+							li
+								input(type="radio" name="s1" id="s6")
+								label(for="s6")
+									span Онлайн
+					.payment-method
+						ul
+							li
+								a(href="#")
+									img(src="/images/webmoney.png")
+							li
+								a(href="#")
+									img(src="/images/yandex.png")
+							li
+								a(href="#")
+									img(src="/images/qiwi.png")
+							li
+								a(href="#")
+									img(src="/images/visa_master-card.png")
 		include ./parts/footer.pug
