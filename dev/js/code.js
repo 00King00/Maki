@@ -177,11 +177,27 @@ $(function(){
 		var sum = 0;
   		$('#order td[data-th="Сумма ₽"]').each(function(){
       	sum+= +$(this).text().slice(0,-4);
-			//console.log(sum);
+			
   		});
   		$('.order-sum').text(sum +' руб.');
 		$('span.sum').text(sum  + ' руб.')
-		});
+		
+		if($("#s8").prop("checked")){
+			var element = +($('#timepicker').val().slice(0,2));
+			//console.log(element);
+			if(element<9){
+					var res = +($('.order-sum').text().slice(0,-4));
+					$('span.sum').text(res+700+' руб.')
+				}
+				else{
+					var res = +($('.order-sum').text().slice(0,-4));
+					$('span.sum').text(res+500+' руб.')
+				}
+		}
+		
+		
+	
+	});
 
 
 
@@ -266,6 +282,16 @@ $(function(){
 		if($("#s8").prop("checked")){
 			$(".delivery").show()
 			$('.delivery__sum-order').show()
+			var element = +($('#timepicker').val().slice(0,2));
+			//console.log(element);
+			if(element<9){
+					var res = +($('.order-sum').text().slice(0,-4));
+					$('span.sum').text(res+700+' руб.')
+				}
+				else{
+					var res = +($('.order-sum').text().slice(0,-4));
+					$('span.sum').text(res+500+' руб.')
+				}
 
 		} else {
 			$(".delivery").hide()
@@ -293,7 +319,7 @@ $(function(){
 		interval: 30,
 		minTime: '0',
 		maxTime: '23:30',
-		defaultTime: '0',
+		defaultTime: '10',
 		startTime: '00:00',
 		dynamic: false,
 		dropdown: true,
@@ -303,4 +329,4 @@ $(function(){
 	$.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
 	//this part for order products
 
-});
+})
