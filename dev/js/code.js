@@ -185,6 +185,7 @@ $(function(){
 
 
 
+
 	//this part for rating
 
 	$(".rating").mousemove(function(e){
@@ -247,7 +248,7 @@ $(function(){
 		if($("#s9").prop("checked")){
 			$("textarea.greeting-card").show()
 		}
-		else($("textarea.greeting-card").hide())
+		else $("textarea.greeting-card").hide()
 		if($("#s5").prop("checked")){
 			$(".payment-method").css({
 				"filter":"grayscale(100%)",
@@ -260,36 +261,34 @@ $(function(){
 			"pointer-events": "auto"
 		})
 	})
-	
-	$("input[name='s1']").click(function() {
+
+	$("input[name='s2']").click(function() {
 		if($("#s8").prop("checked")){
 			$(".delivery").show()
 			$('.delivery__sum-order').show()
-			
+
 		} else {
 			$(".delivery").hide()
 			$('.delivery__sum-order').hide()
 			var res=+($('.order-sum').text().slice(0,-4));
 			$('span.sum').text(res + ' руб.')
 			console.log(res);
-		
 		 }
-		
-	})
-	
-	$("#timepicker").click(function () {
-		var quantity = ($(this).val())
-		//.slice(0,-4));
 
-		console.log('quantity');
+	});
 
-//  		$('.order-sum').text(sum +' руб.');
-//		$('span.sum').text(sum +' руб.')
-		});
-
-	
-	
 	$("#timepicker").timepicker({
+		change: function(){
+			var element =+($(this).val().slice(0,-3));
+			if(element<9){
+				var res = +($('.order-sum').text().slice(0,-4));
+				$('span.sum').text(res+700+' руб.')
+			}
+			else{
+				var res = +($('.order-sum').text().slice(0,-4));
+				$('span.sum').text(res+500+' руб.')
+			}
+		},
 		timeFormat: 'HH:mm',
 		interval: 30,
 		minTime: '0',
