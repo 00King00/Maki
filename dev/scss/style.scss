@@ -683,6 +683,14 @@ body{
 		top:0;
 		right:0;
 	}
+	&_adress{
+		width: 34px;
+		height: 34px;
+		background-position: -292px -14px;
+		position: absolute;
+		top:0;
+		right:0;
+	}
 }
 
 .bottom-line{
@@ -1256,13 +1264,13 @@ table#order {
 
 	}
 }
-.delivery-time,.delivery-date{
+.delivery__time,.delivery__date,.delivery__adress{
 	display: inline-block;
 	position: relative;
 	border: 1px solid #cccccc;
 	height: 34px;
 }
-input#timepicker,input#datepicker{
+input#timepicker,input#datepicker,input#autocomplete{
 	outline: none;
 	position: relative;
 	top:2px;
