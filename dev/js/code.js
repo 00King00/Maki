@@ -180,6 +180,7 @@ $(function(){
 			//console.log(sum);
   		});
   		$('.order-sum').text(sum +' руб.');
+		$('span.sum').text(sum  + ' руб.')
 		});
 
 
@@ -241,7 +242,7 @@ $(function(){
 	  }
 	}
 
-
+		//this part for order__options
 	$("input[name='s1']").click(function() {
 		if($("#s9").prop("checked")){
 			$("textarea.greeting-card").show()
@@ -259,6 +260,35 @@ $(function(){
 			"pointer-events": "auto"
 		})
 	})
+	
+	$("input[name='s1']").click(function() {
+		if($("#s8").prop("checked")){
+			$(".delivery").show()
+			$('.delivery__sum-order').show()
+			
+		} else {
+			$(".delivery").hide()
+			$('.delivery__sum-order').hide()
+			var res=+($('.order-sum').text().slice(0,-4));
+			$('span.sum').text(res + ' руб.')
+			console.log(res);
+		
+		 }
+		
+	})
+	
+	$("#timepicker").change(function () {
+		var quantity = ($(this).val())
+		//.slice(0,-4));
+
+		console.log('quantity');
+
+//  		$('.order-sum').text(sum +' руб.');
+//		$('span.sum').text(sum +' руб.')
+		});
+
+	
+	
 	$("#timepicker").timepicker({
 		timeFormat: 'HH:mm',
 		interval: 30,
