@@ -1174,7 +1174,7 @@ table#order {
 			&:not(:last-child):after{
 				content: '';
 				position: absolute;
-				top: 0;
+				top: 36px;
 				bottom: 0;
 				width: 8px;
 				background:url(../images/leftside_line.png);
