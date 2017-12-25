@@ -400,6 +400,18 @@ body{
 		margin-left:40px;
 		margin-bottom:20px;
 	}
+	&_pay{
+		margin: 10 auto;
+		margin-bottom: 40px;
+		display: block;
+		color:#fff;
+		background: #ffa8a8;
+		border:1px solid #ffa8a8;
+		padding:20px 20px;
+		@include breakpoint(phablet){
+			width: 30%;
+		}
+	}
 }
 .counter-btn{
 	display:inline-block;
@@ -1012,7 +1024,8 @@ body{
 		list-style: none;
 	}
 	>li{
-		margin-bottom: 35px;
+		margin-bottom: 10px;
+		padding-bottom: 30px;
 	}
 	span{
 		display: inline-block;
@@ -1130,62 +1143,66 @@ table#order {
 .order_page{
 	list-style:none;
 	counter-reset: number;
-	margin-left: 50px;
-	&>li{
-		position: relative;
-		>span{
-			&:after{
-				content: '';
-				position: absolute;
-				z-index: 5;
-				width: 8px;
-				height: 38px;
-				background:white;
-				display: inline-block;
-				left: -40px;
+	@include breakpoint(phablet){
+		margin-left: 50px;
+		&>li{
+			position: relative;
+			>span{
+				&:after{
+					content: '';
+					position: absolute;
+					z-index: 5;
+					width: 8px;
+					height: 38px;
+					background:white;
+					display: inline-block;
+					left: -40px;
+				}
+				// &:before{
+				// 	content: '';
+				// 	position: absolute;
+				// 	z-index: 5;
+				// 	width: 8px;
+				// 	height: 38px;
+				// 	bottom: -20px;
+				// 	background:url(../images/leftside_line.png);
+				// 	background-repeat: repeat-y ;
+				// 	display: inline-block;
+				// 	left: -40px;
+				// }
 			}
-			&:before{
+			&:not(:last-child):after{
 				content: '';
 				position: absolute;
-				z-index: 5;
+				top: 36px;
+				bottom: 0;
 				width: 8px;
-				height: 38px;
-				bottom: -23px;
-				background:grey;
+				background:url(../images/leftside_line.png);
+				background-repeat: repeat-y ;
 				display: inline-block;
 				left: -40px;
 			}
 		}
-		&:not(:last-child):after{
-			content: '';
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			width: 8px;
-			background:grey;
-			display: inline-block;
-			left: -40px;
-		}
-	}
 
-	&>li:before{
-		content: "" counter(number);
-		counter-increment: number;
-		position: absolute;
-		height: 30px;
-		width: 30px;
-		line-height: 25px;
-		border-radius: 30px;
-		border: 3px solid #d7d7d7;
-		color: #d7d7d7;
-		z-index: 10;
-		left: -50px;
-		text-align: center;
-		box-sizing: border-box;
-		display: inline-block;
-		top: -1px;
-		background: white;
-		overflow: hidden;
+		&>li:before{
+			content: "" counter(number);
+			counter-increment: number;
+			position: absolute;
+			height: 30px;
+			width: 30px;
+			line-height: 25px;
+			border-radius: 30px;
+			border: 3px solid #d7d7d7;
+			color: #d7d7d7;
+			z-index: 10;
+			left: -50px;
+			text-align: center;
+			box-sizing: border-box;
+			display: inline-block;
+			top: -1px;
+			background: white;
+			overflow: hidden;
+		}
 	}
 }
 .payment-method{
@@ -1194,7 +1211,6 @@ table#order {
 	img{
 		max-width:100%;
 	}
-	margin-bottom:100px;
 	box-shadow: 0 0 30px 20px rgba(221, 221, 221, .5);
 	ul{
 		text-align:center;
@@ -1205,7 +1221,7 @@ table#order {
 		margin:15px;
 		display:inline-block;
 		max-width:140px;
-		
+
 	}
 }
 .order__options{

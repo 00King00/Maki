@@ -6,7 +6,6 @@ html
 		.wrapper
 			ul.order_page
 				li
-					span
 					.order_page__title
 						|Ваш заказ
 					.order-table
@@ -46,7 +45,6 @@ html
 								td(colspan="4") Сумма:
 								td.order-sum 3600 руб.
 				li
-					span
 					.order_page__title Доставка
 					.order__options
 						ul
@@ -99,11 +97,9 @@ html
 							.delivery__sum
 								span Стоимость доставки составит:
 								span 500 руб.
-					.delivery-wrapper-sum
-						
-						.total__sum
-							span Итого:
-							span.sum
+							.total__sum
+								span Итого:
+								span.sum
 
 				li
 					.order_page__title Оплата
@@ -131,4 +127,6 @@ html
 							li
 								a(href="#")
 									img(src="/images/visa_master-card.png")
+			a(href='#').btn.btn_pay
+					|Сделать заказ
 		include ./parts/footer.pug
