@@ -1106,8 +1106,10 @@ table#order {
 				text-align:right;
 				font-weight:bold;
 			}
+		}
+		tr:nth-child(2)>td:first-child{
 			td:before{
-				content:'';
+				width: 0;
 			}
 		}
 		td:before {
@@ -1201,6 +1203,7 @@ input#autocomplete{
 overflow: hidden;
 position: relative;
 padding-left:0;
+margin-bottom: 10px;
 	>span{
 		display: block;
 		margin-bottom:10px;
@@ -1231,17 +1234,6 @@ padding-left:0;
 		color: #adadad;
 		display: inline-block;
 		vertical-align: middle;
-
-
-	}
-
-	.delivery__sum-order,delivery__sum{
-		display: inline-block;
-		//float: right;
-	}
-
-	.delivery-wrapper-sum{
-		text-align: right;
 	}
 
 	input.street{
@@ -1278,4 +1270,20 @@ padding-left:0;
 	font-weight: bold;
 	margin-bottom: 20px;
 	color:#333333;
+}
+.total__sum{
+	color:#333333;
+	text-align: right;
+	color: #ffa9a9;
+	@include breakpoint(phablet){
+		padding-right: 70px;
+	}
+}
+.delivery__sum{
+	margin-top: 30px;
+	text-align: right;
+	font-weight: bold;
+	@include breakpoint(phablet){
+		padding-right: 70px;
+	}
 }
