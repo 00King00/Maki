@@ -1129,6 +1129,64 @@ table#order {
 //table end
 .order_page{
 	list-style:none;
+	counter-reset: number;
+	margin-left: 50px;
+	&>li{
+		position: relative;
+		>span{
+			&:after{
+				content: '';
+				position: absolute;
+				z-index: 5;
+				width: 8px;
+				height: 38px;
+				background:white;
+				display: inline-block;
+				left: -40px;
+			}
+			&:before{
+				content: '';
+				position: absolute;
+				z-index: 5;
+				width: 8px;
+				height: 38px;
+				bottom: -23px;
+				background:grey;
+				display: inline-block;
+				left: -40px;
+			}
+		}
+		&:not(:last-child):after{
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 8px;
+			background:grey;
+			display: inline-block;
+			left: -40px;
+		}
+	}
+
+	&>li:before{
+		content: "" counter(number);
+		counter-increment: number;
+		position: absolute;
+		height: 30px;
+		width: 30px;
+		line-height: 25px;
+		border-radius: 30px;
+		border: 3px solid #d7d7d7;
+		color: #d7d7d7;
+		z-index: 10;
+		left: -50px;
+		text-align: center;
+		box-sizing: border-box;
+		display: inline-block;
+		top: -1px;
+		background: white;
+		overflow: hidden;
+	}
 }
 .payment-method{
 	display:inline-block;
@@ -1147,6 +1205,7 @@ table#order {
 		margin:15px;
 		display:inline-block;
 		max-width:140px;
+		
 	}
 }
 .order__options{
