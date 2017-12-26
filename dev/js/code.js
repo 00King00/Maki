@@ -16,8 +16,8 @@ $(function(){
 		},700)
 	})
 
-	// this part for search
 
+	// this part for search
 
 	$("#top-search").click(function(){
 		if($('.search-top input[type="search"]').val()==""){
@@ -37,6 +37,7 @@ $(function(){
 			}
 		}else{
 				var res;
+
 				res =$(".search-top input").val();
 				$('.search-top input').submit();
 				//console.log(res);
@@ -63,6 +64,7 @@ $(function(){
 		isRange : true
 		}).jRange('setValue', '1000,5000');
 
+
 	// this part for add products
 
 	$('.counter-btn_minus').click(function () {
@@ -80,13 +82,13 @@ $(function(){
 		return false;
 	});
 
+
 	// this part for slider products
 
 	var ProductSlider=$('#ProductSlider').lightSlider({
 		item: 4,
 		controls:false,
 		slideMove:4,
-		//loop:true,
 
 		responsive:[
 			{
@@ -94,20 +96,14 @@ $(function(){
 				settings:{
 					item:3,
 					slideMove:3,
-//					loop:true,
-				}
-
-
+			}
 			},
 			{
 				breakpoint: 600,
 				settings:{
 					item:1,
 					slideMove:1,
-//					loop:true,
 				}
-
-
 			},
 		],
 	})
@@ -117,7 +113,10 @@ $(function(){
 	$(".slider > .ls-nextSlide").click(function(){
 		ProductSlider.goToNextSlide();
 	});
+
+
 	//client slider
+
 	var ClientSlider=$('#ClientSlider').lightSlider({
 		item: 5,
 		slideMove:1,
@@ -131,61 +130,48 @@ $(function(){
 				settings:{
 					item:3,
 					slideMove:1,
-//					loop:true,
 				}
-
-
 			},
 			{
 				breakpoint: 600,
 				settings:{
 					item:2,
 					slideMove:1,
-//					loop:true,
 				}
-
-
 			},
 		],
 	})
 	$(".block__title_slider .ls-prevSlide").click(function(){
-        ClientSlider.goToPrevSlide();
-    });
-    $(".block__title_slider .ls-nextSlide").click(function(){
-        ClientSlider.goToNextSlide();
-    });
+		ClientSlider.goToPrevSlide();
+	});
+	$(".block__title_slider .ls-nextSlide").click(function(){
+		ClientSlider.goToNextSlide();
+	});
+
 
 	//this part for looking product-img
 	$(".product-img__thumbnails img").click(function(){
 		var sourse =  $(this).attr('src');
 		$(".product-img__main-img img").attr( 'src', sourse);
 	});
-
 	//end part for looking product-img
 
 
 	//this part for order-sum
 	$(".amount").change(function () {
-
 		var quantity = +($(this).val());
 		var price = +($(this).parent().parent().siblings('td[data-th="Цена ₽"]').text().slice(0,-4));
-
-		//console.log(price);
-
 		var result = quantity * price;
-
 		$(this).parent().parent().siblings('td[data-th="Сумма ₽"]').text(result +' руб.');
 		var sum = 0;
-  		$('#order td[data-th="Сумма ₽"]').each(function(){
-      	sum+= +$(this).text().slice(0,-4);
-
-  		});
-  		$('.order-sum').text(sum +' руб.');
+		$('#order td[data-th="Сумма ₽"]').each(function(){
+		sum+= +$(this).text().slice(0,-4);
+		});
+		$('.order-sum').text(sum +' руб.');
 		$('span.sum').text(sum  + ' руб.')
 
 		if($("#s8").prop("checked")){
 			var element = +($('#timepicker').val().slice(0,2));
-			//console.log(element);
 			if(element<9){
 					var res = +($('.order-sum').text().slice(0,-4));
 					$('span.sum').text(res+700+' руб.')
@@ -195,16 +181,10 @@ $(function(){
 					$('span.sum').text(res+500+' руб.')
 				}
 		}
-
-
-
 	});
 
 
-
-
 	//this part for rating
-
 	$(".rating").mousemove(function(e){
 		if($(".testimonials__rating").hasClass("rated")){
 			return false;
@@ -239,12 +219,10 @@ $(function(){
 		var stars_width =stars*10 + "%";
 		$(".rating-hover").css("width",stars_width)
 		$(this).addClass("rated")
-
 		return
-
-
-
 	});
+
+	//This for table on order_page
 	var headertext = [],
 	headers = document.querySelectorAll("#order th"),
 	tablerows = document.querySelectorAll("#order th"),
@@ -260,7 +238,8 @@ $(function(){
 	  }
 	}
 
-		//this part for order__options
+
+	//this part for order__options
 	$("input[name='s1']").click(function() {
 		if($("#s9").prop("checked")){
 			$("textarea.greeting-card").show()
@@ -304,6 +283,8 @@ $(function(){
 
 	});
 
+
+	//this part for timepicker
 	$("#timepicker").timepicker({
 		change: function(){
 			var element =+($(this).val().slice(0,-3));
@@ -326,9 +307,26 @@ $(function(){
 		dropdown: true,
 		scrollbar: true
 	});
+
+	
+	//This part for datepicker
 	$("#datepicker").datepicker();
-	$.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
-	//this part for order products
+	Date.prototype.toDateInputValue = (function() {
+		var local = new Date(this);
+		local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+		return local.toJSON().slice(0,10);
+	});
+	$('#datepicker').val(new Date().toDateInputValue());
+		var now = new Date();
+		var month = (now.getMonth() + 1);
+		var day = now.getDate();
+		if(month < 10)
+			month = "0" + month;
+		if(day < 10)
+			day = "0" + day;
+		var today = day+ '.' + month + '.'+ now.getFullYear();
+	$('#datepicker').val(today);
+
 	//autocomplete
 	var city = [
 		"Москва",
