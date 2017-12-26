@@ -499,11 +499,11 @@ body{
 
 [id^=s] + label{
 	display: inline-block;
-	//width: 19px;
+	width: 19px;
 	height: 19px;
-	// border: 1px solid #b9b9b9;
-	background:url('../images/checkbox_unchecked.png');
+	background:url('../images/icons.png');
 	background-repeat: no-repeat;
+	background-position: -46px -21px;
 	span{
 			position: relative;
 			top: 0px;
@@ -512,11 +512,11 @@ body{
 }
 [id^=s]:checked + label{
 	display: inline-block;
-	//width: 19px;
+	width: 19px;
 	height: 19px;
-	// border: 1px solid #b9b9b9;
-	background:url('../images/checkbox_checked.png');
+	background:url('../images/icons.png');
 	background-repeat: no-repeat;
+	background-position: -17px -21px;
 	label{
 		span{
 			position: relative;
