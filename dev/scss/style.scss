@@ -1119,10 +1119,8 @@ table#order {
 				text-align:right;
 				font-weight:bold;
 			}
-		}
-		tr:nth-child(2)>td:first-child{
 			td:before{
-				width: 0;
+				display: none;
 			}
 		}
 		td:before {
@@ -1180,7 +1178,7 @@ table#order {
 				background:url(../images/leftside_line.png);
 				background-repeat: repeat-y ;
 				display: inline-block;
-				left: -40px;
+				left: -39px;
 			}
 		}
 
@@ -1251,7 +1249,7 @@ table#order {
 	}
 }
 input#timepicker,input#datepicker{
-	width: 113px;
+	width: 140px;
 	outline: none;
 	position: relative;
 	margin-left: 5px;
