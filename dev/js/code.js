@@ -36,21 +36,23 @@ $(function(){
 				$(".search-top input").css("display", "none")
 			}
 		}else{
-			function getRes(){
 				var res;
-				res= $(this);
-				alert(res);
-			}
-			$(this).parent().submit (function () {
-				return confirm ( 'Ви дійсно хочете відправити дані?');
-			});
 
+				res =$(".search-top input").val();
+				$('.search-top input').submit();
+				//console.log(res);
+				
 		}
 	});
-
-
-	// this part for range-slider
-
+	
+	$(".search-top input").submit(function(){
+					console.log('ddd');
+				});
+	
+	$('.top-search input').submit(function(){
+		console.log("OK")
+	});
+	// this part for range
 	$('.range-slider').jRange({
 		from:1000,
 		to: 10000,

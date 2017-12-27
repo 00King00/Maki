@@ -1,0 +1,60 @@
+.filters
+	button.btn.btn_filter(type="submit")
+		i.fa.fa-sliders
+		|  Фильтр
+	.block
+		.block__title Стоимость
+		input(type="hidden" class="range-slider" value="5000")
+	.block
+		.block__title Букеты с
+		ul
+			li
+				input(type="checkbox" name="s1" id="s1")
+				label(for="s1")
+					span Розы
+			li
+
+				input(type="checkbox" name="s1" id="s2")
+				label(for="s2")
+					span Орхидея
+			li
+
+				input(type="checkbox" name="s1" id="s3")
+				label(for="s3")
+					span Лилия
+			li
+
+				input(type="checkbox" name="s1" id="s4")
+				label(for="s4")
+					span Гербер
+	.block
+		.block__title Кому
+		ul
+			li
+
+				input(type="checkbox" name="s1" id="s5")
+				label(for="s5")
+					span Мужчина
+			li
+
+				input(type="checkbox" name="s1" id="s6")
+				label(for="s6")
+					span Ребенок
+			li
+
+				input(type="checkbox" name="s1" id="s7")
+				label(for="s7")
+					span Женщина
+			li
+
+				input(type="checkbox" name="s1" id="s8")
+				label(for="s8")
+					span Семья
+	.block
+		.block__title
+			|Поиск
+		.search-right
+			form(action="#" method="#")
+				input(type="text" placeholder="Что вы ищите?" )
+				button.btn.btn_search(type="submit")
+					i.fa.fa-search
