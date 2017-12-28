@@ -186,42 +186,32 @@ $(function(){
 
 	//this part for rating
 	$(".rating").mousemove(function(e){
-		if($(".testimonials__rating").hasClass("rated")){
+		if($(".rating").hasClass("rated")){
 			return false;
 		}
-		var offset = $(".rating").offset(), coords = e.clientX - offset.left;
-		var stars = Math.round((coords+6.4)/12.8);
-		var stars_width =stars*10 + "%";
+		var offset = $(".rating").offset(),
+		coords = e.clientX - offset.left;
+		var rating = Math.round((coords+6.4)/12.8);
+		var stars_width =rating*10 + "%";
+		console.log(e.clientX);
 		$(".rating-hover").css("width",stars_width);
 	});
-
-	$("#rating-hover").mousemove(function(e){
-		if($(".testimonials__rating").hasClass("rated")){
-			return false;
-		}
-		var offset = $(".rating").offset(), coords = e.clientX - offset.left;
-		var stars = Math.round((coords+6.4)/12.8);
-		var stars_width =stars*10 + "%";
-		$(".rating-hover").css("width",stars_width);
-
-	});
-
-	$(".testimonials__rating").mouseleave(function(){
+	$(".rating").mouseleave(function(){
 		if($(this).hasClass("rated")){
 			return false;
 		}
 		$(".rating-hover").css("width",0);
-	});
-
-	$(".testimonials__rating").click(function(e){
+	})
+		$(".rating").click(function(e){
 		var offset = $(".rating").offset(), coords = e.clientX - offset.left;
-		var stars = Math.round((coords+6.4)/12.8);
-		var stars_width =stars*10 + "%";
-		$('.testimonials__rating>input').attr('value',stars/2)
+		var rating = Math.round((coords+6.4)/12.8);
+		var stars_width =rating*10 + "%";
+		$('.rating>input').attr('value',rating/2)
 		$(".rating-hover").css("width",stars_width)
 		$(this).addClass("rated")
-		return
-	});
+		console.log(rating);
+	})
+
 
 	//This for table on order_page
 	var headertext = [],
