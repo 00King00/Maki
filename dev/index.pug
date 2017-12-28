@@ -5,9 +5,7 @@ html
 		include ./parts/header.pug
 		.wrapper
 			.row.clearfix
-				.col-phablet-1-3.col-tablet-1-4.hide-phablet
-					include ./parts/filters.pug
-				.col-phablet-2-3.col-tablet-3-4
+				.col-phablet-2-3.col-tablet-3-4.hide-mobileonly
 					.row.clearfix.catalog
 						include ./parts/catalog.pug
 					.paging
@@ -20,8 +18,21 @@ html
 								a.active(href="#") 3
 							li
 								a(href="#") 4
-				.col-phablet-1-3.col-tablet-1-4.hide-mobileonly
+				.col-phablet-1-3.col-tablet-1-4
 					include ./parts/filters.pug
+				.col-phablet-2-3.col-tablet-3-4.hide-phablet
+					.row.clearfix.catalog
+						include ./parts/catalog.pug
+					.paging
+						ul
+							li
+								a(href="#") 1
+							li.active
+								a(href="#") 2
+							li
+								a.active(href="#") 3
+							li
+								a(href="#") 4
 				
 			include ./parts/news.pug
 		include ./parts/footer.pug
