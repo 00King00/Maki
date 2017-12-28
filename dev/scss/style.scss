@@ -941,22 +941,20 @@ body{
 	width: 128px;
 	height: 21px;
 	background: url(../images/rating.png);
-
-
-
-
-	//background: green;
-	.fa-star-o{
-		color: #ff9f9f;
-	}
 }
-
 .rating-hover{
-	margin-top: -21px;
-	width: 0%;
-	height: 21px;
-	background: url(../images/rating.png) 0 -22px;
+		margin-top: -21px;
+		width: 0%;
+		height: 21px;
+		background: url(../images/rating.png) 0 -22px;
 }
+
+// .rating-hover{
+// 	margin-top: -21px;
+// 	width: 0%;
+// 	height: 21px;
+// 	background: url(../images/rating.png) 0 -22px;
+// }
 
 .order-form{
 	padding:35px;
