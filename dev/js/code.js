@@ -41,14 +41,14 @@ $(function(){
 				res =$(".search-top input").val();
 				$('.search-top input').submit();
 				//console.log(res);
-				
+
 		}
 	});
-	
+
 	$(".search-top input").submit(function(){
 					console.log('ddd');
 				});
-	
+
 	$('.top-search input').submit(function(){
 		console.log("OK")
 	});
@@ -158,7 +158,7 @@ $(function(){
 
 
 	//this part for order-sum
-	$(".amount").change(function () {
+	$(" td.amount").change(function () {
 		var quantity = +($(this).val());
 		var price = +($(this).parent().parent().siblings('td[data-th="Цена ₽"]').text().slice(0,-4));
 		var result = quantity * price;
@@ -217,6 +217,7 @@ $(function(){
 		var offset = $(".rating").offset(), coords = e.clientX - offset.left;
 		var stars = Math.round((coords+6.4)/12.8);
 		var stars_width =stars*10 + "%";
+		$('.testimonials__rating>input').attr('value',stars/2)
 		$(".rating-hover").css("width",stars_width)
 		$(this).addClass("rated")
 		return
@@ -260,7 +261,7 @@ $(function(){
 
 	$("input[name='s2']").click(function() {
 		if($("#s8").prop("checked")){
-			$(".delivery").show()
+			$(".delivery__info:first-child").show()
 			$('.delivery__sum-order').show()
 			var element = +($('#timepicker').val().slice(0,2));
 			//console.log(element);
@@ -274,11 +275,7 @@ $(function(){
 				}
 
 		} else {
-			$(".delivery").hide()
-			$('.delivery__sum-order').hide()
-			var res=+($('.order-sum').text().slice(0,-4));
-			$('span.sum').text(res + ' руб.')
-			console.log(res);
+			$(".delivery__info:first-child").hide()
 		 }
 
 	});
@@ -308,7 +305,7 @@ $(function(){
 		scrollbar: true
 	});
 
-	
+
 	//This part for datepicker
 	$("#datepicker").datepicker();
 	Date.prototype.toDateInputValue = (function() {
@@ -343,5 +340,14 @@ $(function(){
 		"Ростов-на-Дону",
 		"Тюмень"
 	];
-	$( "#autocomplete" ).autocomplete({source: city});
+	$( "#autocomplete" ).autocomplete({
+		source: city,
+		autoFocus: true,
+		minLength: 0
+	});
+	$('#autocomplete').focus(function(){
+	$(this).val('');
+	$(this).keydown();
+	});
+
 })

@@ -499,11 +499,11 @@ body{
 
 [id^=s] + label{
 	display: inline-block;
-	width: 19px;
+	// width: 19px;
 	height: 19px;
-	background:url('../images/icons.png');
+	background:url('../images/checkbox_unchecked.png');
 	background-repeat: no-repeat;
-	background-position: -46px -21px;
+	// background-position: -46px -21px;
 	span{
 			position: relative;
 			top: 0px;
@@ -512,15 +512,15 @@ body{
 }
 [id^=s]:checked + label{
 	display: inline-block;
-	width: 19px;
+	// width: 19px;
 	height: 19px;
-	background:url('../images/icons.png');
+	background:url('../images/checkbox_checked.png');
 	background-repeat: no-repeat;
-	background-position: -17px -21px;
+	// background-position: -17px -21px;
 	label{
 		span{
 			position: relative;
-			top: 0 px;
+			top: 0px;
 			left: 24px;
 		}
 	}
@@ -1069,6 +1069,10 @@ table#order {
 	border-collapse: collapse;
 	vertical-align:center;
 	table-layout: fixed;
+	a{
+		color: #333333;
+		text-decoration: none;
+	}
 	th {
 		text-align:center;
 		padding: 15px;
