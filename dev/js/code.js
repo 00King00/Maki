@@ -189,11 +189,13 @@ $(function(){
 		if($(".rating").hasClass("rated")){
 			return false;
 		}
-		var offset = $(".rating").offset(),
+		var offset = $(this).offset();
 		coords = e.clientX - offset.left;
-		var rating = Math.round((coords+6.4)/12.8);
+		var ratingWidth = $(this).width();
+		star = ratingWidth/5;
+		var rating = Math.round((coords+(star*0.25))/(star*0.5));
 		var stars_width =rating*10 + "%";
-		console.log(e.clientX);
+
 		$(".rating-hover").css("width",stars_width);
 	});
 	$(".rating").mouseleave(function(){
@@ -201,16 +203,19 @@ $(function(){
 			return false;
 		}
 		$(".rating-hover").css("width",0);
-	})
-		$(".rating").click(function(e){
-		var offset = $(".rating").offset(), coords = e.clientX - offset.left;
-		var rating = Math.round((coords+6.4)/12.8);
+	});
+	$(".rating").click(function(e){
+		var offset = $(this).offset();
+		coords = e.clientX - offset.left;
+		var ratingWidth = $(this).width();
+		star = ratingWidth/5;
+		var rating = Math.round((coords+(star*0.25))/(star*0.5));
 		var stars_width =rating*10 + "%";
-		$('.rating>input').attr('value',rating/2)
-		$(".rating-hover").css("width",stars_width)
+		$('.rating>input').attr('value',rating/2);
+		$(".rating-hover").css("width",stars_width);
 		$(this).addClass("rated")
 		console.log(rating);
-	})
+	});
 
 
 	//This for table on order_page
