@@ -943,21 +943,13 @@ body{
 	background: url(../images/rating.png);
 }
 .rating-hover{
-		margin-top: -21px;
+		margin-top: 0px;
 		width: 0%;
 		height: 21px;
 		background: url(../images/rating.png) 0 -22px;
-		@include breakpoint(phablet){
-			margin-top: 0;
-		};
 }
 
-// .rating-hover{
-// 	margin-top: -21px;
-// 	width: 0%;
-// 	height: 21px;
-// 	background: url(../images/rating.png) 0 -22px;
-// }
+
 
 .order-form{
 	padding:35px;
