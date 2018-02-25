@@ -1,6 +1,16 @@
-.wrapper
+.wrapper.clearfix
+	.top-line
+	.search-top
+		form
+			input(type="search" placeholder="Что вы ищите?" )
+			a#top-search(href="#")
+				.btn.btn_search
+					i.fa.fa-search
+	.bars
+		.bar
+		.bar
+		.bar
 	.header_menu
-		img.down(src="images/dropdown.png")
 		ul
 			li.active
 				a(href="#") Доставка
@@ -12,13 +22,6 @@
 				a(href="#") Контакты
 			li
 				a(href="#") Статус заказа
-		img.up(src="images/dropdown.png")
-	.search-top
-		form
-			input(type="search" placeholder="Что вы ищите?" )
-			a#top-search(href="#")
-				.btn.btn_search
-					i.fa.fa-search
 .header
 	.wrapper
 		.row.clearfix

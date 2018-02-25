@@ -53,13 +53,12 @@
 
 .row{
 	margin: 0 -10px;
-	position: relative;
 }
 
 [class*='col-']{
 	padding: 0 10px;
 	min-height: 1px;
-	
+
 }
 
 .show-phablet{
@@ -75,7 +74,7 @@
 .col-{
 	&phablet-{
 		@include breakpoint(phablet){
-			
+
 			&1-2{
 				width: 50%;
 				float: left;
@@ -96,10 +95,10 @@
 				width: 75%;
 				float: left;
 			}
-			
+
 		}
 	}
-	
+
 	&tablet-{
 		@include breakpoint(tablet){
 			&1-3{
