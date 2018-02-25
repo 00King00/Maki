@@ -20,7 +20,7 @@ $(function(){
 	// this part for search
 
 	$("#top-search").click(function(){
-		if($('.search-top input[type="search"]').val()==""){
+		if($('.search-top input[type="search"]').val().length<3){
 			if($('.search-top input[type="search"]').css("display")== "none"){
 				$('.search-top input[type="search"]').css({
 				opacity:1,
@@ -39,19 +39,21 @@ $(function(){
 				var res;
 
 				res =$(".search-top input").val();
-				$('.search-top input').submit();
-				//console.log(res);
+			$("#top").submit();
+				console.log(res);
 
 		}
 	});
-
-	$(".search-top input").submit(function(){
-					console.log('ddd');
-				});
-
-	$('.top-search input').submit(function(){
-		console.log("OK")
+	$( "#top" ).submit(function( event ) {
+		//alert( "Handler for .submit() called." );
 	});
+
+	$( ".search-right>form" ).submit(function( event ) {
+		//alert( "Handler for .submit() called." );
+	});
+
+
+	
 	// this part for range
 	$('.range-slider').jRange({
 		from:1000,
@@ -158,8 +160,9 @@ $(function(){
 
 
 	//this part for order-sum
-	$(" td.amount").change(function () {
+	$("td .amount").change(function () {
 		var quantity = +($(this).val());
+		console.log(quantity);
 		var price = +($(this).parent().parent().siblings('td[data-th="Цена ₽"]').text().slice(0,-4));
 		var result = quantity * price;
 		$(this).parent().parent().siblings('td[data-th="Сумма ₽"]').text(result +' руб.');

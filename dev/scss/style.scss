@@ -637,6 +637,10 @@ body{
 			right:-1;
 			top:-1;
 			height:38px;
+			&:focus{
+				border: 1px solid #ffa8a8;
+				outline: none;
+			}
 		}
 	}
 
