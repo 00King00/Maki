@@ -32,6 +32,9 @@ body{
 .top-line{
 	display:block;
 	height:30px;
+	@include breakpoint(phablet){
+		display: none;
+	};
 }
 // menu burger begin
 .bars{
