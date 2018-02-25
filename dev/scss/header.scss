@@ -159,8 +159,6 @@
 	box-sizing:border-box;
 	position: relative;
 	input[type="search"] {
-//		background: url(/images/search-icon.png) no-repeat;
-//		background-position: right;
 		border:1px solid #e1e1e1;
 		color:#999999;
 		border-right: none;
@@ -190,15 +188,16 @@
 //begining nessecary for header_menu js code
 @include breakpoint(mobileonly){
 	.search-top{
+		float:none;
 		a{
-			position: relative;
-			top: -55px;
-			right: 0;
+			position: absolute;
+			top: -22px;
+			right: 0px;
 		}
 		input{
 			position: relative;
-			top: -55px;
-			right: 0;
+			top: -22px;
+			right: 0px;
 		}
 	}
 	.header_menu{

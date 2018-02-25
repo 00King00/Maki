@@ -1,19 +1,11 @@
 $(function(){
-	// this part for header menu in mobileonly
-	$(".down").click(function(){
-		$(this).hide(300);
-		$(".header_menu ul").slideDown(1000);
-		setTimeout(function(){
-			$(".up").show(300);
-		},1000)
-	})
-
-	$(".up").click(function(){
-		$(this).hide(300);
-		$(".header_menu ul").slideUp(1000);
-		setTimeout(function(){
-			$(".down").show(300);
-		},700)
+	//burder bittons and menu
+	$('.bars').click(function(){
+	  $(this).toggleClass('active');
+	  $(".header_menu ul").animate(
+		{height: 'toggle'},
+		{duration:300}
+	);
 	})
 
 
@@ -158,7 +150,7 @@ $(function(){
 
 
 	//this part for order-sum
-	$(" td.amount").change(function () {
+	$("td .amount").change(function () {
 		var quantity = +($(this).val());
 		var price = +($(this).parent().parent().siblings('td[data-th="Цена ₽"]').text().slice(0,-4));
 		var result = quantity * price;
@@ -190,7 +182,7 @@ $(function(){
 			return false;
 		}
 		var offset = $(this).offset();
-		coords = e.clientX - offset.left;
+		coords = e.pageX - offset.left;
 		var ratingWidth = $(this).width();
 		star = ratingWidth/5;
 		var rating = Math.round((coords+(star*0.25))/(star*0.5));
